@@ -1,6 +1,7 @@
 name: Bolao Auto-Sync
 
 on:
+  push:
   schedule:
     - cron: "0 * * * *" # Roda a cada 1 hora
   workflow_dispatch: # Permite um botão de rodar manualmente na aba Actions

@@ -1053,6 +1053,13 @@ function renderPredictionsGallery() {
     .join("");
 }
 
+let activeConsultTab = 'playoff';
+
+window.setConsultTab = function(tab) {
+  activeConsultTab = tab;
+  renderPredictionConsultation();
+};
+
 function renderPredictionConsultation() {
   if (!backtestData?.participants) {
     predictionsConsultationEl.innerHTML = `
@@ -1064,26 +1071,31 @@ function renderPredictionConsultation() {
     return;
   }
 
-  const phases = [
-    { key: "playoff", title: "Playoff 1ª fase" },
-    { key: "round_of_16", title: "Oitavas de Final" }
-  ];
+  const tabsMarkup = `
+    <div class="tabs-bar" style="margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; overflow-x: auto;">
+      <button class="tab-button ${activeConsultTab === 'primeira' ? 'is-active' : ''}" onclick="setConsultTab('primeira')">Primeira Fase</button>
+      <button class="tab-button ${activeConsultTab === 'class8' ? 'is-active' : ''}" onclick="setConsultTab('class8')">8 Qualificados</button>
+      <button class="tab-button ${activeConsultTab === 'playoff' ? 'is-active' : ''}" onclick="setConsultTab('playoff')">Playoffs</button>
+      <button class="tab-button ${activeConsultTab === 'oitavas' ? 'is-active' : ''}" onclick="setConsultTab('oitavas')">Oitavas</button>
+    </div>
+  `;
 
-  let markup = "";
+  let markup = tabsMarkup;
 
-  phases.forEach((phase) => {
+  const buildKnockoutPhase = (phaseKey, phaseTitle) => {
+    let m = "";
     const matchesMap = {};
     const classMap = {};
 
     participants.forEach((p) => {
       const report = backtestData.participants[p.name];
-      if (!report || !report[phase.key]) return;
+      if (!report || !report[phaseKey]) return;
 
-      const phaseData = report[phase.key];
+      const phaseData = report[phaseKey];
 
-      (phaseData.match_details || []).forEach((m) => {
-        if (!matchesMap[m.label]) matchesMap[m.label] = { official: m.official, predictions: [] };
-        matchesMap[m.label].predictions.push({ name: p.name, predicted: m.predicted, exact: m.exact_hit, result: m.result_hit });
+      (phaseData.match_details || []).forEach((match) => {
+        if (!matchesMap[match.label]) matchesMap[match.label] = { official: match.official, predictions: [] };
+        matchesMap[match.label].predictions.push({ name: p.name, predicted: match.predicted, exact: match.exact_hit, result: match.result_hit });
       });
 
       (phaseData.class_details || []).forEach((c, idx) => {
@@ -1092,101 +1104,59 @@ function renderPredictionConsultation() {
       });
     });
 
-    if (Object.keys(matchesMap).length === 0) return;
-
-    markup += `
-      <section style="margin-bottom: 40px;">
-        <h2 style="margin-bottom: 20px;">${phase.title} - Placares</h2>
-        <div class="predictions-consultation" style="gap: 20px;">
-    `;
-
-    Object.entries(matchesMap).forEach(([label, data]) => {
-      markup += `
-        <article class="prediction-consult-card">
-          <div class="prediction-consult-header">
-            <div>
-              <strong>${label}</strong>
-              <p class="muted">Placar Oficial: <strong>${data.official}</strong></p>
+    if (Object.keys(matchesMap).length > 0) {
+      m += `<section style="margin-bottom: 40px;"><h2 style="margin-bottom: 20px;">${phaseTitle} - Placares</h2><div class="predictions-consultation" style="gap: 20px;">`;
+      Object.entries(matchesMap).forEach(([label, data]) => {
+        m += `
+          <article class="prediction-consult-card">
+            <div class="prediction-consult-header">
+              <div><strong>${label}</strong><p class="muted">Placar Oficial: <strong>${data.official}</strong></p></div>
+              <span class="tag">Jogos</span>
             </div>
-            <span class="tag">Jogos</span>
-          </div>
-          <div class="table-wrap">
-            <table class="dashboard-table compact-table">
-              <thead>
-                <tr>
-                  <th>Palpiteiro</th>
-                  <th>Palpite</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${data.predictions.map(p => `
-                  <tr>
-                    <td><strong>${p.name}</strong></td>
-                    <td>${p.predicted}</td>
-                    <td>${p.exact ? '<span class="result-chip exact">Exato</span>' : p.result ? '<span class="result-chip trend">Tendência</span>' : '<span class="result-chip miss">Errou</span>'}</td>
-                  </tr>
-                `).join("")}
-              </tbody>
-            </table>
-          </div>
-        </article>
-      `;
-    });
-
-    markup += `</div></section>`;
+            <div class="table-wrap">
+              <table class="dashboard-table compact-table">
+                <thead><tr><th>Palpiteiro</th><th>Palpite</th><th>Status</th></tr></thead>
+                <tbody>
+                  ${data.predictions.map(p => `<tr><td><strong>${p.name}</strong></td><td>${p.predicted}</td><td>${p.exact ? '<span class="result-chip exact">Exato</span>' : p.result ? '<span class="result-chip trend">Tendência</span>' : '<span class="result-chip miss">Errou</span>'}</td></tr>`).join("")}
+                </tbody>
+              </table>
+            </div>
+          </article>
+        `;
+      });
+      m += `</div></section>`;
+    }
 
     if (Object.keys(classMap).length > 0) {
-      // Pega a lista de classificados oficiais únicos (filtrando ausentes)
       const officialSet = new Set();
       participants.forEach(p => {
          const r = backtestData.participants[p.name];
-         if (r && r[phase.key]?.class_details) {
-            r[phase.key].class_details.forEach(c => {
-              if (c.official && c.official !== "—" && c.official !== "-") {
-                officialSet.add(c.official);
-              }
+         if (r && r[phaseKey]?.class_details) {
+            r[phaseKey].class_details.forEach(c => {
+               if (c.official && c.official !== "—" && c.official !== "-") officialSet.add(c.official);
             });
          }
       });
       const officialList = Array.from(officialSet);
 
-      markup += `
+      m += `
         <section style="margin-bottom: 40px;">
-          <h2 style="margin-bottom: 8px;">${phase.title} - Classificados</h2>
-          <p style="margin-bottom: 20px; font-size: 0.9rem;" class="muted">
-            <strong style="color: var(--text);">Oficiais:</strong> 
-            ${officialList.length > 0 ? officialList.join(", ") : "Ainda não definidos"}
-          </p>
+          <h2 style="margin-bottom: 8px;">${phaseTitle} - Classificados</h2>
+          <p style="margin-bottom: 20px; font-size: 0.9rem;" class="muted"><strong style="color: var(--text);">Oficiais:</strong> ${officialList.length > 0 ? officialList.join(", ") : "Ainda não definidos"}</p>
           <div class="predictions-consultation" style="gap: 20px;">
             <article class="prediction-consult-card">
               <div class="table-wrap">
                 <table class="dashboard-table compact-table">
-                  <thead>
-                    <tr>
-                      <th>Palpiteiro</th>
-                      <th>Acertos</th>
-                      <th colspan="8">Palpites Enviados (8 times)</th>
-                    </tr>
-                  </thead>
+                  <thead><tr><th>Palpiteiro</th><th>Acertos</th><th colspan="8">Palpites Enviados (8 times)</th></tr></thead>
                   <tbody>
                     ${participants.filter((p) => backtestData.participants[p.name]).map((p) => {
-                      const cDetails = backtestData.participants[p.name][phase.key].class_details || [];
+                      const cDetails = backtestData.participants[p.name][phaseKey].class_details || [];
                       const hits = cDetails.filter(c => c.hit).length;
-                      return `
-                      <tr>
-                        <td><strong>${p.name}</strong></td>
-                        <td><strong style="color: var(--accent);">${hits}/8</strong></td>
-                        ${cDetails.map(c => `
-                          <td>
-                            <span style="color: ${c.hit ? 'var(--accent-strong)' : 'var(--danger)'};">
-                              ${c.pick || "-"} ${c.hit ? "✅" : "❌"}
-                            </span>
-                          </td>
-                        `).join("")}
+                      return `<tr><td><strong>${p.name}</strong></td><td><strong style="color: var(--accent);">${hits}/8</strong></td>
+                        ${cDetails.map(c => `<td><span style="color: ${c.hit ? 'var(--accent-strong)' : 'var(--danger)'};">${c.pick || "-"} ${c.hit ? "✅" : "❌"}</span></td>`).join("")}
                         ${Array.from({length: Math.max(0, 8 - cDetails.length)}).map(() => `<td>-</td>`).join("")}
-                      </tr>
-                    `}).join("")}
+                      </tr>`;
+                    }).join("")}
                   </tbody>
                 </table>
               </div>
@@ -1195,7 +1165,82 @@ function renderPredictionConsultation() {
         </section>
       `;
     }
-  });
+    return m;
+  };
+
+  const buildLeaguePhase = () => {
+    if (!leaguePhaseData?.records) return "<p>Dados da primeira fase indisponíveis.</p>";
+    let m = "";
+    const matches = leaguePhaseData.records.filter(r => r.matchday.includes("Machtday"));
+    
+    m += `<section style="margin-bottom: 40px;"><h2 style="margin-bottom: 20px;">Primeira Fase - Jogos</h2><div class="predictions-consultation" style="gap: 20px;">`;
+    
+    matches.forEach((match, idx) => {
+      m += `
+        <article class="prediction-consult-card">
+          <div class="prediction-consult-header">
+            <div><strong>Jogo ${idx + 1} (${match.matchday})</strong><p class="muted">Oficial Vencedor/Empate: <strong>${match.official || "-"}</strong></p></div>
+          </div>
+          <div class="table-wrap" style="max-height: 300px; overflow-y: auto;">
+            <table class="dashboard-table compact-table">
+              <thead><tr><th>Palpiteiro</th><th>Palpite</th><th>Status</th></tr></thead>
+              <tbody>
+                ${match.picks.map(p => {
+                  const hit = p.pick === match.official;
+                  return `<tr><td><strong>${p.participant}</strong></td><td>${p.pick}</td><td>${hit ? '<span class="result-chip exact">Acertou</span>' : '<span class="result-chip miss">Errou</span>'}</td></tr>`;
+                }).join("")}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      `;
+    });
+    
+    m += `</div></section>`;
+    return m;
+  };
+
+  const buildClass8Phase = () => {
+    if (!leaguePhaseData?.records) return "<p>Dados da primeira fase indisponíveis.</p>";
+    let m = "";
+    const classRecords = leaguePhaseData.records.filter(r => r.matchday.includes("Classificado"));
+    
+    m += `<section style="margin-bottom: 40px;"><h2 style="margin-bottom: 20px;">Top 8 Classificados - Palpites</h2><div class="predictions-consultation" style="gap: 20px;">`;
+    
+    classRecords.forEach((record, idx) => {
+      m += `
+        <article class="prediction-consult-card">
+          <div class="prediction-consult-header">
+            <div><strong>Top 8 - Vaga ${idx + 1}</strong><p class="muted">Time Oficial: <strong>${record.official || "-"}</strong></p></div>
+          </div>
+          <div class="table-wrap" style="max-height: 300px; overflow-y: auto;">
+            <table class="dashboard-table compact-table">
+              <thead><tr><th>Palpiteiro</th><th>Palpite</th><th>Status</th></tr></thead>
+              <tbody>
+                ${record.picks.map(p => {
+                  const hit = p.pick === record.official;
+                  return `<tr><td><strong>${p.participant}</strong></td><td>${p.pick}</td><td>${hit ? '<span class="result-chip exact">Acertou</span>' : '<span class="result-chip miss">Errou</span>'}</td></tr>`;
+                }).join("")}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      `;
+    });
+    
+    m += `</div></section>`;
+    return m;
+  };
+
+  if (activeConsultTab === 'playoff') {
+    markup += buildKnockoutPhase('playoff', 'Playoff 1ª fase');
+  } else if (activeConsultTab === 'oitavas') {
+    markup += buildKnockoutPhase('round_of_16', 'Oitavas de Final');
+  } else if (activeConsultTab === 'primeira') {
+    markup += buildLeaguePhase();
+  } else if (activeConsultTab === 'class8') {
+    markup += buildClass8Phase();
+  }
 
   predictionsConsultationEl.innerHTML = markup;
 }

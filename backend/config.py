@@ -29,7 +29,7 @@ def load_settings() -> Settings:
         api_football_host=os.getenv("API_FOOTBALL_HOST", "v3.football.api-sports.io"),
         api_football_base_url=os.getenv("API_FOOTBALL_BASE_URL", "https://v3.football.api-sports.io"),
         api_football_league_id=int(os.getenv("API_FOOTBALL_LEAGUE_ID", "2")),
-        default_season=int(os.getenv("BOLAO_DEFAULT_SEASON", "2024")),
+        default_season=int(os.getenv("BOLAO_DEFAULT_SEASON", "2025")),
         host=os.getenv("BOLAO_BACKEND_HOST", "127.0.0.1"),
         port=int(os.getenv("BOLAO_BACKEND_PORT", "8080")),
     )

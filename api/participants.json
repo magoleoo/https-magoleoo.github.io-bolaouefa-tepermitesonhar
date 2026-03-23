@@ -1,3 +1,136 @@
 {
-  "participants": []
+  "participants": [
+    {
+      "id": 8,
+      "slug": "biel",
+      "name": "biel",
+      "is_active": 1
+    },
+    {
+      "id": 16,
+      "slug": "celsinho",
+      "name": "celsinho",
+      "is_active": 1
+    },
+    {
+      "id": 2,
+      "slug": "dan",
+      "name": "dan",
+      "is_active": 1
+    },
+    {
+      "id": 21,
+      "slug": "deco",
+      "name": "deco",
+      "is_active": 1
+    },
+    {
+      "id": 13,
+      "slug": "enrico",
+      "name": "enrico",
+      "is_active": 1
+    },
+    {
+      "id": 15,
+      "slug": "faber",
+      "name": "faber",
+      "is_active": 1
+    },
+    {
+      "id": 18,
+      "slug": "feijao",
+      "name": "feijao",
+      "is_active": 1
+    },
+    {
+      "id": 3,
+      "slug": "felippe-leite",
+      "name": "felippe-leite",
+      "is_active": 1
+    },
+    {
+      "id": 5,
+      "slug": "gui-giron",
+      "name": "gui-giron",
+      "is_active": 1
+    },
+    {
+      "id": 19,
+      "slug": "ivan",
+      "name": "ivan",
+      "is_active": 1
+    },
+    {
+      "id": 11,
+      "slug": "leo-picca",
+      "name": "leo-picca",
+      "is_active": 1
+    },
+    {
+      "id": 4,
+      "slug": "leo-raposo",
+      "name": "leo-raposo",
+      "is_active": 1
+    },
+    {
+      "id": 1,
+      "slug": "marcel",
+      "name": "marcel",
+      "is_active": 1
+    },
+    {
+      "id": 20,
+      "slug": "michel",
+      "name": "michel",
+      "is_active": 1
+    },
+    {
+      "id": 10,
+      "slug": "muca",
+      "name": "muca",
+      "is_active": 1
+    },
+    {
+      "id": 14,
+      "slug": "nanel",
+      "name": "nanel",
+      "is_active": 1
+    },
+    {
+      "id": 22,
+      "slug": "oficial",
+      "name": "oficial",
+      "is_active": 1
+    },
+    {
+      "id": 7,
+      "slug": "rafinha",
+      "name": "rafinha",
+      "is_active": 1
+    },
+    {
+      "id": 17,
+      "slug": "ranieri",
+      "name": "ranieri",
+      "is_active": 1
+    },
+    {
+      "id": 6,
+      "slug": "scarpa",
+      "name": "scarpa",
+      "is_active": 1
+    },
+    {
+      "id": 9,
+      "slug": "serginho",
+      "name": "serginho",
+      "is_active": 1
+    },
+    {
+      "id": 12,
+      "slug": "victor",
+      "name": "victor",
+      "is_active": 1
+    }
+  ]
 }

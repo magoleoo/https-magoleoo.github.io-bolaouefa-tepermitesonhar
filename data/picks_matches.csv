@@ -1,0 +1,561 @@
+participant,match_label,pred_home,pred_away
+marcel,Paris Saint-Germain x AS Monaco,1,1
+marcel,Galatasaray x Juventus,2,1
+marcel,Real Madrid x Benfica,0,1
+marcel,Atalanta x Borussia Dortmund,1,3
+marcel,Newcastle United x Qarabag,3,1
+marcel,Atlético Madrid x Club Brugge,1,1
+marcel,Bodø/Glimt x Inter Milan,0,2
+marcel,Bayer Leverkusen x Olympiacos,2,1
+dan,Paris Saint-Germain x AS Monaco,3,0
+dan,Galatasaray x Juventus,2,1
+dan,Real Madrid x Benfica,2,2
+dan,Atalanta x Borussia Dortmund,0,2
+dan,Newcastle United x Qarabag,2,1
+dan,Atlético Madrid x Club Brugge,3,0
+dan,Bodø/Glimt x Inter Milan,1,2
+dan,Bayer Leverkusen x Olympiacos,1,1
+felippe-leite,Paris Saint-Germain x AS Monaco,3,1
+felippe-leite,Galatasaray x Juventus,1,1
+felippe-leite,Real Madrid x Benfica,2,2
+felippe-leite,Atalanta x Borussia Dortmund,0,2
+felippe-leite,Newcastle United x Qarabag,3,0
+felippe-leite,Atlético Madrid x Club Brugge,1,1
+felippe-leite,Bodø/Glimt x Inter Milan,0,5
+felippe-leite,Bayer Leverkusen x Olympiacos,1,2
+leo-raposo,Paris Saint-Germain x AS Monaco,2,2
+leo-raposo,Galatasaray x Juventus,0,1
+leo-raposo,Real Madrid x Benfica,2,1
+leo-raposo,Atalanta x Borussia Dortmund,1,1
+leo-raposo,Newcastle United x Qarabag,3,0
+leo-raposo,Atlético Madrid x Club Brugge,0,0
+leo-raposo,Bodø/Glimt x Inter Milan,1,4
+leo-raposo,Bayer Leverkusen x Olympiacos,2,1
+gui-giron,Paris Saint-Germain x AS Monaco,2,0
+gui-giron,Galatasaray x Juventus,0,1
+gui-giron,Real Madrid x Benfica,0,1
+gui-giron,Atalanta x Borussia Dortmund,1,2
+gui-giron,Newcastle United x Qarabag,1,0
+gui-giron,Atlético Madrid x Club Brugge,1,0
+gui-giron,Bodø/Glimt x Inter Milan,0,2
+gui-giron,Bayer Leverkusen x Olympiacos,1,1
+scarpa,Paris Saint-Germain x AS Monaco,2,2
+scarpa,Galatasaray x Juventus,0,0
+scarpa,Real Madrid x Benfica,2,1
+scarpa,Atalanta x Borussia Dortmund,1,1
+scarpa,Newcastle United x Qarabag,2,0
+scarpa,Atlético Madrid x Club Brugge,0,0
+scarpa,Bodø/Glimt x Inter Milan,0,2
+scarpa,Bayer Leverkusen x Olympiacos,0,1
+rafinha,Paris Saint-Germain x AS Monaco,2,1
+rafinha,Galatasaray x Juventus,1,0
+rafinha,Real Madrid x Benfica,2,2
+rafinha,Atalanta x Borussia Dortmund,1,3
+rafinha,Newcastle United x Qarabag,2,0
+rafinha,Atlético Madrid x Club Brugge,1,1
+rafinha,Bodø/Glimt x Inter Milan,0,1
+rafinha,Bayer Leverkusen x Olympiacos,0,2
+biel,Paris Saint-Germain x AS Monaco,2,1
+biel,Galatasaray x Juventus,1,1
+biel,Real Madrid x Benfica,1,1
+biel,Atalanta x Borussia Dortmund,2,2
+biel,Newcastle United x Qarabag,0,1
+biel,Atlético Madrid x Club Brugge,0,1
+biel,Bodø/Glimt x Inter Milan,0,2
+biel,Bayer Leverkusen x Olympiacos,3,1
+serginho,Paris Saint-Germain x AS Monaco,2,1
+serginho,Galatasaray x Juventus,2,0
+serginho,Real Madrid x Benfica,1,0
+serginho,Atalanta x Borussia Dortmund,0,2
+serginho,Newcastle United x Qarabag,1,1
+serginho,Atlético Madrid x Club Brugge,1,1
+serginho,Bodø/Glimt x Inter Milan,1,1
+serginho,Bayer Leverkusen x Olympiacos,0,1
+muca,Paris Saint-Germain x AS Monaco,2,0
+muca,Galatasaray x Juventus,1,0
+muca,Real Madrid x Benfica,0,1
+muca,Atalanta x Borussia Dortmund,0,1
+muca,Newcastle United x Qarabag,2,1
+muca,Atlético Madrid x Club Brugge,1,1
+muca,Bodø/Glimt x Inter Milan,0,1
+muca,Bayer Leverkusen x Olympiacos,1,1
+leo-picca,Paris Saint-Germain x AS Monaco,2,1
+leo-picca,Galatasaray x Juventus,2,1
+leo-picca,Real Madrid x Benfica,1,1
+leo-picca,Atalanta x Borussia Dortmund,2,1
+leo-picca,Newcastle United x Qarabag,1,1
+leo-picca,Atlético Madrid x Club Brugge,1,1
+leo-picca,Bodø/Glimt x Inter Milan,1,1
+leo-picca,Bayer Leverkusen x Olympiacos,0,1
+victor,Paris Saint-Germain x AS Monaco,3,1
+victor,Galatasaray x Juventus,2,1
+victor,Real Madrid x Benfica,3,1
+victor,Atalanta x Borussia Dortmund,1,2
+victor,Newcastle United x Qarabag,2,1
+victor,Atlético Madrid x Club Brugge,1,1
+victor,Bodø/Glimt x Inter Milan,0,2
+victor,Bayer Leverkusen x Olympiacos,1,1
+enrico,Paris Saint-Germain x AS Monaco,2,0
+enrico,Galatasaray x Juventus,1,1
+enrico,Real Madrid x Benfica,1,1
+enrico,Atalanta x Borussia Dortmund,1,2
+enrico,Newcastle United x Qarabag,0,0
+enrico,Atlético Madrid x Club Brugge,1,1
+enrico,Bodø/Glimt x Inter Milan,1,2
+enrico,Bayer Leverkusen x Olympiacos,2,2
+nanel,Paris Saint-Germain x AS Monaco,2,1
+nanel,Galatasaray x Juventus,1,1
+nanel,Real Madrid x Benfica,2,2
+nanel,Atalanta x Borussia Dortmund,1,2
+nanel,Newcastle United x Qarabag,2,1
+nanel,Atlético Madrid x Club Brugge,1,2
+nanel,Bodø/Glimt x Inter Milan,1,2
+nanel,Bayer Leverkusen x Olympiacos,1,1
+faber,Paris Saint-Germain x AS Monaco,2,1
+faber,Galatasaray x Juventus,1,1
+faber,Real Madrid x Benfica,2,0
+faber,Atalanta x Borussia Dortmund,1,2
+faber,Newcastle United x Qarabag,3,1
+faber,Atlético Madrid x Club Brugge,1,1
+faber,Bodø/Glimt x Inter Milan,1,1
+faber,Bayer Leverkusen x Olympiacos,1,2
+celsinho,Paris Saint-Germain x AS Monaco,3,2
+celsinho,Galatasaray x Juventus,1,1
+celsinho,Real Madrid x Benfica,0,0
+celsinho,Atalanta x Borussia Dortmund,1,1
+celsinho,Newcastle United x Qarabag,3,1
+celsinho,Atlético Madrid x Club Brugge,0,1
+celsinho,Bodø/Glimt x Inter Milan,3,2
+celsinho,Bayer Leverkusen x Olympiacos,2,1
+ranieri,Paris Saint-Germain x AS Monaco,2,0
+ranieri,Galatasaray x Juventus,2,1
+ranieri,Real Madrid x Benfica,2,2
+ranieri,Atalanta x Borussia Dortmund,0,3
+ranieri,Newcastle United x Qarabag,2,0
+ranieri,Atlético Madrid x Club Brugge,2,0
+ranieri,Bodø/Glimt x Inter Milan,0,2
+ranieri,Bayer Leverkusen x Olympiacos,3,1
+feijao,Paris Saint-Germain x AS Monaco,0,2
+feijao,Galatasaray x Juventus,1,2
+feijao,Real Madrid x Benfica,1,0
+feijao,Atalanta x Borussia Dortmund,0,2
+feijao,Newcastle United x Qarabag,2,1
+feijao,Atlético Madrid x Club Brugge,1,3
+feijao,Bodø/Glimt x Inter Milan,0,2
+feijao,Bayer Leverkusen x Olympiacos,0,2
+ivan,Paris Saint-Germain x AS Monaco,2,1
+ivan,Galatasaray x Juventus,1,1
+ivan,Real Madrid x Benfica,2,1
+ivan,Atalanta x Borussia Dortmund,1,1
+ivan,Newcastle United x Qarabag,2,1
+ivan,Atlético Madrid x Club Brugge,2,1
+ivan,Bodø/Glimt x Inter Milan,1,2
+ivan,Bayer Leverkusen x Olympiacos,2,1
+michel,Paris Saint-Germain x AS Monaco,2,1
+michel,Galatasaray x Juventus,1,1
+michel,Real Madrid x Benfica,3,1
+michel,Atalanta x Borussia Dortmund,0,2
+michel,Newcastle United x Qarabag,1,1
+michel,Atlético Madrid x Club Brugge,1,2
+michel,Bodø/Glimt x Inter Milan,1,2
+michel,Bayer Leverkusen x Olympiacos,1,1
+deco,Paris Saint-Germain x AS Monaco,2,0
+deco,Galatasaray x Juventus,2,1
+deco,Real Madrid x Benfica,2,1
+deco,Atalanta x Borussia Dortmund,0,2
+deco,Newcastle United x Qarabag,2,0
+deco,Atlético Madrid x Club Brugge,2,1
+deco,Bodø/Glimt x Inter Milan,0,2
+deco,Bayer Leverkusen x Olympiacos,2,1
+oficial,Paris Saint-Germain x AS Monaco,3,2
+oficial,Galatasaray x Juventus,5,2
+oficial,Real Madrid x Benfica,1,0
+oficial,Atalanta x Borussia Dortmund,0,2
+oficial,Newcastle United x Qarabag,6,1
+oficial,Atlético Madrid x Club Brugge,3,3
+oficial,Bodø/Glimt x Inter Milan,3,1
+oficial,Bayer Leverkusen x Olympiacos,2,0
+marcel,Paris Saint-Germain x AS Monaco,1,2
+marcel,Galatasaray x Juventus,3,1
+marcel,Real Madrid x Benfica,1,3
+marcel,Atalanta x Borussia Dortmund,2,1
+marcel,Newcastle United x Qarabag,1,4
+marcel,Atlético Madrid x Club Brugge,0,1
+marcel,Bodø/Glimt x Inter Milan,2,0
+marcel,Bayer Leverkusen x Olympiacos,1,3
+dan,Paris Saint-Germain x AS Monaco,0,3
+dan,Galatasaray x Juventus,3,1
+dan,Real Madrid x Benfica,1,3
+dan,Atalanta x Borussia Dortmund,1,3
+dan,Newcastle United x Qarabag,1,2
+dan,Atlético Madrid x Club Brugge,0,2
+dan,Bodø/Glimt x Inter Milan,2,0
+dan,Bayer Leverkusen x Olympiacos,1,3
+felippe-leite,Paris Saint-Germain x AS Monaco,0,4
+felippe-leite,Galatasaray x Juventus,1,0
+felippe-leite,Real Madrid x Benfica,0,3
+felippe-leite,Atalanta x Borussia Dortmund,2,2
+felippe-leite,Newcastle United x Qarabag,0,1
+felippe-leite,Atlético Madrid x Club Brugge,1,2
+felippe-leite,Bodø/Glimt x Inter Milan,2,0
+felippe-leite,Bayer Leverkusen x Olympiacos,0,2
+leo-raposo,Paris Saint-Germain x AS Monaco,2,3
+leo-raposo,Galatasaray x Juventus,1,0
+leo-raposo,Real Madrid x Benfica,0,2
+leo-raposo,Atalanta x Borussia Dortmund,2,1
+leo-raposo,Newcastle United x Qarabag,0,3
+leo-raposo,Atlético Madrid x Club Brugge,1,2
+leo-raposo,Bodø/Glimt x Inter Milan,4,0
+leo-raposo,Bayer Leverkusen x Olympiacos,0,1
+gui-giron,Paris Saint-Germain x AS Monaco,0,2
+gui-giron,Galatasaray x Juventus,2,0
+gui-giron,Real Madrid x Benfica,0,2
+gui-giron,Atalanta x Borussia Dortmund,1,1
+gui-giron,Newcastle United x Qarabag,0,3
+gui-giron,Atlético Madrid x Club Brugge,0,2
+gui-giron,Bodø/Glimt x Inter Milan,3,0
+gui-giron,Bayer Leverkusen x Olympiacos,0,2
+scarpa,Paris Saint-Germain x AS Monaco,1,4
+scarpa,Galatasaray x Juventus,2,0
+scarpa,Real Madrid x Benfica,0,3
+scarpa,Atalanta x Borussia Dortmund,0,1
+scarpa,Newcastle United x Qarabag,0,4
+scarpa,Atlético Madrid x Club Brugge,0,2
+scarpa,Bodø/Glimt x Inter Milan,3,0
+scarpa,Bayer Leverkusen x Olympiacos,2,2
+rafinha,Paris Saint-Germain x AS Monaco,0,3
+rafinha,Galatasaray x Juventus,2,1
+rafinha,Real Madrid x Benfica,1,3
+rafinha,Atalanta x Borussia Dortmund,0,1
+rafinha,Newcastle United x Qarabag,0,2
+rafinha,Atlético Madrid x Club Brugge,1,3
+rafinha,Bodø/Glimt x Inter Milan,2,1
+rafinha,Bayer Leverkusen x Olympiacos,1,1
+biel,Paris Saint-Germain x AS Monaco,0,2
+biel,Galatasaray x Juventus,3,1
+biel,Real Madrid x Benfica,1,4
+biel,Atalanta x Borussia Dortmund,2,2
+biel,Newcastle United x Qarabag,1,2
+biel,Atlético Madrid x Club Brugge,1,2
+biel,Bodø/Glimt x Inter Milan,2,0
+biel,Bayer Leverkusen x Olympiacos,1,2
+serginho,Paris Saint-Germain x AS Monaco,0,2
+serginho,Galatasaray x Juventus,1,1
+serginho,Real Madrid x Benfica,1,2
+serginho,Atalanta x Borussia Dortmund,1,1
+serginho,Newcastle United x Qarabag,0,2
+serginho,Atlético Madrid x Club Brugge,0,1
+serginho,Bodø/Glimt x Inter Milan,3,1
+serginho,Bayer Leverkusen x Olympiacos,0,2
+muca,Paris Saint-Germain x AS Monaco,0,3
+muca,Galatasaray x Juventus,2,1
+muca,Real Madrid x Benfica,1,3
+muca,Atalanta x Borussia Dortmund,2,1
+muca,Newcastle United x Qarabag,0,3
+muca,Atlético Madrid x Club Brugge,0,2
+muca,Bodø/Glimt x Inter Milan,2,0
+muca,Bayer Leverkusen x Olympiacos,0,2
+leo-picca,Paris Saint-Germain x AS Monaco,1,2
+leo-picca,Galatasaray x Juventus,2,0
+leo-picca,Real Madrid x Benfica,0,2
+leo-picca,Atalanta x Borussia Dortmund,1,1
+leo-picca,Newcastle United x Qarabag,0,2
+leo-picca,Atlético Madrid x Club Brugge,0,2
+leo-picca,Bodø/Glimt x Inter Milan,2,0
+leo-picca,Bayer Leverkusen x Olympiacos,0,2
+victor,Paris Saint-Germain x AS Monaco,0,2
+victor,Galatasaray x Juventus,2,0
+victor,Real Madrid x Benfica,1,5
+victor,Atalanta x Borussia Dortmund,1,1
+victor,Newcastle United x Qarabag,0,2
+victor,Atlético Madrid x Club Brugge,1,1
+victor,Bodø/Glimt x Inter Milan,4,0
+victor,Bayer Leverkusen x Olympiacos,0,2
+enrico,Paris Saint-Germain x AS Monaco,0,2
+enrico,Galatasaray x Juventus,2,0
+enrico,Real Madrid x Benfica,1,2
+enrico,Atalanta x Borussia Dortmund,2,2
+enrico,Newcastle United x Qarabag,0,1
+enrico,Atlético Madrid x Club Brugge,1,1
+enrico,Bodø/Glimt x Inter Milan,2,0
+enrico,Bayer Leverkusen x Olympiacos,0,1
+marcel,Paris Saint-Germain x Chelsea,1,0
+marcel,Liverpool x Galatasaray,1,1
+marcel,Real Madrid x Manchester City,2,1
+marcel,Bayern Munich x Atalanta,1,1
+marcel,Barcelona x Newcastle United,2,1
+marcel,Atlético Madrid x Tottenham Hotspur,0,0
+marcel,Sporting CP x Bodø/Glimt,0,1
+marcel,Arsenal x Bayer Leverkusen,2,2
+dan,Paris Saint-Germain x Chelsea,2,1
+dan,Liverpool x Galatasaray,0,1
+dan,Real Madrid x Manchester City,1,1
+dan,Bayern Munich x Atalanta,2,1
+dan,Barcelona x Newcastle United,2,1
+dan,Atlético Madrid x Tottenham Hotspur,2,0
+dan,Sporting CP x Bodø/Glimt,0,2
+dan,Arsenal x Bayer Leverkusen,0,1
+felippe-leite,Paris Saint-Germain x Chelsea,3,0
+felippe-leite,Liverpool x Galatasaray,2,1
+felippe-leite,Real Madrid x Manchester City,1,1
+felippe-leite,Bayern Munich x Atalanta,2,1
+felippe-leite,Barcelona x Newcastle United,0,2
+felippe-leite,Atlético Madrid x Tottenham Hotspur,2,1
+felippe-leite,Sporting CP x Bodø/Glimt,0,2
+felippe-leite,Arsenal x Bayer Leverkusen,3,2
+leo-raposo,Paris Saint-Germain x Chelsea,2,3
+leo-raposo,Liverpool x Galatasaray,3,1
+leo-raposo,Real Madrid x Manchester City,3,1
+leo-raposo,Bayern Munich x Atalanta,0,1
+leo-raposo,Barcelona x Newcastle United,1,0
+leo-raposo,Atlético Madrid x Tottenham Hotspur,2,0
+leo-raposo,Sporting CP x Bodø/Glimt,0,2
+leo-raposo,Arsenal x Bayer Leverkusen,1,0
+gui-giron,Paris Saint-Germain x Chelsea,1,0
+gui-giron,Liverpool x Galatasaray,1,0
+gui-giron,Real Madrid x Manchester City,1,1
+gui-giron,Bayern Munich x Atalanta,2,0
+gui-giron,Barcelona x Newcastle United,1,0
+gui-giron,Atlético Madrid x Tottenham Hotspur,2,0
+gui-giron,Sporting CP x Bodø/Glimt,0,1
+gui-giron,Arsenal x Bayer Leverkusen,2,1
+scarpa,Paris Saint-Germain x Chelsea,1,1
+scarpa,Liverpool x Galatasaray,0,1
+scarpa,Real Madrid x Manchester City,0,2
+scarpa,Bayern Munich x Atalanta,3,0
+scarpa,Barcelona x Newcastle United,2,2
+scarpa,Atlético Madrid x Tottenham Hotspur,1,0
+scarpa,Sporting CP x Bodø/Glimt,0,1
+scarpa,Arsenal x Bayer Leverkusen,0,0
+rafinha,Paris Saint-Germain x Chelsea,2,1
+rafinha,Liverpool x Galatasaray,0,1
+rafinha,Real Madrid x Manchester City,1,2
+rafinha,Bayern Munich x Atalanta,3,0
+rafinha,Barcelona x Newcastle United,1,2
+rafinha,Atlético Madrid x Tottenham Hotspur,4,0
+rafinha,Sporting CP x Bodø/Glimt,1,2
+rafinha,Arsenal x Bayer Leverkusen,2,2
+biel,Paris Saint-Germain x Chelsea,2,1
+biel,Liverpool x Galatasaray,3,2
+biel,Real Madrid x Manchester City,2,1
+biel,Bayern Munich x Atalanta,2,1
+biel,Barcelona x Newcastle United,1,1
+biel,Atlético Madrid x Tottenham Hotspur,1,0
+biel,Sporting CP x Bodø/Glimt,1,2
+biel,Arsenal x Bayer Leverkusen,0,1
+serginho,Paris Saint-Germain x Chelsea,2,2
+serginho,Liverpool x Galatasaray,0,1
+serginho,Real Madrid x Manchester City,1,1
+serginho,Bayern Munich x Atalanta,2,1
+serginho,Barcelona x Newcastle United,2,1
+serginho,Atlético Madrid x Tottenham Hotspur,1,0
+serginho,Sporting CP x Bodø/Glimt,0,2
+serginho,Arsenal x Bayer Leverkusen,2,1
+muca,Paris Saint-Germain x Chelsea,2,1
+muca,Liverpool x Galatasaray,2,1
+muca,Real Madrid x Manchester City,1,2
+muca,Bayern Munich x Atalanta,2,1
+muca,Barcelona x Newcastle United,1,2
+muca,Atlético Madrid x Tottenham Hotspur,2,0
+muca,Sporting CP x Bodø/Glimt,0,2
+muca,Arsenal x Bayer Leverkusen,2,0
+leo-picca,Paris Saint-Germain x Chelsea,2,1
+leo-picca,Liverpool x Galatasaray,3,1
+leo-picca,Real Madrid x Manchester City,2,1
+leo-picca,Bayern Munich x Atalanta,3,1
+leo-picca,Barcelona x Newcastle United,2,2
+leo-picca,Atlético Madrid x Tottenham Hotspur,2,0
+leo-picca,Sporting CP x Bodø/Glimt,2,2
+leo-picca,Arsenal x Bayer Leverkusen,3,1
+victor,Paris Saint-Germain x Chelsea,2,2
+victor,Liverpool x Galatasaray,2,1
+victor,Real Madrid x Manchester City,2,2
+victor,Bayern Munich x Atalanta,1,1
+victor,Barcelona x Newcastle United,2,1
+victor,Atlético Madrid x Tottenham Hotspur,1,1
+victor,Sporting CP x Bodø/Glimt,0,2
+victor,Arsenal x Bayer Leverkusen,2,1
+enrico,Paris Saint-Germain x Chelsea,3,1
+enrico,Liverpool x Galatasaray,1,1
+enrico,Real Madrid x Manchester City,3,2
+enrico,Bayern Munich x Atalanta,1,1
+enrico,Barcelona x Newcastle United,1,1
+enrico,Atlético Madrid x Tottenham Hotspur,2,1
+enrico,Sporting CP x Bodø/Glimt,2,2
+enrico,Arsenal x Bayer Leverkusen,0,0
+nanel,Paris Saint-Germain x Chelsea,2,2
+nanel,Liverpool x Galatasaray,1,2
+nanel,Real Madrid x Manchester City,2,1
+nanel,Bayern Munich x Atalanta,2,1
+nanel,Barcelona x Newcastle United,1,2
+nanel,Atlético Madrid x Tottenham Hotspur,1,2
+nanel,Sporting CP x Bodø/Glimt,1,2
+nanel,Arsenal x Bayer Leverkusen,2,1
+faber,Paris Saint-Germain x Chelsea,2,1
+faber,Liverpool x Galatasaray,1,1
+faber,Real Madrid x Manchester City,2,2
+faber,Bayern Munich x Atalanta,2,0
+faber,Barcelona x Newcastle United,1,1
+faber,Atlético Madrid x Tottenham Hotspur,2,0
+faber,Sporting CP x Bodø/Glimt,0,2
+faber,Arsenal x Bayer Leverkusen,1,0
+celsinho,Paris Saint-Germain x Chelsea,2,3
+celsinho,Liverpool x Galatasaray,2,1
+celsinho,Real Madrid x Manchester City,1,1
+celsinho,Bayern Munich x Atalanta,0,1
+celsinho,Barcelona x Newcastle United,3,1
+celsinho,Atlético Madrid x Tottenham Hotspur,1,2
+celsinho,Sporting CP x Bodø/Glimt,0,1
+celsinho,Arsenal x Bayer Leverkusen,1,1
+ranieri,Paris Saint-Germain x Chelsea,2,3
+ranieri,Liverpool x Galatasaray,1,1
+ranieri,Real Madrid x Manchester City,2,2
+ranieri,Bayern Munich x Atalanta,2,0
+ranieri,Barcelona x Newcastle United,3,1
+ranieri,Atlético Madrid x Tottenham Hotspur,1,0
+ranieri,Sporting CP x Bodø/Glimt,2,2
+ranieri,Arsenal x Bayer Leverkusen,2,2
+feijao,Paris Saint-Germain x Chelsea,2,1
+feijao,Liverpool x Galatasaray,3,1
+feijao,Real Madrid x Manchester City,2,2
+feijao,Bayern Munich x Atalanta,2,1
+feijao,Barcelona x Newcastle United,1,2
+feijao,Atlético Madrid x Tottenham Hotspur,2,0
+feijao,Sporting CP x Bodø/Glimt,2,2
+feijao,Arsenal x Bayer Leverkusen,1,0
+ivan,Paris Saint-Germain x Chelsea,1,1
+ivan,Liverpool x Galatasaray,0,1
+ivan,Real Madrid x Manchester City,2,2
+ivan,Bayern Munich x Atalanta,1,1
+ivan,Barcelona x Newcastle United,1,1
+ivan,Atlético Madrid x Tottenham Hotspur,1,1
+ivan,Sporting CP x Bodø/Glimt,1,2
+ivan,Arsenal x Bayer Leverkusen,1,1
+michel,Paris Saint-Germain x Chelsea,1,2
+michel,Liverpool x Galatasaray,3,1
+michel,Real Madrid x Manchester City,3,0
+michel,Bayern Munich x Atalanta,2,2
+michel,Barcelona x Newcastle United,2,0
+michel,Atlético Madrid x Tottenham Hotspur,2,0
+michel,Sporting CP x Bodø/Glimt,1,1
+michel,Arsenal x Bayer Leverkusen,3,1
+deco,Paris Saint-Germain x Chelsea,2,1
+deco,Liverpool x Galatasaray,1,1
+deco,Real Madrid x Manchester City,2,1
+deco,Bayern Munich x Atalanta,2,1
+deco,Barcelona x Newcastle United,2,1
+deco,Atlético Madrid x Tottenham Hotspur,2,0
+deco,Sporting CP x Bodø/Glimt,2,1
+deco,Arsenal x Bayer Leverkusen,2,1
+oficial,Paris Saint-Germain x Chelsea,5,2
+oficial,Liverpool x Galatasaray,0,1
+oficial,Real Madrid x Manchester City,3,0
+oficial,Bayern Munich x Atalanta,6,1
+oficial,Barcelona x Newcastle United,1,1
+oficial,Atlético Madrid x Tottenham Hotspur,5,2
+oficial,Sporting CP x Bodø/Glimt,0,3
+oficial,Arsenal x Bayer Leverkusen,1,1
+marcel,Paris Saint-Germain x Chelsea,2,2
+marcel,Liverpool x Galatasaray,1,2
+marcel,Real Madrid x Manchester City,2,2
+marcel,Bayern Munich x Atalanta,1,3
+marcel,Barcelona x Newcastle United,1,3
+marcel,Atlético Madrid x Tottenham Hotspur,2,0
+marcel,Sporting CP x Bodø/Glimt,0,2
+marcel,Arsenal x Bayer Leverkusen,1,3
+dan,Paris Saint-Germain x Chelsea,3,2
+dan,Liverpool x Galatasaray,1,3
+dan,Real Madrid x Manchester City,3,0
+dan,Bayern Munich x Atalanta,0,2
+dan,Barcelona x Newcastle United,0,3
+dan,Atlético Madrid x Tottenham Hotspur,2,1
+dan,Sporting CP x Bodø/Glimt,2,2
+dan,Arsenal x Bayer Leverkusen,1,3
+felippe-leite,Paris Saint-Germain x Chelsea,2,2
+felippe-leite,Liverpool x Galatasaray,0,3
+felippe-leite,Real Madrid x Manchester City,1,2
+felippe-leite,Bayern Munich x Atalanta,0,2
+felippe-leite,Barcelona x Newcastle United,0,3
+felippe-leite,Atlético Madrid x Tottenham Hotspur,2,3
+felippe-leite,Sporting CP x Bodø/Glimt,0,2
+felippe-leite,Arsenal x Bayer Leverkusen,1,3
+leo-raposo,Paris Saint-Germain x Chelsea,2,1
+leo-raposo,Liverpool x Galatasaray,0,2
+leo-raposo,Real Madrid x Manchester City,2,3
+leo-raposo,Bayern Munich x Atalanta,1,3
+leo-raposo,Barcelona x Newcastle United,0,2
+leo-raposo,Atlético Madrid x Tottenham Hotspur,1,2
+leo-raposo,Sporting CP x Bodø/Glimt,2,1
+leo-raposo,Arsenal x Bayer Leverkusen,0,2
+gui-giron,Paris Saint-Germain x Chelsea,1,1
+gui-giron,Liverpool x Galatasaray,0,2
+gui-giron,Real Madrid x Manchester City,2,0
+gui-giron,Bayern Munich x Atalanta,0,2
+gui-giron,Barcelona x Newcastle United,0,2
+gui-giron,Atlético Madrid x Tottenham Hotspur,1,1
+gui-giron,Sporting CP x Bodø/Glimt,1,3
+gui-giron,Arsenal x Bayer Leverkusen,0,2
+scarpa,Paris Saint-Germain x Chelsea,2,0
+scarpa,Liverpool x Galatasaray,1,3
+scarpa,Real Madrid x Manchester City,2,2
+scarpa,Bayern Munich x Atalanta,0,2
+scarpa,Barcelona x Newcastle United,1,4
+scarpa,Atlético Madrid x Tottenham Hotspur,1,1
+scarpa,Sporting CP x Bodø/Glimt,2,1
+scarpa,Arsenal x Bayer Leverkusen,0,2
+rafinha,Paris Saint-Germain x Chelsea,1,2
+rafinha,Liverpool x Galatasaray,0,2
+rafinha,Real Madrid x Manchester City,3,2
+rafinha,Bayern Munich x Atalanta,1,4
+rafinha,Barcelona x Newcastle United,2,4
+rafinha,Atlético Madrid x Tottenham Hotspur,0,2
+rafinha,Sporting CP x Bodø/Glimt,1,1
+rafinha,Arsenal x Bayer Leverkusen,1,3
+biel,Paris Saint-Germain x Chelsea,2,1
+biel,Liverpool x Galatasaray,0,2
+biel,Real Madrid x Manchester City,2,2
+biel,Bayern Munich x Atalanta,1,4
+biel,Barcelona x Newcastle United,0,2
+biel,Atlético Madrid x Tottenham Hotspur,1,2
+biel,Sporting CP x Bodø/Glimt,1,1
+biel,Arsenal x Bayer Leverkusen,0,2
+serginho,Paris Saint-Germain x Chelsea,1,2
+serginho,Liverpool x Galatasaray,1,3
+serginho,Real Madrid x Manchester City,2,2
+serginho,Bayern Munich x Atalanta,0,2
+serginho,Barcelona x Newcastle United,1,3
+serginho,Atlético Madrid x Tottenham Hotspur,1,1
+serginho,Sporting CP x Bodø/Glimt,0,0
+serginho,Arsenal x Bayer Leverkusen,0,2
+muca,Paris Saint-Germain x Chelsea,2,2
+muca,Liverpool x Galatasaray,0,3
+muca,Real Madrid x Manchester City,2,0
+muca,Bayern Munich x Atalanta,1,3
+muca,Barcelona x Newcastle United,1,3
+muca,Atlético Madrid x Tottenham Hotspur,1,1
+muca,Sporting CP x Bodø/Glimt,2,2
+muca,Arsenal x Bayer Leverkusen,0,3
+leo-picca,Paris Saint-Germain x Chelsea,2,2
+leo-picca,Liverpool x Galatasaray,0,2
+leo-picca,Real Madrid x Manchester City,2,1
+leo-picca,Bayern Munich x Atalanta,0,2
+leo-picca,Barcelona x Newcastle United,1,3
+leo-picca,Atlético Madrid x Tottenham Hotspur,0,1
+leo-picca,Sporting CP x Bodø/Glimt,0,2
+leo-picca,Arsenal x Bayer Leverkusen,0,3
+victor,Paris Saint-Germain x Chelsea,2,1
+victor,Liverpool x Galatasaray,2,3
+victor,Real Madrid x Manchester City,1,2
+victor,Bayern Munich x Atalanta,1,3
+victor,Barcelona x Newcastle United,1,3
+victor,Atlético Madrid x Tottenham Hotspur,2,1
+victor,Sporting CP x Bodø/Glimt,0,1
+victor,Arsenal x Bayer Leverkusen,0,3
+enrico,Paris Saint-Germain x Chelsea,2,2
+enrico,Liverpool x Galatasaray,1,2
+enrico,Real Madrid x Manchester City,2,2
+enrico,Bayern Munich x Atalanta,0,2
+enrico,Barcelona x Newcastle United,1,3
+enrico,Atlético Madrid x Tottenham Hotspur,1,1
+enrico,Sporting CP x Bodø/Glimt,0,1
+enrico,Arsenal x Bayer Leverkusen,0,1

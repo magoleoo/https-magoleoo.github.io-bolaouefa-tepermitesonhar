@@ -1182,56 +1182,56 @@ function renderPredictionConsultation() {
 
   const tabsMarkup = `
     <div class="tabs-bar" style="margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; overflow-x: auto;">
-                  .join("")}
-              </tbody>
-            </table>
-          </div>
-        </article>
-      `
-    )
-    .join("");
+      <button class="tab-button ${activeConsultTab === 'playoff' ? 'is-active' : ''}" onclick="setConsultTab('playoff')">Ligas</button>
+      <button class="tab-button ${activeConsultTab === 'oitavas' ? 'is-active' : ''}" onclick="setConsultTab('oitavas')">Playoffs</button>
+      <button class="tab-button ${activeConsultTab === 'class8' ? 'is-active' : ''}" onclick="setConsultTab('class8')">Oitavas</button>
+    </div>
+  `;
 
-  const classMarkup = Object.entries(groupedClassifications)
-    .map(
-      ([slot, data]) => `
-        <article class="prediction-consult-card">
-          <div class="prediction-consult-header">
-            <div>
-              <strong>${slot}</strong>
-              <p class="muted">Classificado oficial: <strong>${data.official}</strong></p>
-            </div>
-            <span class="tag">Classificado</span>
-          </div>
-          <div class="table-wrap">
-            <table class="dashboard-table compact-table">
-              <thead>
-                <tr>
-                  <th>Palpiteiro</th>
-                  <th>Palpite</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${data.predictions
-                  .map(
-                    (prediction) => `
-                      <tr>
-                        <td><strong>${prediction.name}</strong></td>
-                        <td>${prediction.pick}</td>
-                        <td>${prediction.hit ? '<span class="result-chip exact">Acertou</span>' : '<span class="result-chip miss">Errou</span>'}</td>
-                      </tr>
-                    `
-                  )
-                  .join("")}
-              </tbody>
-            </table>
-          </div>
-        </article>
-      `
-    )
-    .join("");
+  let phaseKey = 'LEAGUE';
+  if (activeConsultTab === 'oitavas') phaseKey = 'PLAYOFF';
+  else if (activeConsultTab === 'class8') phaseKey = 'ROUND_OF_16';
 
-  predictionsConsultationEl.innerHTML = `${tabsMarkup}${matchesMarkup}${classMarkup}`;
+  const phaseData = backtestData.phases[phaseKey] || { fixtures: [] };
+
+  const matchesMarkup = phaseData.fixtures.map((fixture) => `
+    <article class="prediction-consult-card">
+      <div class="prediction-consult-header">
+        <div>
+          <strong>${fixture.label}</strong>
+          <p class="muted">Placar oficial: <strong>${fixture.official || '-'}</strong></p>
+        </div>
+        <span class="tag">Jogo</span>
+      </div>
+      <div class="table-wrap">
+        <table class="dashboard-table compact-table">
+          <thead>
+            <tr>
+              <th>Palpiteiro</th>
+              <th>Palpite</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${fixture.picks.map(pick => `
+              <tr>
+                <td><strong>${pick.participant}</strong></td>
+                <td>${pick.pick}</td>
+                <td><span class="result-chip ${pick.rank_value && parseFloat(pick.rank_value) > 3 ? 'exact' : (pick.rank_value ? 'trend' : '')}">${pick.rank_value ? pick.rank_value + ' pts' : '-'}</span></td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    </article>
+  `).join("");
+
+  container.innerHTML = `
+    ${tabsMarkup}
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+      ${matchesMarkup || '<p class="muted">Nenhum jogo carregado para esta fase.</p>'}
+    </div>
+  `;
 }
 
 function toggleLoginState() {

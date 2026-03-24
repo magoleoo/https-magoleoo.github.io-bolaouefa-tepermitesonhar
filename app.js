@@ -1101,6 +1101,9 @@ function renderPredictionsGallery() {
         </article>
       `
     )
+    .join("");
+}
+
 let activeConsultTab = 'playoff';
 
 window.setConsultTab = function(tab) {

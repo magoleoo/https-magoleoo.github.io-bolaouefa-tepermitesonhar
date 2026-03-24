@@ -144,9 +144,9 @@ function getRankingRows() {
       roundOf16: row.round_of_16_points,
       superclassic: row.superclassic_points,
       hopeSolo: row.hope_solo_hits,
-      favoriteTeam: "-",
-      scorerPick: "-",
-      assistPick: "-"
+      favoriteTeam: row.favorite_team || "-",
+      scorerPick: row.scorer_pick || "-",
+      assistPick: row.assist_pick || "-"
     };
   });
   mapped.sort((a, b) => b.total - a.total);

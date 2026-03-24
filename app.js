@@ -433,148 +433,66 @@ function renderRanking(leaderboard) {
 }
 
 function renderMatches() {
+  const container = document.getElementById("results-container");
+  if (!container || !backtestData?.phases) return;
+
   const tabsMarkup = `
     <div class="tabs-bar" style="margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; overflow-x: auto;">
-      <button class="tab-button ${activeResultsTab === 'LEAGUE' ? 'is-active' : ''}" onclick="setResultsTab('LEAGUE')">Primeira Fase</button>
+      <button class="tab-button ${activeResultsTab === 'LEAGUE' ? 'is-active' : ''}" onclick="setResultsTab('LEAGUE')">Ligas</button>
       <button class="tab-button ${activeResultsTab === 'PLAYOFF' ? 'is-active' : ''}" onclick="setResultsTab('PLAYOFF')">Playoffs</button>
       <button class="tab-button ${activeResultsTab === 'ROUND_OF_16' ? 'is-active' : ''}" onclick="setResultsTab('ROUND_OF_16')">Oitavas</button>
-      <button class="tab-button ${activeResultsTab === 'QUARTER' ? 'is-active' : ''}" onclick="setResultsTab('QUARTER')">Quartas</button>
     </div>
   `;
 
-  let contentMarkup = "";
+  let sourceFixtures = backtestData.phases[activeResultsTab]?.fixtures || [];
+  const finishedFixtures = sourceFixtures.filter(f => f.official && f.official.trim() !== "" && f.official !== "-");
 
-  if (activeResultsTab === 'LEAGUE') {
-    const leaguePhaseMarkup = leaguePhaseData
-      ? Object.entries(
-          leaguePhaseData.records.reduce((acc, record) => {
-            if (!record.matchday.startsWith("Machtday")) return acc;
-            if (!acc[record.matchday]) acc[record.matchday] = [];
-            acc[record.matchday].push(record);
-            return acc;
-          }, {})
-        )
-          .map(
-            ([matchday, records]) => `
-              <section class="phase-block">
-                <div class="phase-block-header">
-                  <div>
-                    <p class="eyebrow">Fase do campeonato</p>
-                    <h3>Primeira fase • ${matchday}</h3>
-                  </div>
-                  <span class="tag">${records.length} partidas</span>
-                </div>
-                <div class="league-phase-grid">
-                  ${records
-                    .map(
-                      (record, index) => `
-                        <article class="league-row-card ${isManualSuperclassic(createLeagueMatchId(matchday, index)) ? "is-superclassic" : ""}">
-                          <div class="superclassic-card-header">
-                            <strong>Jogo ${index + 1}</strong>
-                            ${
-                              isManualSuperclassic(createLeagueMatchId(matchday, index))
-                                ? `<span class="superclassic-chip">Superclássico</span>`
-                                : ""
-                            }
-                          </div>
-                          <span class="muted">Resultado oficial: ${record.official}</span>
-                          <small class="muted">${record.picks.length} palpites registrados</small>
-                          <button
-                            class="superclassic-toggle"
-                            type="button"
-                            data-superclassic-id="${createLeagueMatchId(matchday, index)}"
-                          >
-                            ${
-                              isManualSuperclassic(createLeagueMatchId(matchday, index))
-                                ? "Remover de superclássicos"
-                                : "Marcar como superclássico"
-                            }
-                          </button>
-                        </article>
-                      `
-                    )
-                    .join("")}
-                </div>
-              </section>
-            `
-          )
-          .join("")
-      : `
-        <section class="phase-block">
-          <div class="phase-block-header">
-            <div>
-              <p class="eyebrow">Fase do campeonato</p>
-              <h3>Primeira fase</h3>
-            </div>
-            <span class="tag">carregando</span>
-          </div>
-          <p class="muted">Estou carregando os 144 jogos da fase de liga a partir da planilha oficial.</p>
-        </section>
-      `;
-      contentMarkup = leaguePhaseMarkup;
-  } else {
-    const matches = knockoutResults.filter(m => m.phase === activeResultsTab);
-    const phaseLabel = phaseRules[activeResultsTab] ? phaseRules[activeResultsTab].label : (activeResultsTab === 'QUARTER' ? 'Quartas' : activeResultsTab);
-    contentMarkup = `
-        <section class="phase-block">
-          <div class="phase-block-header">
-            <div>
-              <p class="eyebrow">Fase do campeonato</p>
-              <h3>${phaseLabel}</h3>
-            </div>
-            <span class="tag">${matches.length} jogos</span>
-          </div>
-          <div class="matches-grid">
-            ${matches
-              .map(
-                (match) => {
-                  const matchTitle = createKnockoutMatchTitle(match);
-                  const highlights = predictionHighlightsByMatchTitle[matchTitle];
-                  return `
-                  <article class="match-card ${isManualSuperclassic(match.id) ? "is-superclassic" : ""}">
-                    <div class="match-header">
-                      <div>
-                        <p class="eyebrow">${phaseLabel}</p>
-                        <strong>${match.roundLabel}</strong>
-                      </div>
-                      <div class="match-header-tags">
-                        ${isManualSuperclassic(match.id) ? `<span class="superclassic-chip">Superclássico</span>` : ""}
-                        <span class="status-pill status-finished">Encerrado</span>
-                      </div>
-                    </div>
-                    <div class="teams">
-                      <span class="team-line">${teamBadgeMarkup(match.homeTeam)} ${match.homeTeam}</span>
-                      <span class="team-line right">${match.awayTeam} ${teamBadgeMarkup(match.awayTeam)}</span>
-                    </div>
-                    <div class="scoreline">
-                      <strong>${match.scoreFinal.home ?? '-'}</strong>
-                      <strong>${match.scoreFinal.away ?? '-'}</strong>
-                    </div>
-                    <p class="muted">${formatKickoff(match.kickoff)}${match.aggregate ? ` • agregado ${match.aggregate}` : ''}${match.qualified ? ` • classificado: ${match.qualified}` : ""}${match.extraTime ? " • prorrogação" : ""}</p>
-                    ${
-                      highlights
-                        ? `
-                          <div class="prediction-highlights">
-                            ${renderPredictionHighlightList("Placar exato", highlights.exact, "exact")}
-                            ${renderPredictionHighlightList("Tendência", highlights.tendency, "trend")}
-                          </div>
-                        `
-                        : ""
-                    }
-                    <button class="superclassic-toggle" type="button" data-superclassic-id="${match.id}">
-                      ${isManualSuperclassic(match.id) ? "Remover de superclássicos" : "Marcar como superclássico"}
-                    </button>
-                  </article>
-                `;
-                }
-              )
-              .join("")}
-          </div>
-        </section>
-      `;
-  }
+  const contentMarkup = `
+    <div style="margin-bottom: 24px; text-align: center;">
+      <h3 style="margin-bottom: 8px;">Resultados Processados</h3>
+      <p class="muted">${finishedFixtures.length} jogos computados nesta fase</p>
+    </div>
+    <div class="matches-grid">
+      ${finishedFixtures.map(fixture => {
+        let h_score = '';
+        let a_score = '';
+        if (fixture.official.includes('x')) {
+          h_score = fixture.official.split('x')[0] || '';
+          a_score = fixture.official.split('x')[1] || '';
+        } else {
+          h_score = fixture.official;
+        }
+        
+        let t1 = fixture.label;
+        let t2 = '';
+        if (fixture.label.includes(' x ')) {
+           t1 = fixture.label.split(' x ')[0];
+           t2 = fixture.label.split(' x ')[1];
+        }
 
-  matchesGrid.innerHTML = tabsMarkup + contentMarkup;
+        return \`
+        <article class="match-card">
+          <div class="match-header" style="justify-content: center;">
+            <span class="tag">Finalizado</span>
+          </div>
+          <div class="match-teams">
+            <div class="team">
+              <strong>${t1}</strong>
+              <div class="score">${h_score}</div>
+            </div>
+            ${t2 ? \`
+            <div class="team">
+              <div class="score">${a_score}</div>
+              <strong>${t2}</strong>
+            </div>
+            \` : ''}
+          </div>
+        </article>\`
+      }).join('')}
+    </div>
+  `;
+
+  container.innerHTML = tabsMarkup + contentMarkup;
 }
 
 function renderParticipantSnapshot() {
@@ -1111,66 +1029,7 @@ window.setConsultTab = function(tab) {
   renderPredictionConsultation();
 };
 
-function renderMatches() {
-  const container = document.getElementById("results-container");
-  if (!container || !backtestData?.phases) return;
 
-  let sourceFixtures = [];
-  if (activePhaseFilter === 'league') {
-    sourceFixtures = backtestData.phases['LEAGUE']?.fixtures || [];
-  } else if (activePhaseFilter === 'playoffs') {
-    sourceFixtures = backtestData.phases['PLAYOFF']?.fixtures || [];
-  } else if (activePhaseFilter === 'oitavas') {
-    sourceFixtures = backtestData.phases['ROUND_OF_16']?.fixtures || [];
-  }
-
-  const finishedFixtures = sourceFixtures.filter(f => f.official && f.official.trim() !== "" && f.official !== "-");
-
-  container.innerHTML = `
-    <div style="margin-bottom: 24px; text-align: center;">
-      <h3 style="margin-bottom: 8px;">Resultados Processados</h3>
-      <p class="muted">${finishedFixtures.length} jogos computados nesta fase</p>
-    </div>
-    <div class="matches-grid">
-      ${finishedFixtures.map(fixture => {
-        let h_score = '';
-        let a_score = '';
-        if (fixture.official.includes('x')) {
-          h_score = fixture.official.split('x')[0] || '';
-          a_score = fixture.official.split('x')[1] || '';
-        } else {
-          h_score = fixture.official;
-        }
-        
-        let t1 = fixture.label;
-        let t2 = '';
-        if (fixture.label.includes(' x ')) {
-           t1 = fixture.label.split(' x ')[0];
-           t2 = fixture.label.split(' x ')[1];
-        }
-
-        return `
-        <article class="match-card">
-          <div class="match-header" style="justify-content: center;">
-            <span class="tag">Finalizado</span>
-          </div>
-          <div class="match-teams">
-            <div class="team">
-              <strong>${t1}</strong>
-              <div class="score">${h_score}</div>
-            </div>
-            ${t2 ? `
-            <div class="team">
-              <div class="score">${a_score}</div>
-              <strong>${t2}</strong>
-            </div>
-            ` : ''}
-          </div>
-        </article>`
-      }).join('')}
-    </div>
-  `;
-}
 function renderPredictionConsultation() {
   const container = document.getElementById("picks-container");
   if (!container) return;

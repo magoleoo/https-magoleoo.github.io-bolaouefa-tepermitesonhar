@@ -1,0 +1,21 @@
+phase_key,match_label,home_team,away_team,score_home_90,score_away_90,qualified_team
+PLAYOFF,Real Madrid x Benfica,Real Madrid,Benfica,3,1,Real Madrid
+PLAYOFF,Paris Saint-Germain x AS Monaco,Paris Saint-Germain,AS Monaco,5,4,Paris Saint-Germain
+PLAYOFF,Galatasaray x Juventus,Galatasaray,Juventus,,,Galatasaray
+PLAYOFF,Atalanta x Borussia Dortmund,Atalanta,Borussia Dortmund,4,3,Atalanta
+PLAYOFF,Newcastle United x Qarabag,Newcastle United,Qarabag,9,3,Newcastle United
+PLAYOFF,Bodø/Glimt x Inter Milan,Bodø/Glimt,Inter Milan,5,2,Bodø/Glimt
+PLAYOFF,Atlético Madrid x Club Brugge,Atlético Madrid,Club Brugge,7,4,Atlético Madrid
+PLAYOFF,Bayer Leverkusen x Olympiacos,Bayer Leverkusen,Olympiacos,,,Bayer Leverkusen
+ROUND_OF_16,Real Madrid x Manchester City,Real Madrid,Manchester City,5,1,Real Madrid
+ROUND_OF_16,Paris Saint-Germain x Chelsea,Paris Saint-Germain,Chelsea,8,2,Paris Saint-Germain
+ROUND_OF_16,Barcelona x Newcastle United,Barcelona,Newcastle United,8,3,Barcelona
+ROUND_OF_16,Liverpool x Galatasaray,Liverpool,Galatasaray,4,1,Liverpool
+ROUND_OF_16,Bayern Munich x Atalanta,Bayern Munich,Atalanta,10,2,Bayern Munich
+ROUND_OF_16,Arsenal x Bayer Leverkusen,Arsenal,Bayer Leverkusen,3,1,Arsenal
+ROUND_OF_16,Atlético Madrid x Tottenham Hotspur,Atlético Madrid,Tottenham Hotspur,7,5,Atlético Madrid
+ROUND_OF_16,Sporting CP x Bodø/Glimt,Sporting CP,Bodø/Glimt,5,3,Sporting CP
+QUARTER,Sporting CP x Arsenal,Sporting CP,Arsenal,,,
+QUARTER,Real Madrid x Bayern Munich,Real Madrid,Bayern Munich,,,
+QUARTER,Barcelona x Atlético Madrid,Barcelona,Atlético Madrid,,,
+QUARTER,Paris Saint-Germain x Liverpool,Paris Saint-Germain,Liverpool,,,

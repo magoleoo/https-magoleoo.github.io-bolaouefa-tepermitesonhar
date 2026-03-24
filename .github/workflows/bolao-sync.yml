@@ -25,7 +25,8 @@ jobs:
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-          python tools/action_sync.py
+          pip install -r requirements.txt
+          python tools/action_sync_excel.py
           
       - name: Commitar e Salvar JSONs Gerados
         run: |

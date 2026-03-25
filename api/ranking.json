@@ -276,6 +276,1525 @@
     }
   ],
   "phases": {
+    "PLAYOFF": {
+      "fixtures": [
+        {
+          "label": "Monaco x Paris Saint-Germain",
+          "official": "2.0x2.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "2x3",
+              "rank_value": "3.0"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "4x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "3x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Deco",
+              "pick": "3x1",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Galatasaray x Juventus",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Dan",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Victor",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            }
+          ]
+        },
+        {
+          "label": "Benfica x Real Madrid",
+          "official": "2.0x1.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Dan",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "2x1",
+              "rank_value": "3.0"
+            },
+            {
+              "participant": "Muca",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            }
+          ]
+        },
+        {
+          "label": "Borussia Dortmund x Atalanta",
+          "official": "4.0x1.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Dan",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "3x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Enrico",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Faber",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x4",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x1",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Qarabag x Newcastle",
+          "official": "3.0x2.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Dan",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "5x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x1",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Club Brugge x Atlético de Madrid",
+          "official": "4.0x1.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "3x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Bodö/Glimt x Internazionale",
+          "official": "1.0x2.0",
+          "picks": [
+            {
+              "participant": "Dan",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x4",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "3x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "4x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x2",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Olympiacos x Bayer Leverkusen",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Dan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "2x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "1x1",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "1x3",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "3x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": "0.5"
+            }
+          ]
+        }
+      ]
+    },
+    "ROUND_OF_16": {
+      "fixtures": [
+        {
+          "label": "Paris Saint-Germain x Chelsea",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Dan",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "2x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Victor",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "2x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            }
+          ]
+        },
+        {
+          "label": "Galatasaray x Liverpool",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Dan",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x1",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Real Madrid x Manchester City",
+          "official": "1.0x2.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Dan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Victor",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "3x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Faber",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            }
+          ]
+        },
+        {
+          "label": "Atalanta x Bayern de Munique",
+          "official": "4.0x1.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Dan",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "4x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x3",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": "1.0"
+            }
+          ]
+        },
+        {
+          "label": "Newcastle x Barcelona",
+          "official": "7.0x2.0",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Dan",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "2x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "2x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Atlético de Madrid x Tottenham",
+          "official": "3.0x2.0",
+          "picks": [
+            {
+              "participant": "Dan",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Biel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Muca",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Faber",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Michel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x1",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Bodö/Glimt x Sporting",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Dan",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Raposo",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Scarpa",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Biel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Muca",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Enrico",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Faber",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Ivan",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x1",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": ""
+            }
+          ]
+        },
+        {
+          "label": "Bayer Leverkusen x Arsenal",
+          "official": "-",
+          "picks": [
+            {
+              "participant": "Marcel",
+              "pick": "2x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Dan",
+              "pick": "3x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Felippe Leite",
+              "pick": "2x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Gui Giron",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Rafinha",
+              "pick": "2x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Serginho",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Leo Picca",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Victor",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Nanel",
+              "pick": "1x2",
+              "rank_value": ""
+            },
+            {
+              "participant": "Celsinho",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Ranieri",
+              "pick": "2x2",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Feijão",
+              "pick": "2x1",
+              "rank_value": "1.0"
+            },
+            {
+              "participant": "Ivan",
+              "pick": "1x1",
+              "rank_value": "6.0"
+            },
+            {
+              "participant": "Michel",
+              "pick": "1x3",
+              "rank_value": ""
+            },
+            {
+              "participant": "Deco",
+              "pick": "1x2",
+              "rank_value": ""
+            }
+          ]
+        }
+      ]
+    },
     "LEAGUE": {
       "fixtures": [
         {

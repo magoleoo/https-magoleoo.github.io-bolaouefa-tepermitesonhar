@@ -290,34 +290,6 @@ function renderRules() {
   competitionMark.innerHTML = competitionLogoMarkup();
 }
 
-function renderLiveSummary() {
-  const playoffMatches = knockoutResults.filter((match) => match.phase === "PLAYOFF").length;
-  const roundOf16Matches = knockoutResults.filter((match) => match.phase === "ROUND_OF_16").length;
-
-  liveSummary.innerHTML = `
-    <div class="stat-card">
-      <span>1ª fase</span>
-      <strong>${competitionSnapshot.leaguePhaseMatches}</strong>
-      <small class="muted">partidas da fase de liga no formato atual</small>
-    </div>
-    <div class="stat-card">
-      <span>Playoffs</span>
-      <strong>${competitionSnapshot.playoffMatches}</strong>
-      <small class="muted">${playoffMatches} jogos já organizados no app</small>
-    </div>
-    <div class="stat-card">
-      <span>Oitavas</span>
-      <strong>${roundOf16Matches}</strong>
-      <small class="muted">${competitionSnapshot.roundOf16Matches} jogos oficiais do mata-mata</small>
-    </div>
-    <div class="stat-card">
-      <span>Quartas definidas</span>
-      <strong>${competitionSnapshot.quarterFinalists}</strong>
-      <small class="muted">classificados confirmados pela UEFA</small>
-    </div>
-  `;
-}
-
 function renderOverview(leaderboard) {
   const currentRow = leaderboard.find((row) => row.participant.id === currentUserId);
   const leader = leaderboard[0];
@@ -518,8 +490,9 @@ function renderMatches() {
         <div class="qualified-grid">
           ${leaguePhaseTopEight
             .map(
-              (team) => `
+              (team, index) => `
                 <article class="qualified-card">
+                  <span class="position-badge" style="font-weight:bold; color:var(--clr-primary-400); font-family:var(--font-heading); font-size:1.5rem; line-height:1; min-width:30px">${index + 1}º</span>
                   ${teamBadgeMarkup(team, "lg")}
                   <strong>${team}</strong>
                 </article>

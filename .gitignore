@@ -1,0 +1,5 @@
+*.db
+backend/*.db
+backend/data/*.db
+__pycache__/
+*.pyc

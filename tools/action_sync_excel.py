@@ -101,78 +101,71 @@ def main():
         ws = wb[sheet_name]
         fixtures = []
 
-        p_cols = {}
-        for c in range(5, 50):
-            val = normalize(ws.cell(row=2, column=c).value)
-            if val:
-                p_cols[val] = c
+        # Find ALL participant rows mapped to names, since names repeat 4 or 5 times down the sheet!
+        from collections import defaultdict
+        p_row_lists = defaultdict(list)
+        for r in range(3, 120):
+            name = normalize(ws.cell(row=r, column=2).value)
+            if name and name != "None" and name != "" and name.lower() != "oficial" and name.lower() != "resultado":
+                p_row_lists[name].append(r)
 
-        match_row = 3
-        while True:
-            match_lbl = normalize(ws.cell(row=match_row, column=1).value)
-            if not match_lbl:
-                if match_row > 100: break
-                match_row += 1
+        # Matches are spaced columns across Row 2. e.g. Col 3, Col 8, Col 13
+        for c in range(3, 200, 5):
+            match_lbl = normalize(ws.cell(row=2, column=c).value)
+            if not match_lbl or match_lbl == "None" or " x " not in match_lbl:
                 continue
+
+            # Look up official score by searching "oficial" down column 2
+            official_score_h = ""
+            official_score_a = ""
+            for out_r in range(30, 100):
+                if normalize(ws.cell(row=out_r, column=2).value).lower() in ["resultado oficial", "oficial", "placar", "resultado"]:
+                    # Because official score blocks might also repeat, ensure we grab the one with actual numbers
+                    oh = normalize(ws.cell(row=out_r, column=c).value)
+                    oa = normalize(ws.cell(row=out_r, column=c+2).value)
+                    op = normalize(ws.cell(row=out_r, column=c+1).value)
+                    if oh != "" and oa != "" and op == "x":
+                        official_score_h = oh
+                        official_score_a = oa
+                        break
             
-            home_team = normalize(ws.cell(row=match_row, column=2).value)
-            away_team = normalize(ws.cell(row=match_row+1, column=2).value)
-            
-            if " x " not in match_lbl:
-                lbl = f"{home_team} x {away_team}"
-            else:
-                lbl = match_lbl
-
-            official_score_h = normalize(ws.cell(row=match_row, column=3).value)
-            official_score_a = normalize(ws.cell(row=match_row+1, column=3).value)
-            official_res = f"{official_score_h}x{official_score_a}" if official_score_h != "" and official_score_a != "" else ""
-
-            sh = None
-            sa = None
-            try:
-                if official_score_h != "": sh = int(official_score_h)
-                if official_score_a != "": sa = int(official_score_a)
-            except:
-                pass
-
-            matches_list.append({
-                "phase_key": phase_key,
-                "round_label": lbl,
-                "home_team_name": home_team,
-                "away_team_name": away_team,
-                "score_home_90": sh,
-                "score_away_90": sa,
-                "is_finished": 1 if sh is not None else 0
-            })
+            official_res = f"{official_score_h}x{official_score_a}" if official_score_h != "" and official_score_a != "" else "-"
 
             fixture = {
-                "label": lbl,
+                "label": match_lbl,
                 "official": official_res,
                 "picks": []
             }
 
-            for p_name, c in p_cols.items():
-                ph = str(ws.cell(row=match_row, column=c).value).strip() if ws.cell(row=match_row, column=c).value is not None else ""
-                pa = str(ws.cell(row=match_row+1, column=c).value).strip() if ws.cell(row=match_row+1, column=c).value is not None else ""
+            for p_name, rows in p_row_lists.items():
+                best_ph, best_pa, best_pts = "", "", ""
                 
-                # Check points in right adjacent column if available
-                pts = normalize(ws.cell(row=match_row, column=c+1).value)
-                pt_val = ""
-                if pts and pts != "None":
-                    try:
-                        pt_val = str(float(pts))
-                    except:
-                        pass
+                # Check each row this participant appears in
+                for pr in rows:
+                    ph = normalize(ws.cell(row=pr, column=c).value)
+                    sep = normalize(ws.cell(row=pr, column=c+1).value)
+                    pa = normalize(ws.cell(row=pr, column=c+2).value)
+                    pts = normalize(ws.cell(row=pr, column=c+4).value)
+                    
+                    # We want the section that has 'x' in the middle column
+                    if sep == "x" and ph != "" and pa != "":
+                        best_ph = ph
+                        best_pa = pa
+                        if pts and pts != "None":
+                            try:
+                                best_pts = str(float(pts))
+                            except: pass
+                        break
                 
-                if ph != "" and pa != "":
+                if best_ph != "" and best_pa != "" and best_ph != "None" and best_pa != "None":
                     fixture["picks"].append({
                         "participant": p_name,
-                        "pick": f"{ph}x{pa}",
-                        "rank_value": pt_val
+                        "pick": f"{best_ph}x{best_pa}",
+                        "rank_value": best_pts
                     })
 
-            fixtures.append(fixture)
-            match_row += 2
+            if fixture["picks"]:
+                fixtures.append(fixture)
 
         if fixtures:
             phases[phase_key] = {"fixtures": fixtures}

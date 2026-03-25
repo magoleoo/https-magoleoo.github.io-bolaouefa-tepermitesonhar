@@ -15,6 +15,11 @@ import {
   teamLogos,
   winnersHistory,
 } from "./data.js";
+import {
+  leaguePhaseResults,
+  leaguePhaseTopEight,
+  resultsSources,
+} from "./results-data.js";
 
 const storageKeys = {
   session: "ucl-bolao-session",
@@ -94,7 +99,7 @@ function getParticipantById(id) {
 }
 
 let knockoutResults = [...staticKnockoutResults];
-let activeResultsTab = 'ROUND_OF_16';
+let activeResultsTab = "LEAGUE";
 
 window.setResultsTab = (tab) => {
   activeResultsTab = tab;
@@ -172,8 +177,8 @@ function createLeagueMatchId(matchday, index) {
   return `league:${matchday}:${index + 1}`;
 }
 
-function createLeagueMatchTitle(matchday, index) {
-  return `${matchday} • Jogo ${index + 1}`;
+function createLeagueMatchTitle(match) {
+  return `${match.matchday} • ${match.homeTeam} x ${match.awayTeam}`;
 }
 
 function createKnockoutMatchTitle(match) {
@@ -222,27 +227,24 @@ function toggleManualSuperclassic(matchId) {
 function getManualSuperclassicEntries() {
   const entries = [];
 
-  if (leaguePhaseData?.records?.length) {
-    const recordsByMatchday = leaguePhaseData.records.reduce((acc, record) => {
-      if (!record.matchday.startsWith("Machtday")) return acc;
-      if (!acc[record.matchday]) acc[record.matchday] = [];
-      acc[record.matchday].push(record);
-      return acc;
-    }, {});
+  const groupedLeagueMatches = leaguePhaseResults.reduce((acc, match) => {
+    if (!acc[match.matchday]) acc[match.matchday] = [];
+    acc[match.matchday].push(match);
+    return acc;
+  }, {});
 
-    Object.entries(recordsByMatchday).forEach(([matchday, records]) => {
-      records.forEach((record, index) => {
-        const id = createLeagueMatchId(matchday, index);
-        if (!isManualSuperclassic(id)) return;
-        entries.push({
-          id,
-          phase: "Primeira fase",
-          title: createLeagueMatchTitle(matchday, index),
-          detail: `Resultado oficial: ${record.official}`,
-        });
+  Object.entries(groupedLeagueMatches).forEach(([matchday, matches]) => {
+    matches.forEach((match, index) => {
+      const id = createLeagueMatchId(matchday, index);
+      if (!isManualSuperclassic(id)) return;
+      entries.push({
+        id,
+        phase: "Primeira fase",
+        title: createLeagueMatchTitle(match),
+        detail: `Resultado oficial: ${match.scoreFinal.home} x ${match.scoreFinal.away}`,
       });
     });
-  }
+  });
 
   knockoutResults.forEach((match) => {
     if (!isManualSuperclassic(match.id)) return;
@@ -433,66 +435,162 @@ function renderRanking(leaderboard) {
 }
 
 function renderMatches() {
-  const container = document.getElementById("results-container");
-  if (!container || !backtestData?.phases) return;
+  if (!matchesGrid) return;
 
   const tabsMarkup = `
-    <div class="tabs-bar" style="margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 12px; overflow-x: auto;">
-      <button class="tab-button ${activeResultsTab === 'LEAGUE' ? 'is-active' : ''}" onclick="setResultsTab('LEAGUE')">Ligas</button>
-      <button class="tab-button ${activeResultsTab === 'PLAYOFF' ? 'is-active' : ''}" onclick="setResultsTab('PLAYOFF')">Playoffs</button>
-      <button class="tab-button ${activeResultsTab === 'ROUND_OF_16' ? 'is-active' : ''}" onclick="setResultsTab('ROUND_OF_16')">Oitavas</button>
+    <div class="tabs-bar results-tabs">
+      <button class="tab-button ${activeResultsTab === "LEAGUE" ? "is-active" : ""}" onclick="setResultsTab('LEAGUE')">Primeira fase</button>
+      <button class="tab-button ${activeResultsTab === "PLAYOFF" ? "is-active" : ""}" onclick="setResultsTab('PLAYOFF')">Playoffs</button>
+      <button class="tab-button ${activeResultsTab === "ROUND_OF_16" ? "is-active" : ""}" onclick="setResultsTab('ROUND_OF_16')">Oitavas</button>
     </div>
   `;
 
-  let sourceFixtures = backtestData.phases[activeResultsTab]?.fixtures || [];
-  const finishedFixtures = sourceFixtures.filter(f => f.official && f.official.trim() !== "" && f.official !== "-");
+  const renderMatchCard = (match, meta = {}) => {
+    const matchId = meta.matchId || match.id;
+    const superclassic = isManualSuperclassic(matchId);
+    const status = meta.statusLabel || "Finalizado";
+    const secondary = meta.secondaryLine
+      ? `<p class="muted match-card-note">${meta.secondaryLine}</p>`
+      : "";
 
-  const contentMarkup = `
-    <div style="margin-bottom: 24px; text-align: center;">
-      <h3 style="margin-bottom: 8px;">Resultados Processados</h3>
-      <p class="muted">${finishedFixtures.length} jogos computados nesta fase</p>
-    </div>
-    <div class="matches-grid">
-      ${finishedFixtures.map(fixture => {
-        let h_score = '';
-        let a_score = '';
-        if (fixture.official.includes('x')) {
-          h_score = fixture.official.split('x')[0] || '';
-          a_score = fixture.official.split('x')[1] || '';
-        } else {
-          h_score = fixture.official;
-        }
-        
-        let t1 = fixture.label;
-        let t2 = '';
-        if (fixture.label.includes(' x ')) {
-           t1 = fixture.label.split(' x ')[0];
-           t2 = fixture.label.split(' x ')[1];
-        }
+    return `
+      <article class="match-card ${superclassic ? "is-superclassic" : ""}">
+        <div class="match-header">
+          <span class="tag status-finished">${status}</span>
+          <div class="match-header-tags">
+            ${superclassic ? `<span class="tag">Superclássico</span>` : ""}
+            <button type="button" class="superclassic-toggle" data-superclassic-id="${matchId}">
+              ${superclassic ? "Remover superclássico" : "Marcar superclássico"}
+            </button>
+          </div>
+        </div>
+        <div class="teams">
+          <span class="team-line">
+            ${teamBadgeMarkup(match.homeTeam)}
+            <strong>${match.homeTeam}</strong>
+          </span>
+          <span class="team-line right">
+            <strong>${match.awayTeam}</strong>
+            ${teamBadgeMarkup(match.awayTeam)}
+          </span>
+        </div>
+        <div class="scoreline">
+          <strong>${match.scoreFinal.home}</strong>
+          <strong>${match.scoreFinal.away}</strong>
+        </div>
+        ${secondary}
+      </article>
+    `;
+  };
 
-        return `
-        <article class="match-card">
-          <div class="match-header" style="justify-content: center;">
-            <span class="tag">Finalizado</span>
-          </div>
-          <div class="match-teams">
-            <div class="team">
-              <strong>${t1}</strong>
-              <div class="score">${h_score}</div>
-            </div>
-            ${t2 ? `
-            <div class="team">
-              <div class="score">${a_score}</div>
-              <strong>${t2}</strong>
-            </div>
-            ` : ''}
-          </div>
-        </article>`
-      }).join('')}
-    </div>
+  const renderGroup = (title, matches, formatter) => `
+    <section class="results-phase-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">${title}</p>
+          <h2>${matches.length} jogo${matches.length === 1 ? "" : "s"}</h2>
+        </div>
+      </div>
+      <div class="matches-grid">
+        ${matches.map(formatter).join("")}
+      </div>
+    </section>
   `;
 
-  container.innerHTML = tabsMarkup + contentMarkup;
+  let contentMarkup = "";
+
+  if (activeResultsTab === "LEAGUE") {
+    const grouped = leaguePhaseResults.reduce((acc, match) => {
+      if (!acc[match.matchday]) acc[match.matchday] = [];
+      acc[match.matchday].push(match);
+      return acc;
+    }, {});
+
+    const topEightMarkup = `
+      <section class="results-phase-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Classificados diretos</p>
+            <h2>Top 8 da primeira fase</h2>
+          </div>
+          <span class="tag">Confirmados pela UEFA</span>
+        </div>
+        <div class="qualified-grid">
+          ${leaguePhaseTopEight
+            .map(
+              (team) => `
+                <article class="qualified-card">
+                  ${teamBadgeMarkup(team, "lg")}
+                  <strong>${team}</strong>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+        <p class="muted results-source-note">
+          Fonte oficial: <a href="${resultsSources.fixturesAndResultsUrl}" target="_blank" rel="noreferrer">UEFA fixtures and results</a>
+        </p>
+      </section>
+    `;
+
+    const phasesMarkup = Object.entries(grouped)
+      .sort((a, b) => Number(a[0].replace(/\D/g, "")) - Number(b[0].replace(/\D/g, "")))
+      .map(([matchday, matches]) =>
+        renderGroup(matchday, matches, (match, index) =>
+          renderMatchCard(match, {
+            matchId: createLeagueMatchId(matchday, index),
+          })
+        )
+      )
+      .join("");
+
+    contentMarkup = `
+      <div class="results-summary">
+        <h3>Primeira fase completa</h3>
+        <p class="muted">${leaguePhaseResults.length} jogos oficiais carregados</p>
+      </div>
+      ${topEightMarkup}
+      ${phasesMarkup}
+    `;
+  } else {
+    const matches = knockoutResults.filter((match) => match.phase === activeResultsTab);
+    const grouped = matches.reduce((acc, match) => {
+      if (!acc[match.roundLabel]) acc[match.roundLabel] = [];
+      acc[match.roundLabel].push(match);
+      return acc;
+    }, {});
+
+    const titleByPhase = {
+      PLAYOFF: "Playoffs completos",
+      ROUND_OF_16: "Oitavas completas",
+    };
+
+    const phasesMarkup = Object.entries(grouped)
+      .map(([roundLabel, phaseMatches]) =>
+        renderGroup(roundLabel, phaseMatches, (match) =>
+          renderMatchCard(match, {
+            secondaryLine: [
+              match.aggregate ? `Agregado: ${match.aggregate}` : "",
+              match.qualified ? `Classificado: ${match.qualified}` : "",
+              formatKickoff(match.kickoff),
+            ]
+              .filter(Boolean)
+              .join(" • "),
+          })
+        )
+      )
+      .join("");
+
+    contentMarkup = `
+      <div class="results-summary">
+        <h3>${titleByPhase[activeResultsTab] || "Mata-mata"}</h3>
+        <p class="muted">${matches.length} jogos oficiais carregados</p>
+      </div>
+      ${phasesMarkup}
+    `;
+  }
+
+  matchesGrid.innerHTML = tabsMarkup + contentMarkup;
 }
 
 function renderParticipantSnapshot() {
@@ -1227,8 +1325,6 @@ logoutButton.addEventListener("click", () => {
 });
 
 skipLoginButton.addEventListener("click", () => {
-  console.log("==> ENTRAR SEM IDENTIFICAR CLICADO!");
-  alert("CLICADO!");
   currentUserId = "";
   localStorage.removeItem(storageKeys.session);
   localStorage.setItem("ucl-bolao-guest", "1");

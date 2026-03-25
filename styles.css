@@ -619,6 +619,56 @@ thead th {
   gap: 16px;
 }
 
+.results-tabs {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.results-summary {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.results-summary h3 {
+  margin: 0 0 8px;
+}
+
+.results-phase-block {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.results-source-note {
+  margin: 12px 0 0;
+}
+
+.results-source-note a {
+  color: var(--accent);
+}
+
+.qualified-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.qualified-card {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(16, 32, 58, 0.96), rgba(7, 16, 30, 0.92));
+  text-align: center;
+}
+
+.qualified-card strong {
+  font-size: 0.95rem;
+}
+
 .match-card {
   border-radius: 22px;
   padding: 18px;
@@ -675,6 +725,12 @@ thead th {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  justify-self: end;
+  flex-wrap: wrap;
+}
+
+.match-card-note {
+  margin: 0;
 }
 
 .team-badge {
@@ -936,6 +992,13 @@ option {
   transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
 }
 
+.match-card .superclassic-toggle {
+  width: auto;
+  margin-top: 0;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+}
+
 .superclassic-toggle:hover {
   transform: translateY(-1px);
   background: rgba(255, 200, 0, 0.12);
@@ -967,6 +1030,7 @@ option {
   .layout,
   .hero,
   .cards-grid,
+  .qualified-grid,
   .league-phase-grid,
   .superclassic-submissions,
   .superclassic-manual-grid,

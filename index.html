@@ -246,12 +246,15 @@
           O site está sem senha por enquanto. Se quiser, escolha seu nome para personalizar a área
           do participante. Você também pode fechar e navegar sem login.
         </p>
-
-        <label>
-          Participante
-          <input id="login-user" list="login-user-list" placeholder="Digite ou escolha seu nome" />
-          <datalist id="login-user-list"></datalist>
-        </label>
+        <div class="input-group" style="margin-bottom:24px">
+          <label for="login-user">Seu nome de palpiteiro</label>
+          <input type="text" id="login-user" list="participant-list" placeholder="Digite ou selecione..." autocomplete="off" />
+          <datalist id="participant-list"></datalist>
+        </div>
+        <div class="input-group">
+          <label for="login-password">Sua Senha</label>
+          <input type="password" id="login-password" placeholder="Digite a chave secreta..." autocomplete="current-password" />
+        </div>
 
         <button class="primary-button" type="submit">Continuar</button>
         <button id="skip-login-button" class="ghost-button" type="button">Entrar sem identificar</button>
@@ -259,6 +262,8 @@
       </form>
     </div>
 
-    <script type="module" src="./app.js?v=26.0"></script>
+    <script src="./data.js?v=28.0"></script>
+    <script src="./results-data.js?v=28.0"></script>
+    <script src="./app.js?v=28.0"></script>
   </body>
 </html>

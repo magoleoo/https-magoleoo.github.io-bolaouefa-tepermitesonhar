@@ -1,7 +1,7 @@
-import {
+const {
   competitionSnapshot,
   competitionAssets,
-  knockoutResults as staticKnockoutResults,
+  knockoutResults: staticKnockoutResults,
   leaguePhaseSnapshot,
   officialSources,
   participantSnapshots,
@@ -14,8 +14,7 @@ import {
   rulesSections,
   teamLogos,
   winnersHistory,
-} from "./data.js";
-const { leaguePhaseResults, leaguePhaseTopEight, resultsSources } = window;
+} = window;
 
 const storageKeys = {
   session: "ucl-bolao-session",
@@ -1316,6 +1315,7 @@ async function loadMatchesData() {
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const participant = getParticipantByName(loginUser.value);
+  const loginPassword = document.getElementById("login-password");
   if (!participant && loginUser.value.trim()) {
     loginFeedback.textContent = "Nome não encontrado. Escolha um participante da lista ou entre sem identificar.";
     return;
@@ -1329,6 +1329,7 @@ loginForm.addEventListener("submit", (event) => {
   localStorage.setItem("ucl-bolao-guest", "1");
   loginFeedback.textContent = "";
   loginUser.value = participant?.name || "";
+  if (loginPassword) loginPassword.value = "";
   renderApp();
 });
 
@@ -1337,6 +1338,8 @@ logoutButton.addEventListener("click", () => {
   localStorage.removeItem(storageKeys.session);
   localStorage.removeItem("ucl-bolao-guest");
   loginUser.value = "";
+  const loginPassword = document.getElementById("login-password");
+  if (loginPassword) loginPassword.value = "";
   renderApp();
 });
 
@@ -1346,6 +1349,8 @@ skipLoginButton.addEventListener("click", () => {
   localStorage.setItem("ucl-bolao-guest", "1");
   loginFeedback.textContent = "";
   loginUser.value = "";
+  const loginPassword = document.getElementById("login-password");
+  if (loginPassword) loginPassword.value = "";
   renderApp();
 });
 

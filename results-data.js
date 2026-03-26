@@ -1,4 +1,4 @@
-const leaguePhaseRawByMatchday = {
+window.leaguePhaseRawByMatchday = {
   1: `
 Young Boys 0-3 Aston Villa
 Juventus 3-1 PSV Eindhoven
@@ -179,7 +179,7 @@ function parseLeagueLine(line) {
   };
 }
 
-export const leaguePhaseResults = Object.entries(leaguePhaseRawByMatchday).flatMap(
+window.leaguePhaseResults = Object.entries(window.leaguePhaseRawByMatchday).flatMap(
   ([matchday, block]) =>
     block
       .trim()
@@ -193,7 +193,7 @@ export const leaguePhaseResults = Object.entries(leaguePhaseRawByMatchday).flatM
       }))
 );
 
-export const leaguePhaseTopEight = [
+window.leaguePhaseTopEight = [
   "Paris Saint-Germain",
   "Liverpool",
   "Inter",
@@ -204,7 +204,7 @@ export const leaguePhaseTopEight = [
   "Sporting CP",
 ];
 
-export const resultsSources = {
+window.resultsSources = {
   fixturesAndResultsUrl:
     "https://www.uefa.com/uefachampionsleague/news/029c-1e9a2f63fe2d-ebf9ad643892-1000--2025-26-champions-league-all-the-fixtures-and-results/",
   qualificationUrl:

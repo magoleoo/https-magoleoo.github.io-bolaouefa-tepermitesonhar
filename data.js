@@ -1,10 +1,10 @@
-export const phaseRules = {
+window.phaseRules = {
   LEAGUE: { label: "Primeira fase" },
   PLAYOFF: { label: "Playoff 1ª fase" },
   ROUND_OF_16: { label: "Oitavas" },
 };
 
-export const participants = [
+window.participants = [
   ["leo-picca", "Leo Picca", "UCL-101"],
   ["leo-raposo", "Leo Raposo", "UCL-102"],
   ["serginho", "Serginho", "UCL-103"],
@@ -33,19 +33,19 @@ export const participants = [
   color: ["#4ecdc4", "#ffd166", "#ff6b6b", "#7b9cff"][index % 4],
 }));
 
-export const competitionAssets = {
+window.competitionAssets = {
   mark: "./assets/champions-league-mark.png",
   trophy: "./assets/champions-league-trophy.jpeg",
 };
 
-export const competitionSnapshot = {
+window.competitionSnapshot = {
   leaguePhaseMatches: 144,
   playoffMatches: 16,
   roundOf16Matches: 16,
   quarterFinalists: 8,
 };
 
-export const quarterFinalsFormsConfig = {
+window.quarterFinalsFormsConfig = {
   csvUrl: "",
   description:
     "Cole aqui a URL CSV publicada da planilha de respostas do Google Forms quando ela estiver pronta.",
@@ -75,7 +75,7 @@ export const quarterFinalsFormsConfig = {
   ],
 };
 
-export const teamLogos = {
+window.teamLogos = {
   "Real Madrid": "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.realmadrid.com",
   Liverpool: "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.liverpoolfc.com",
   Barcelona: "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.fcbarcelona.com",
@@ -111,7 +111,7 @@ export const teamLogos = {
   Olympiacos: "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.olympiacos.org",
 };
 
-export const knockoutResults = [
+window.knockoutResults = [
   {
     id: "PO1",
     phase: "PLAYOFF",
@@ -460,7 +460,7 @@ const hopeSoloByParticipant = {
   Michel: 1,
 };
 
-export const leaguePhaseSnapshot = {
+window.leaguePhaseSnapshot = {
   phaseLabel: "Ranking oficial atualizado até o fim das oitavas",
   updatedAtLabel: "Ranking importado da imagem enviada pelo usuário em 18/03/2026 e resultados oficiais da UEFA até 18/03/2026",
   leaderboard: [
@@ -491,14 +491,14 @@ export const leaguePhaseSnapshot = {
   })),
 };
 
-export const participantSnapshots = Object.fromEntries(
+window.participantSnapshots = Object.fromEntries(
   leaguePhaseSnapshot.leaderboard.map((row) => [
     participants.find((participant) => participant.name === row.name)?.id || row.name,
     row,
   ])
 );
 
-export const rulesHighlights = [
+window.rulesHighlights = [
   "O ranking agora está atualizado até o fim das oitavas, com `Felippe Leite` líder em 183,7 pontos.",
   "A primeira fase da Champions no novo formato teve 144 partidas na fase de liga.",
   "Os resultados de playoff e oitavas vieram do site oficial da UEFA, atualizado em 18 de março de 2026.",
@@ -507,7 +507,7 @@ export const rulesHighlights = [
   "A próxima etapa natural é ligar quartas, semi e final assim que os resultados forem acontecendo.",
 ];
 
-export const rulesSections = [
+window.rulesSections = [
   {
     title: "Pontuação por fase",
     items: [
@@ -564,7 +564,7 @@ export const rulesSections = [
   },
 ];
 
-export const predictionHighlightsByMatchTitle = {
+window.predictionHighlightsByMatchTitle = {
   "Atlético de Madrid x Tottenham": {
     exact: [],
     tendency: [
@@ -677,13 +677,13 @@ export const predictionHighlightsByMatchTitle = {
   },
 };
 
-export const officialSources = {
+window.officialSources = {
   rankingImage: "/Users/leopicca/Downloads/06_Projetos_e_Criacao/WhatsApp Image 2026-03-18 at 19.33.01.jpeg",
   uefaResultsUrl:
     "https://www.uefa.com/uefachampionsleague/news/029c-1e9a2f63fe2d-ebf9ad643892-1000--2025-26-champions-league-all-the-fixtures-and-results/",
 };
 
-export const winnersHistory = [
+window.winnersHistory = [
   { season: "08/09", guanabara: "", first: "Felippe Leite", second: "Muca", third: "Brunão", fourth: "", participants: 3 },
   { season: "09/10", guanabara: "", first: "Felippe Leite", second: "Faber", third: "?", fourth: "?", participants: 6 },
   { season: "10/11", guanabara: "", first: "Rafinha", second: "Felippe Leite", third: "Claudio", fourth: "Muca", participants: 11 },
@@ -877,6 +877,6 @@ function buildPredictionEntry(image, phase, folderLabel, index) {
   };
 }
 
-export const predictionsGallery = predictionImageGroups.flatMap((group) =>
+window.predictionsGallery = predictionImageGroups.flatMap((group) =>
   group.images.map((image, index) => buildPredictionEntry(image, group.phase, group.folderLabel, index))
 );

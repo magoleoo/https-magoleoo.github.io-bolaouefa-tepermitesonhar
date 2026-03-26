@@ -16,7 +16,7 @@
     <div class="app-shell">
       <header class="topbar">
         <div class="brand-block">
-          <div id="competition-mark" class="competition-mark"></div>
+          <img src="assets/champions-league-mark.png" alt="Bolão" class="brand-logo" style="width: 48px; height: auto;" />
           <div>
             <h1 class="brand-title">CHAMPIONSBOLÃO</h1>
             <p class="brand-subtitle">Painel oficial do bolão da Champions League</p>
@@ -112,12 +112,26 @@
             <section class="card">
               <div class="section-heading">
                 <div>
-                  <p class="eyebrow">Resultados oficiais</p>
-                  <h2>Jogos separados por fase</h2>
+                  <p class="eyebrow">Situação Oficial</p>
+                  <h2 style="display: flex; align-items: center; gap: 8px">
+                    Top 8 da primeira fase
+                  </h2>
                 </div>
-                <span class="tag">Organizado por andamento do campeonato</span>
+                <span class="tag">Atualizado da UEFA</span>
               </div>
-              <div id="matches-grid" class="results-phases"></div>
+              <div id="top-8-grid" class="top-8-grid"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Histórico de jogos</p>
+                  <h2>Acompanhamento dos Resultados</h2>
+                </div>
+                <span class="tag">Rodada por Rodada</span>
+              </div>
+              <div id="results-tabs" class="predictions-tabs" style="margin-bottom: 24px;"></div>
+              <div id="matches-list"></div>
             </section>
           </section>
 
@@ -210,16 +224,7 @@
               <div id="predictions-consultation" class="predictions-consultation"></div>
             </section>
 
-            <section class="card">
-              <div class="section-heading">
-                <div>
-                  <p class="eyebrow">Consulta visual</p>
-                  <h2>Imagens originais dos palpites</h2>
-                </div>
-                <span class="tag">Organizado por confronto</span>
-              </div>
-              <div id="predictions-gallery" class="predictions-gallery"></div>
-            </section>
+
           </section>
 
           <section id="panel-rules" class="tab-panel">
@@ -262,8 +267,12 @@
       </form>
     </div>
 
-    <script src="./data.js?v=28.0"></script>
-    <script src="./results-data.js?v=28.0"></script>
-    <script src="./app.js?v=28.0"></script>
+    <script src="./league-phase.js?v=29.0"></script>
+    <script src="./superclassicos.js?v=29.0"></script>
+    <script src="./api/ranking.js?v=29.0"></script>
+    <script src="./api/matches.js?v=29.0"></script>
+    <script src="./data.js?v=29.0"></script>
+    <script src="./results-data.js?v=29.0"></script>
+    <script src="./app.js?v=29.0"></script>
   </body>
 </html>

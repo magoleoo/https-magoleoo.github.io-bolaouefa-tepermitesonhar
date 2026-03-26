@@ -194,14 +194,14 @@ window.leaguePhaseResults = Object.entries(window.leaguePhaseRawByMatchday).flat
 );
 
 window.leaguePhaseTopEight = [
-  "Paris Saint-Germain",
-  "Liverpool",
-  "Inter",
-  "Barcelona",
   "Arsenal",
   "Bayern München",
-  "Atlético de Madrid",
+  "Liverpool",
+  "Tottenham",
+  "Barcelona",
+  "Chelsea",
   "Sporting CP",
+  "Man City",
 ];
 
 window.resultsSources = {

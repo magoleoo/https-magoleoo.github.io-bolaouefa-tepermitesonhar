@@ -37,7 +37,6 @@ const userSummary = document.querySelector("#user-summary");
 const awards = document.querySelector("#awards");
 const rulesList = document.querySelector("#rules-list");
 const liveSummary = document.querySelector("#live-summary");
-const competitionMark = document.querySelector("#competition-mark");
 const historyTable = document.querySelector("#history-table");
 const hallOfFame = document.querySelector("#hall-of-fame");
 const predictionsGalleryEl = document.querySelector("#predictions-gallery");
@@ -49,9 +48,17 @@ const tabRanking = document.querySelector("#tab-ranking");
 const tabResults = document.querySelector("#tab-results");
 const tabSubmitQf = document.querySelector("#tab-submit-qf");
 const tabSuperclassic = document.querySelector("#tab-superclassic");
+const tabPlayoff = document.querySelector("#tab-playoff");
+const tabRound16 = document.querySelector("#tab-round-of-16");
+const tabAwards = document.querySelector("#tab-awards");
 const tabPredictions = document.querySelector("#tab-predictions");
 const tabHistory = document.querySelector("#tab-history");
 const tabRules = document.querySelector("#tab-rules");
+
+const resultsTabs = document.querySelector("#results-tabs");
+const matchesList = document.querySelector("#matches-list");
+const top8Grid = document.querySelector("#top-8-grid");
+
 const panelRanking = document.querySelector("#panel-ranking");
 const panelResults = document.querySelector("#panel-results");
 const panelSubmitQf = document.querySelector("#panel-submit-qf");
@@ -95,6 +102,7 @@ function getParticipantById(id) {
 
 let knockoutResults = [...staticKnockoutResults];
 let activeResultsTab = "LEAGUE";
+let activeLeagueMatchday = "1";
 
 window.setResultsTab = (tab) => {
   activeResultsTab = tab;
@@ -282,7 +290,6 @@ function renderRules() {
   rulesList.innerHTML = rulesHighlights
     .map((rule) => `<li>${rule}</li>`)
     .join("");
-  competitionMark.innerHTML = competitionLogoMarkup();
 }
 
 function renderOverview(leaderboard) {
@@ -401,8 +408,13 @@ function renderRanking(leaderboard) {
     .join("");
 }
 
+window.setLeagueMatchday = (md) => {
+  activeLeagueMatchday = md;
+  renderMatches();
+}
+
 function renderMatches() {
-  if (!matchesGrid) return;
+  if (!matchesList) return;
 
   const tabsMarkup = `
     <div class="tabs-bar results-tabs">
@@ -464,62 +476,47 @@ function renderMatches() {
     </section>
   `;
 
+  if (top8Grid) {
+    top8Grid.innerHTML = leaguePhaseTopEight
+      .map(
+        (team, index) => `
+          <article class="qualified-card">
+            <span class="position-badge" style="font-weight:bold; color:var(--clr-primary-400); font-family:var(--font-heading); font-size:1.5rem; line-height:1; min-width:30px">${index + 1}º</span>
+            ${teamBadgeMarkup(team, "lg")}
+            <strong>${team}</strong>
+          </article>
+        `
+      )
+      .join("");
+  }
+
   let contentMarkup = "";
 
   if (activeResultsTab === "LEAGUE") {
     const grouped = leaguePhaseResults.reduce((acc, match) => {
-      if (!acc[match.matchday]) acc[match.matchday] = [];
-      acc[match.matchday].push(match);
+      const matchdayNumber = match.matchday.replace(/\D/g, "");
+      if (!acc[matchdayNumber]) acc[matchdayNumber] = [];
+      acc[matchdayNumber].push(match);
       return acc;
     }, {});
 
-    const topEightMarkup = `
-      <section class="results-phase-block">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Classificados diretos</p>
-            <h2>Top 8 da primeira fase</h2>
-          </div>
-          <span class="tag">Confirmados pela UEFA</span>
-        </div>
-        <div class="qualified-grid">
-          ${leaguePhaseTopEight
-            .map(
-              (team, index) => `
-                <article class="qualified-card">
-                  <span class="position-badge" style="font-weight:bold; color:var(--clr-primary-400); font-family:var(--font-heading); font-size:1.5rem; line-height:1; min-width:30px">${index + 1}º</span>
-                  ${teamBadgeMarkup(team, "lg")}
-                  <strong>${team}</strong>
-                </article>
-              `
-            )
-            .join("")}
-        </div>
-        <p class="muted results-source-note">
-          Fonte oficial: <a href="${resultsSources.fixturesAndResultsUrl}" target="_blank" rel="noreferrer">UEFA fixtures and results</a>
-        </p>
-      </section>
-    `;
-
-    const phasesMarkup = Object.entries(grouped)
-      .sort((a, b) => Number(a[0].replace(/\D/g, "")) - Number(b[0].replace(/\D/g, "")))
-      .map(([matchday, matches]) =>
-        renderGroup(matchday, matches, (match, index) =>
-          renderMatchCard(match, {
-            matchId: createLeagueMatchId(matchday, index),
-          })
-        )
-      )
-      .join("");
-
-    contentMarkup = `
-      <div class="results-summary">
-        <h3>Primeira fase completa</h3>
-        <p class="muted">${leaguePhaseResults.length} jogos oficiais carregados</p>
+    const phaseTabs = `
+      <div class="tabs-bar" style="margin-bottom: 24px;">
+        ${Object.keys(grouped).sort((a,b) => Number(a)-Number(b)).map(md => `
+          <button class="tab-button ${activeLeagueMatchday === md ? "is-active" : ""}" onclick="setLeagueMatchday('${md}')">Rodada ${md}</button>
+        `).join("")}
       </div>
-      ${topEightMarkup}
-      ${phasesMarkup}
     `;
+
+    const matchesForActiveMatchday = grouped[activeLeagueMatchday] || [];
+    
+    const phasesMarkup = renderGroup(`Rodada ${activeLeagueMatchday}`, matchesForActiveMatchday, (match, index) =>
+      renderMatchCard(match, {
+        matchId: createLeagueMatchId(`Matchday ${activeLeagueMatchday}`, index),
+      })
+    );
+
+    contentMarkup = phaseTabs + phasesMarkup;
   } else {
     const matches = knockoutResults.filter((match) => match.phase === activeResultsTab);
     const grouped = matches.reduce((acc, match) => {
@@ -558,7 +555,8 @@ function renderMatches() {
     `;
   }
 
-  matchesGrid.innerHTML = tabsMarkup + contentMarkup;
+  resultsTabs.innerHTML = tabsMarkup;
+  matchesList.innerHTML = contentMarkup;
 }
 
 function renderParticipantSnapshot() {
@@ -1224,7 +1222,6 @@ function renderApp() {
   renderParticipantSnapshot();
   renderHistory();
   renderPredictionConsultation();
-  renderPredictionsGallery();
   renderRulesPanel();
   renderSuperclassicPanel();
   renderQuarterFinalsForm();
@@ -1232,45 +1229,28 @@ function renderApp() {
   toggleLoginState();
 }
 
-async function loadLeaguePhaseData() {
-  try {
-    const response = await fetch("./league-phase.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Falha ao carregar league-phase.json: ${response.status}`);
-    }
-    leaguePhaseData = await response.json();
-  } catch (error) {
-    console.error(error);
-    leaguePhaseData = { records: [] };
+function loadImmediateData() {
+  backtestData = window.backtestData || { ranking: [] };
+  leaguePhaseData = window.leaguePhaseData || { records: [] };
+  superclassicData = window.superclassicData || { blocks: [] };
+  if (window.apiMatchesData) {
+    knockoutResults = window.apiMatchesData.matches.map(m => ({
+      id: m.id.toString(),
+      phase: m.phase_key,
+      roundLabel: m.round_label,
+      kickoff: m.kickoff_utc,
+      homeTeam: m.home_team_name,
+      awayTeam: m.away_team_name,
+      scoreFinal: { home: m.score_home_90, away: m.score_away_90 },
+      aggregate: m.score_home_90 !== null ? `${m.score_home_90}-${m.score_away_90}` : null,
+      qualified: m.qualified_team_name,
+    }));
+  } else {
+    knockoutResults = staticKnockoutResults;
   }
 }
 
-async function loadSuperclassicData() {
-  try {
-    const response = await fetch("./superclassicos.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Falha ao carregar superclassicos.json: ${response.status}`);
-    }
-    superclassicData = await response.json();
-  } catch (error) {
-    console.error(error);
-    superclassicData = { blocks: [] };
-  }
-}
-
-async function loadBacktestData() {
-  try {
-    const response = await fetch("./api/ranking.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Falha ao carregar ranking.json: ${response.status}`);
-    }
-    backtestData = await response.json();
-  } catch (error) {
-    console.error(error);
-    backtestData = { ranking: [] };
-  }
-}
-
+// Quarters final load still using fetch if URL provided
 async function loadQuarterFinalsFormsData() {
   if (!quarterFinalsFormsConfig.csvUrl) {
     quarterFinalsFormsData = [];
@@ -1287,28 +1267,6 @@ async function loadQuarterFinalsFormsData() {
   } catch (error) {
     console.error(error);
     quarterFinalsFormsData = [];
-  }
-}
-
-async function loadMatchesData() {
-  try {
-    const response = await fetch("./api/matches.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("Falha api/matches.json");
-    const data = await response.json();
-    knockoutResults = data.matches.map(m => ({
-      id: m.id.toString(),
-      phase: m.phase_key,
-      roundLabel: m.round_label,
-      kickoff: m.kickoff_utc,
-      homeTeam: m.home_team_name,
-      awayTeam: m.away_team_name,
-      scoreFinal: { home: m.score_home_90, away: m.score_away_90 },
-      aggregate: m.score_home_90 !== null ? `${m.score_home_90}-${m.score_away_90}` : null,
-      qualified: m.qualified_team_name,
-    }));
-  } catch (e) {
-    console.error(e);
-    knockoutResults = [...staticKnockoutResults];
   }
 }
 
@@ -1369,11 +1327,8 @@ tabRules.addEventListener("click", () => setActiveTab("rules"));
 tabSubmitQf.addEventListener("click", () => setActiveTab("submit-qf"));
 
 console.log(">>> APP.JS CARREGADO NO FINAL DO ARQUIVO! ATRIBUINDO LISTENERS...");
+loadImmediateData();
 populateLoginSelect();
 renderRules();
 renderApp();
-loadLeaguePhaseData().then(renderApp);
-loadSuperclassicData().then(renderApp);
-loadBacktestData().then(renderApp);
 loadQuarterFinalsFormsData().then(renderApp);
-loadMatchesData().then(renderApp);

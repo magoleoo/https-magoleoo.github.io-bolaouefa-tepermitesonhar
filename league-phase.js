@@ -1,0 +1,16918 @@
+window.leaguePhaseData = {
+  "participants": [
+    "Leo Picca",
+    "Leo Raposo",
+    "Serginho",
+    "Biel",
+    "Rafinha",
+    "Ranieri",
+    "Nanel",
+    "Marcel",
+    "Dan",
+    "Celsinho",
+    "Enrico",
+    "Gui Giron",
+    "Scarpa",
+    "Victor",
+    "Faber",
+    "Felippe Leite",
+    "Muca",
+    "Feijão",
+    "Ivan",
+    "Michel",
+    "Deco"
+  ],
+  "records_count": 152,
+  "matchdays": [
+    "Classificado 1",
+    "Machtday 1",
+    "Machtday 2",
+    "Classificado 2",
+    "Machtday 3",
+    "Classificado 3",
+    "Machtday 4",
+    "Classificado 4",
+    "Machtday 5",
+    "Classificado 5",
+    "Machtday 6",
+    "Classificado 6",
+    "Machtday 7",
+    "Classificado 7",
+    "Machtday 8",
+    "Classificado 8"
+  ],
+  "records": [
+    {
+      "matchday": "Machtday 1",
+      "official": "Union Saint-Gilloise",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Michel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Arsenal",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Real Madrid",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Qarabag",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Benfica",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Juventus",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Juventus",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Borussia Dortmund",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "3"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Tottenham",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Tottenham",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Olympiacos",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Slavia Praga",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Slavia Praga",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bodö/Glimt",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Slavia Praga",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Slavia Praga",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Paris Saint-Germain",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Bayern de Munique",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "11"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Liverpool",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Internazionale",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Internazionale",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Ajax",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Internazionale",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Internazionale",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Ajax",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Internazionale",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Ajax",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Club Brugge",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Monaco",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Club Brugge",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Club Brugge",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Club Brugge",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Club Brugge",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Club Brugge",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Club Brugge",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Club Brugge",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Monaco",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Copenhagen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Manchester City",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Eintracht Frankfurt",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Galatasaray",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Galatasaray",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Sporting",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Sporting",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Sporting",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 1",
+      "official": "Barcelona",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Newcastle",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Atalanta",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atalanta",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Club Brugge",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Real Madrid",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Kairat",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Internazionale",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Chelsea",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Atlético de Madrid",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Tottenham",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Olympique de Marselha",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Ajax",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Ajax",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Olympique de Marselha",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Galatasaray",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Bayern de Munique",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Newcastle",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Newcastle",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Qarabag",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Copenhagen",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Qarabag",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Copenhagen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Copenhagen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Qarabag",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Copenhagen",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Qarabag",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Copenhagen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Qarabag",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Qarabag",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Qarabag",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Copenhagen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Copenhagen",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Copenhagen",
+          "rank_value": "8"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Arsenal",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Michel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Juventus",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Juventus",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Villarreal",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Villarreal",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Juventus",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Juventus",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "11"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Napoli",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Napoli",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Napoli",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Napoli",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Monaco",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Borussia Dortmund",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Borussia Dortmund",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 2",
+      "official": "Paris Saint-Germain",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Barcelona",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Pafos",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Pafos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Kairat",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Kairat",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Kairat",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Kairat",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Pafos",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Kairat",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Pafos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Kairat",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Kairat",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Pafos",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Kairat",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Pafos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Kairat",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Arsenal",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "2"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Paris Saint-Germain",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Manchester City",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Villarreal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Villarreal",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "PSV Eindhoven",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Dan",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Faber",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "PSV Eindhoven",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Napoli",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Borussia Dortmund",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Copenhagen",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Borussia Dortmund",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Internazionale",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Internazionale",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Internazionale",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Newcastle",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Benfica",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Newcastle",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Galatasaray",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Galatasaray",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Athletic Bilbao",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Athletic Bilbao",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Chelsea",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atalanta",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Slavia Praga",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Liverpool",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Sporting",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Sporting",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Sporting",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympique de Marselha",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Sporting",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Sporting",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Sporting",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Olympique de Marselha",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Olympique de Marselha",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Sporting",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "4"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Monaco",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Monaco",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Monaco",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Monaco",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Monaco",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Tottenham",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Real Madrid",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 3",
+      "official": "Bayern de Munique",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Napoli",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Arsenal",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Slavia Praga",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Bayern de Munique",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Liverpool",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "3"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Atlético de Madrid",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Juventus",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Sporting",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Tottenham",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Olympiacos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Olympiacos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympiacos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "PSV Eindhoven",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Olympiacos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Dan",
+          "pick": "PSV Eindhoven",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "PSV Eindhoven",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympiacos",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "PSV Eindhoven",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympiacos",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "PSV Eindhoven",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Olympiacos",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "8"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Monaco",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Monaco",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Monaco",
+          "rank_value": "13"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Pafos",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Villarreal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Villarreal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Villarreal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Villarreal",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Manchester City",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Internazionale",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Internazionale",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Bayer Leverkusen",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Empate",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Club Brugge",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Galatasaray",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Ajax",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Ajax",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Galatasaray",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "2"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Atalanta",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atalanta",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "7"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 4",
+      "official": "Newcastle",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Newcastle",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Newcastle",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Newcastle",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Ajax",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Ajax",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Ajax",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Ajax",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Ajax",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "3"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Galatasaray",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "5"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Borussia Dortmund",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Athletic Bilbao",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Slavia Praga",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Slavia Praga",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Slavia Praga",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Athletic Bilbao",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Slavia Praga",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Athletic Bilbao",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Slavia Praga",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Athletic Bilbao",
+          "rank_value": "13"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Newcastle",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Olympique de Marselha",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Newcastle",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Newcastle",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Olympique de Marselha",
+          "rank_value": "7"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Olympique de Marselha",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympique de Marselha",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Newcastle",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Newcastle",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Kairat",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Copenhagen",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Copenhagen",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Monaco",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Pafos",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Monaco",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Monaco",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Pafos",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Monaco",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Monaco",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "8"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Internazionale",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "10"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "8"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atalanta",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atalanta",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atalanta",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Atalanta",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atalanta",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atalanta",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atalanta",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "8"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Sporting",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Club Brugge",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Sporting",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Sporting",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympiacos",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Kairat",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Kairat",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Kairat",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Kairat",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Olympiacos",
+          "rank_value": "13"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Internazionale",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Internazionale",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "12"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atalanta",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Tottenham",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "PSV Eindhoven",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "PSV Eindhoven",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "PSV Eindhoven",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "PSV Eindhoven",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Monaco",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Monaco",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Galatasaray",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Galatasaray",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Monaco",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Galatasaray",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Monaco",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Monaco",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "5"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympique de Marselha",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Olympique de Marselha",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Olympique de Marselha",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Olympique de Marselha",
+          "rank_value": "12"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Copenhagen",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Villarreal",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Villarreal",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Villarreal",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Villarreal",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Ajax",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Qarabag",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Qarabag",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Ajax",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Ajax",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Ajax",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Borussia Dortmund",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Newcastle",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Newcastle",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "4"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Napoli",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Benfica",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Benfica",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Benfica",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Napoli",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Juventus",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Club Brugge",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Club Brugge",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Athletic Bilbao",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Kairat",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Kairat",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Kairat",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Kairat",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Villarreal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Ajax",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Villarreal",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Villarreal",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Ajax",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Villarreal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Villarreal",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Ajax",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Tottenham",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Sporting",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Olympiacos",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Olympiacos",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Olympiacos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Olympiacos",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Olympiacos",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Olympiacos",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympiacos",
+          "rank_value": "8"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Copenhagen",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Napoli",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Copenhagen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Napoli",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Copenhagen",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Napoli",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Copenhagen",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Napoli",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Galatasaray",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Galatasaray",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Qarabag",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atalanta",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atalanta",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atalanta",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Juventus",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Benfica",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Olympique de Marselha",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Newcastle",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "PSV Eindhoven",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Newcastle",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Slavia Praga",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Pafos",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Pafos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Slavia Praga",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Pafos",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Slavia Praga",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Pafos",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Slavia Praga",
+          "rank_value": "11"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Manchester City",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Borussia Dortmund",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Empate",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Internazionale",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Internazionale",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Borussia Dortmund",
+          "rank_value": "13"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "6"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Empate",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayer Leverkusen",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "21"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Benfica",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Benfica",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Benfica",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Tottenham",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Tottenham",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Tottenham",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Eintracht Frankfurt",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Tottenham",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "5"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Olympique de Marselha",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Olympique de Marselha",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Club Brugge",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Club Brugge",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Club Brugge",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Olympique de Marselha",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Club Brugge",
+          "rank_value": "14"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "4"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Bayern de Munique",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Dan",
+          "pick": "PSV Eindhoven",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "PSV Eindhoven",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "PSV Eindhoven",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "18"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Juventus",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Juventus",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Empate",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Monaco",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Monaco",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Empate",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Juventus",
+          "rank_value": "9"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Juventus",
+          "rank_value": "9"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Atalanta",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Atalanta",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Atalanta",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Union Saint-Gilloise",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atalanta",
+          "rank_value": "16"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Sporting",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Sporting",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Athletic Bilbao",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Sporting",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Athletic Bilbao",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Ajax",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Ajax",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Ajax",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Machtday 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Napoli",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "4"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Napoli",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Napoli",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Empate",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Napoli",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Chelsea",
+          "rank_value": "12"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Empate",
+          "rank_value": "4"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 1",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 2",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Chelsea",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Chelsea",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Chelsea",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Chelsea",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Chelsea",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Bayern de Munique",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Chelsea",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 3",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Liverpool",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Internazionale",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Liverpool",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 4",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Bayern de Munique",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Barcelona",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Bayern de Munique",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Bayern de Munique",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Villarreal",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 5",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Juventus",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Manchester City",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Manchester City",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Liverpool",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Napoli",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Bayern de Munique",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Real Madrid",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Barcelona",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Bayern de Munique",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Atalanta",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 6",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Internazionale",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Bayern de Munique",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Arsenal",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Juventus",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Real Madrid",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Manchester City",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Manchester City",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Bayern de Munique",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Chelsea",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Real Madrid",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Chelsea",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Chelsea",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Internazionale",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 7",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Liverpool",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Bayern de Munique",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Chelsea",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Manchester City",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Barcelona",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Juventus",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Arsenal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Barcelona",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Arsenal",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Paris Saint-Germain",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Juventus",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Arsenal",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Barcelona",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Chelsea",
+          "rank_value": "17"
+        }
+      ]
+    },
+    {
+      "matchday": "Classificado 8",
+      "official": "",
+      "picks": [
+        {
+          "participant": "Leo Picca",
+          "pick": "Atalanta",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Leo Raposo",
+          "pick": "Arsenal",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Serginho",
+          "pick": "Real Madrid",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Biel",
+          "pick": "Atlético de Madrid",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Rafinha",
+          "pick": "Atlético de Madrid",
+          "rank_value": "1"
+        },
+        {
+          "participant": "Ranieri",
+          "pick": "Internazionale",
+          "rank_value": "15"
+        },
+        {
+          "participant": "Nanel",
+          "pick": "Manchester City",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Marcel",
+          "pick": "Manchester City",
+          "rank_value": "3"
+        },
+        {
+          "participant": "Dan",
+          "pick": "Internazionale",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Celsinho",
+          "pick": "Real Madrid",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Enrico",
+          "pick": "Juventus",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Gui Giron",
+          "pick": "Tottenham",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Scarpa",
+          "pick": "Arsenal",
+          "rank_value": "6"
+        },
+        {
+          "participant": "Victor",
+          "pick": "Bayern de Munique",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Faber",
+          "pick": "Manchester City",
+          "rank_value": "19"
+        },
+        {
+          "participant": "Felippe Leite",
+          "pick": "Chelsea",
+          "rank_value": "20"
+        },
+        {
+          "participant": "Muca",
+          "pick": "Napoli",
+          "rank_value": "5"
+        },
+        {
+          "participant": "Feijão",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Ivan",
+          "pick": "Borussia Dortmund",
+          "rank_value": "2"
+        },
+        {
+          "participant": "Michel",
+          "pick": "Liverpool",
+          "rank_value": "17"
+        },
+        {
+          "participant": "Deco",
+          "pick": "Atlético de Madrid",
+          "rank_value": "3"
+        }
+      ]
+    }
+  ]
+};

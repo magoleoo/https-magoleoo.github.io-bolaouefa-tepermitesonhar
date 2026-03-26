@@ -15,11 +15,7 @@ import {
   teamLogos,
   winnersHistory,
 } from "./data.js";
-import {
-  leaguePhaseResults,
-  leaguePhaseTopEight,
-  resultsSources,
-} from "./results-data.js";
+const { leaguePhaseResults, leaguePhaseTopEight, resultsSources } = window;
 
 const storageKeys = {
   session: "ucl-bolao-session",
@@ -1214,7 +1210,9 @@ window.setPredictFilter = (f) => {
 };
 
 function toggleLoginState() {
-  loginModal.classList.toggle("hidden", localStorage.getItem("ucl-bolao-guest") === "1" || Boolean(currentUserId));
+  const isLogged = localStorage.getItem("ucl-bolao-guest") === "1" || Boolean(currentUserId);
+  loginModal.classList.toggle("hidden", isLogged);
+  loginModal.style.display = isLogged ? "none" : "grid";
 }
 
 function renderApp() {

@@ -1217,7 +1217,6 @@ function toggleLoginState() {
 
 function renderApp() {
   const leaderboard = getRankingRows();
-  renderLiveSummary();
   renderOverview(leaderboard);
   renderUserSummary(leaderboard);
   renderAwards(leaderboard);

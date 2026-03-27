@@ -91,6 +91,12 @@ window.quarterFinalsFormsConfig = {
   ],
 };
 
+window.leagueSuperclassicFormsConfig = {
+  formUrl: "",
+  description:
+    "Espaço para palpites de placar dos superclássicos da 1ª fase. Você pode preencher aqui e copiar o texto para enviar no fluxo oficial.",
+};
+
 window.teamLogos = {
   Ajax: "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.ajax.nl",
   "Real Madrid": "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.realmadrid.com",
@@ -698,6 +704,7 @@ window.rulesSections = [
     items: [
       "Superclássicos: o dobro da pontuação do placar exato em confrontos entre times elegíveis ao superclássico.",
       "A regra de superclássico vai somente até as quartas de final. Nas semifinais e na final ela não se aplica.",
+      "Na 1ª fase, os placares dos superclássicos devem ser preenchidos no espaço dedicado da aba Superclássicos (separado da tendência da fase de liga).",
       "Hope Solo: quando apenas um participante é o único a acertar o jogo, seja no placar exato ou na tendência, a pontuação desse acerto é dobrada.",
       "Prorrogação: acertando o placar nos 90 minutos, vale a regra normal. Acertando apenas o placar da prorrogação, vale metade da pontuação normal de placar.",
       "Final empatada: se o apostador acertar o placar da final mas errar o campeão, recebe só os 23,80 pontos do placar, sem os pontos de classificação.",

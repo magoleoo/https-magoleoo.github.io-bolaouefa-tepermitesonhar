@@ -7,6 +7,7 @@ const {
   participantSnapshots,
   participants,
   phaseRules,
+  leagueSuperclassicFormsConfig,
   predictionHighlightsByMatchTitle,
   predictionsGallery,
   quarterFinalsFormsConfig,
@@ -19,6 +20,7 @@ const {
 
 const storageKeys = {
   session: "ucl-bolao-session",
+  leagueSuperclassicDrafts: "ucl-bolao-league-superclassic-drafts",
   qfDrafts: "ucl-bolao-qf-drafts",
 };
 
@@ -183,6 +185,12 @@ function normalizeSuperclassicPicks(rawPicks) {
 
 function buildAutomaticSuperclassicFixtures() {
   const fixturesByKey = new Map();
+  const officialScoreByTeams = new Map(
+    (leaguePhaseResults || []).map((match) => [
+      `${canonicalTeamKey(match.homeTeam)}::${canonicalTeamKey(match.awayTeam)}`,
+      `${match.scoreFinal.home}x${match.scoreFinal.away}`,
+    ])
+  );
 
   const upsertFixture = ({ phase, phaseDetail, title, official, picks }) => {
     const key = `${phase}::${normalizeText(phaseDetail || "")}::${normalizeText(title)}`;
@@ -234,7 +242,12 @@ function buildAutomaticSuperclassicFixtures() {
         phase: phaseKey,
         phaseDetail,
         title: `${parsed.homeTeam} x ${parsed.awayTeam}`,
-        official: normalizeScoreToken(fixture.official),
+        official:
+          phaseKey === "LEAGUE"
+            ? officialScoreByTeams.get(
+                `${canonicalTeamKey(parsed.homeTeam)}::${canonicalTeamKey(parsed.awayTeam)}`
+              ) || normalizeScoreToken(fixture.official)
+            : normalizeScoreToken(fixture.official),
         picks: normalizeSuperclassicPicks(fixture.picks),
       });
     });
@@ -1010,6 +1023,85 @@ function renderSuperclassicPanel() {
     return acc;
   }, {});
 
+  const leagueFixtures = fixturesByPhase.LEAGUE || [];
+  const leagueDraft = getLeagueSuperclassicDraft();
+
+  const leagueFormMarkup = leagueFixtures.length
+    ? `
+      <article class="rules-card">
+        <h3>Palpitar Superclássicos da 1ª fase</h3>
+        <p class="muted">${leagueSuperclassicFormsConfig?.description || "Preencha os placares dos superclássicos da primeira fase."}</p>
+        <form id="league-superclassic-form" class="predictions-form">
+          <section class="form-block">
+            <p class="eyebrow">Participante</p>
+            <div class="qf-toolbar">
+              <div>
+                <strong>${leagueDraft.participant || getActiveParticipantLabel()}</strong>
+                <p class="muted">Rascunho salvo neste navegador.</p>
+              </div>
+              <button class="ghost-button qf-clear-button" type="button" id="league-superclassic-clear">Limpar rascunho</button>
+            </div>
+          </section>
+          <div class="matches-grid">
+            ${leagueFixtures
+              .map((fixture, index) => {
+                const pick = leagueDraft.picks?.[fixture.key] || {};
+                return `
+                  <article class="match-card qf-match-card">
+                    <div class="match-header">
+                      <div>
+                        <p class="eyebrow">Superclássico ${index + 1}</p>
+                        <strong>${fixture.title}</strong>
+                        <p class="muted">${fixture.phaseDetail}</p>
+                      </div>
+                      <span class="status-pill">1ª fase</span>
+                    </div>
+                    <div class="qf-leg-row">
+                      <span class="qf-leg-label">Placar</span>
+                      <div class="qf-score-inputs">
+                        <input
+                          type="number"
+                          min="0"
+                          required
+                          data-fixture-key="${fixture.key}"
+                          data-side="home"
+                          value="${pick.home || ""}"
+                          class="qf-score-input"
+                        />
+                        <span class="muted">x</span>
+                        <input
+                          type="number"
+                          min="0"
+                          required
+                          data-fixture-key="${fixture.key}"
+                          data-side="away"
+                          value="${pick.away || ""}"
+                          class="qf-score-input"
+                        />
+                      </div>
+                    </div>
+                  </article>
+                `;
+              })
+              .join("")}
+          </div>
+          <div class="form-block qf-actions-block">
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="primary-button" type="submit">Copiar para WhatsApp</button>
+              ${
+                leagueSuperclassicFormsConfig?.formUrl
+                  ? `<a class="ghost-button" href="${leagueSuperclassicFormsConfig.formUrl}" target="_blank" rel="noopener noreferrer">Abrir Forms</a>`
+                  : ""
+              }
+            </div>
+            <p class="muted">Use este espaço para registrar placares dos superclássicos da liga e compartilhar no fluxo oficial.</p>
+          </div>
+          <p id="league-superclassic-feedback" class="feedback"></p>
+        </form>
+      </article>
+    `
+    : "";
+
   const overviewMarkup = `
     <article class="rules-card">
       <h3>Confrontos superclássicos elegíveis</h3>
@@ -1039,7 +1131,58 @@ function renderSuperclassicPanel() {
     )
     .join("");
 
-  superclassicPanel.innerHTML = `${matrixStyles}${overviewMarkup}${blockMarkup}`;
+  superclassicPanel.innerHTML = `${matrixStyles}${leagueFormMarkup}${overviewMarkup}${blockMarkup}`;
+
+  const leagueForm = superclassicPanel.querySelector("#league-superclassic-form");
+  const leagueFeedback = superclassicPanel.querySelector("#league-superclassic-feedback");
+  const clearLeagueButton = superclassicPanel.querySelector("#league-superclassic-clear");
+
+  if (leagueForm) {
+    leagueForm.oninput = (event) => {
+      const field = event.target;
+      const fixtureKey = field?.dataset?.fixtureKey;
+      const side = field?.dataset?.side;
+      if (!fixtureKey || !side) return;
+      saveLeagueSuperclassicDraftField(fixtureKey, side, field.value);
+    };
+
+    leagueForm.onsubmit = (event) => {
+      event.preventDefault();
+      const draft = getLeagueSuperclassicDraft();
+      const hasAllScores = leagueFixtures.every((fixture) => {
+        const pick = draft.picks?.[fixture.key] || {};
+        return String(pick.home || "").trim() !== "" && String(pick.away || "").trim() !== "";
+      });
+
+      if (!hasAllScores) {
+        if (leagueFeedback) {
+          leagueFeedback.textContent = "Preencha todos os placares antes de copiar.";
+          leagueFeedback.classList.remove("success");
+        }
+        return;
+      }
+
+      const message = buildLeagueSuperclassicMessage(leagueFixtures, draft);
+      navigator.clipboard.writeText(message).then(() => {
+        if (leagueFeedback) {
+          leagueFeedback.textContent = "Copiado para a área de transferência! Agora é só colar no fluxo oficial.";
+          leagueFeedback.classList.add("success");
+        }
+      }).catch((error) => {
+        if (leagueFeedback) {
+          leagueFeedback.textContent = `Erro ao copiar: ${error}`;
+          leagueFeedback.classList.remove("success");
+        }
+      });
+    };
+  }
+
+  if (clearLeagueButton) {
+    clearLeagueButton.onclick = () => {
+      clearLeagueSuperclassicDraft();
+      renderSuperclassicPanel();
+    };
+  }
 }
 
 function setActiveTab(tab) {
@@ -1125,6 +1268,74 @@ function buildQfWhatsAppMessage(formData) {
     message += `Classificado: ${formData.get(`${match.id}_classificado`)}\n\n`;
   });
 
+  return message.trim();
+}
+
+function loadLeagueSuperclassicDrafts() {
+  try {
+    const raw = localStorage.getItem(storageKeys.leagueSuperclassicDrafts);
+    const parsed = raw ? JSON.parse(raw) : {};
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch (error) {
+    console.error("Falha ao ler rascunhos de superclássicos da 1ª fase.", error);
+    return {};
+  }
+}
+
+function saveLeagueSuperclassicDrafts(drafts) {
+  localStorage.setItem(storageKeys.leagueSuperclassicDrafts, JSON.stringify(drafts));
+}
+
+function getLeagueSuperclassicDraftKey() {
+  return currentUserId || normalizeText(loginUser.value || "visitante");
+}
+
+function getLeagueSuperclassicDraft() {
+  const drafts = loadLeagueSuperclassicDrafts();
+  const payload = drafts[getLeagueSuperclassicDraftKey()] || {};
+  return {
+    participant: payload.participant || getActiveParticipantLabel(),
+    picks: payload.picks && typeof payload.picks === "object" ? payload.picks : {},
+  };
+}
+
+function saveLeagueSuperclassicDraftField(fixtureKey, side, value) {
+  const drafts = loadLeagueSuperclassicDrafts();
+  const draftKey = getLeagueSuperclassicDraftKey();
+  const current = drafts[draftKey] || {};
+  const picks = current.picks && typeof current.picks === "object" ? current.picks : {};
+  const previous = picks[fixtureKey] && typeof picks[fixtureKey] === "object" ? picks[fixtureKey] : {};
+  picks[fixtureKey] = {
+    ...previous,
+    [side]: value,
+  };
+  drafts[draftKey] = {
+    participant: getActiveParticipantLabel(),
+    picks,
+  };
+  saveLeagueSuperclassicDrafts(drafts);
+}
+
+function clearLeagueSuperclassicDraft() {
+  const drafts = loadLeagueSuperclassicDrafts();
+  delete drafts[getLeagueSuperclassicDraftKey()];
+  saveLeagueSuperclassicDrafts(drafts);
+}
+
+function buildLeagueSuperclassicMessage(fixtures, draft) {
+  const participant = draft.participant || getActiveParticipantLabel();
+  let message = `🏆 *Superclássicos - 1ª Fase (${participant})*\n\n`;
+  fixtures.forEach((fixture, index) => {
+    const pick = draft.picks?.[fixture.key] || {};
+    const home = String(pick.home || "").trim();
+    const away = String(pick.away || "").trim();
+    message += `🔹 *Jogo ${index + 1}* - ${fixture.title}\n`;
+    message += `Placar: ${home || "_"} x ${away || "_"}\n`;
+    if (fixture.official) {
+      message += `Oficial: ${fixture.official}\n`;
+    }
+    message += "\n";
+  });
   return message.trim();
 }
 

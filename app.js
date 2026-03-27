@@ -22,6 +22,7 @@ const storageKeys = {
   session: "ucl-bolao-session",
   leagueSuperclassicDrafts: "ucl-bolao-league-superclassic-drafts",
   qfDrafts: "ucl-bolao-qf-drafts",
+  tournamentOutcome: "ucl-bolao-tournament-outcome",
 };
 
 const loginModal = document.querySelector("#login-modal");
@@ -62,6 +63,7 @@ const tabRules = document.querySelector("#tab-rules");
 const resultsTabs = document.querySelector("#results-tabs");
 const matchesList = document.querySelector("#matches-list");
 const top8Grid = document.querySelector("#top-8-grid");
+const tournamentOutcomePanel = document.querySelector("#tournament-outcome-panel");
 
 const panelRanking = document.querySelector("#panel-ranking");
 const panelResults = document.querySelector("#panel-results");
@@ -524,6 +526,138 @@ function getActiveParticipantLabel() {
   return getParticipantById(currentUserId)?.name || loginUser.value.trim() || "Visitante";
 }
 
+function createDefaultTournamentOutcome() {
+  return {
+    champion: "",
+    scorer: "",
+    assist: "",
+    updatedAt: "",
+    updatedBy: "",
+  };
+}
+
+function loadTournamentOutcome() {
+  try {
+    const raw = localStorage.getItem(storageKeys.tournamentOutcome);
+    const parsed = raw ? JSON.parse(raw) : {};
+    if (!parsed || typeof parsed !== "object") return createDefaultTournamentOutcome();
+    return {
+      ...createDefaultTournamentOutcome(),
+      ...parsed,
+    };
+  } catch (error) {
+    console.error("Falha ao ler dados de encerramento do bolão.", error);
+    return createDefaultTournamentOutcome();
+  }
+}
+
+function saveTournamentOutcome(payload) {
+  localStorage.setItem(storageKeys.tournamentOutcome, JSON.stringify(payload));
+}
+
+function buildTournamentOutcomeSuggestions(leaderboard) {
+  const championSet = new Set([
+    ...(window.leaguePhaseTopEight || []),
+    ...(knockoutResults || [])
+      .flatMap((match) => [match.homeTeam, match.awayTeam])
+      .filter((team) => team && !String(team).includes("/")),
+    ...(leaderboard || []).map((row) => row.favoriteTeam).filter(Boolean),
+  ]);
+  const scorerSet = new Set((leaderboard || []).map((row) => row.scorerPick).filter(Boolean));
+  const assistSet = new Set((leaderboard || []).map((row) => row.assistPick).filter(Boolean));
+
+  return {
+    champion: [...championSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
+    scorer: [...scorerSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
+    assist: [...assistSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
+  };
+}
+
+function renderTournamentOutcomePanel(leaderboard, flashMessage = "") {
+  if (!tournamentOutcomePanel) return;
+
+  const outcome = loadTournamentOutcome();
+  const suggestions = buildTournamentOutcomeSuggestions(leaderboard);
+  const updatedAtLabel = outcome.updatedAt
+    ? new Date(outcome.updatedAt).toLocaleString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : "";
+
+  tournamentOutcomePanel.innerHTML = `
+    <form id="tournament-outcome-form" class="predictions-form">
+      <section class="form-block">
+        <p class="muted">Quando o bolão terminar, preencha os resultados oficiais abaixo.</p>
+        <div class="classification-grid">
+          <label>
+            Campeão oficial
+            <input type="text" name="champion" list="tournament-champion-options" value="${outcome.champion || ""}" placeholder="Ex.: Real Madrid" />
+          </label>
+          <label>
+            Artilheiro oficial
+            <input type="text" name="scorer" list="tournament-scorer-options" value="${outcome.scorer || ""}" placeholder="Ex.: Erling Haaland" />
+          </label>
+          <label>
+            Garçom oficial
+            <input type="text" name="assist" list="tournament-assist-options" value="${outcome.assist || ""}" placeholder="Ex.: Lamine Yamal" />
+          </label>
+        </div>
+        <datalist id="tournament-champion-options">
+          ${suggestions.champion.map((name) => `<option value="${name}"></option>`).join("")}
+        </datalist>
+        <datalist id="tournament-scorer-options">
+          ${suggestions.scorer.map((name) => `<option value="${name}"></option>`).join("")}
+        </datalist>
+        <datalist id="tournament-assist-options">
+          ${suggestions.assist.map((name) => `<option value="${name}"></option>`).join("")}
+        </datalist>
+        <div class="form-actions" style="display:flex; gap:10px; justify-content:flex-start; margin-top:12px;">
+          <button class="primary-button" type="submit">Salvar encerramento</button>
+          <button class="ghost-button" id="tournament-outcome-clear" type="button">Limpar</button>
+        </div>
+        ${
+          updatedAtLabel
+            ? `<p class="muted" style="margin-top:10px;">Última atualização: ${updatedAtLabel}${outcome.updatedBy ? ` • por ${outcome.updatedBy}` : ""}</p>`
+            : `<p class="muted" style="margin-top:10px;">Sem preenchimento oficial ainda.</p>`
+        }
+        <p id="tournament-outcome-feedback" class="feedback ${flashMessage ? "success" : ""}">${flashMessage}</p>
+      </section>
+    </form>
+  `;
+
+  const form = tournamentOutcomePanel.querySelector("#tournament-outcome-form");
+  const clearButton = tournamentOutcomePanel.querySelector("#tournament-outcome-clear");
+
+  if (form) {
+    form.onsubmit = (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const payload = {
+        champion: String(formData.get("champion") || "").trim(),
+        scorer: String(formData.get("scorer") || "").trim(),
+        assist: String(formData.get("assist") || "").trim(),
+        updatedAt: new Date().toISOString(),
+        updatedBy: getActiveParticipantLabel(),
+      };
+      saveTournamentOutcome(payload);
+      renderAwards(leaderboard);
+      renderTournamentOutcomePanel(leaderboard, "Encerramento salvo com sucesso.");
+    };
+  }
+
+  if (clearButton) {
+    clearButton.onclick = () => {
+      saveTournamentOutcome(createDefaultTournamentOutcome());
+      renderAwards(leaderboard);
+      renderTournamentOutcomePanel(leaderboard, "Encerramento limpo.");
+    };
+  }
+}
+
 function getRankingRows() {
   if (!backtestData || !backtestData.ranking) return [];
   const quarterContext = buildQuarterScoringContext();
@@ -696,11 +830,15 @@ function renderAwards(leaderboard) {
   const leader = leaderboard[0];
   const playoffLeader = [...leaderboard].sort((a, b) => b.playoff - a.playoff)[0];
   const roundOf16Leader = [...leaderboard].sort((a, b) => b.roundOf16 - a.roundOf16)[0];
+  const tournamentOutcome = loadTournamentOutcome();
 
   awards.innerHTML = [
     ["Liderança geral", leader ? `${leader.participant.name} com ${formatPoints(leader.total)} pts` : "-"],
     ["Melhor playoff", playoffLeader ? `${playoffLeader.participant.name} com ${formatPoints(playoffLeader.playoff)} pts` : "-" ],
     ["Melhor oitavas", roundOf16Leader ? `${roundOf16Leader.participant.name} com ${formatPoints(roundOf16Leader.roundOf16)} pts` : "-" ],
+    ["Campeão oficial", tournamentOutcome.champion || "Pendente"],
+    ["Artilheiro oficial", tournamentOutcome.scorer || "Pendente"],
+    ["Garçom oficial", tournamentOutcome.assist || "Pendente"],
   ]
     .map(
       ([title, body]) => `
@@ -2254,6 +2392,7 @@ function renderApp() {
   renderAwards(leaderboard);
   renderRanking(leaderboard);
   renderMatches();
+  renderTournamentOutcomePanel(leaderboard);
   renderParticipantSnapshot();
   renderHistory();
   renderPredictionConsultation();

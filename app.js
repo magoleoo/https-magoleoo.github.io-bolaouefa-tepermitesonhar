@@ -535,9 +535,9 @@ function renderMatches() {
   `;
 
   const renderMatchCard = (match, meta = {}) => {
-    const superclassicEligible = superclassicEligiblePhases.has(match.phase);
     const superclassic =
-      superclassicEligible && isEligibleSuperclassicMatch(match.homeTeam, match.awayTeam);
+      superclassicEligiblePhases.has(match.phase) &&
+      isEligibleSuperclassicMatch(match.homeTeam, match.awayTeam);
     const hasScore =
       typeof match?.scoreFinal?.home === "number" && typeof match?.scoreFinal?.away === "number";
     const status = meta.statusLabel || match.status || (hasScore ? "Finalizado" : "Agendado");
@@ -553,7 +553,6 @@ function renderMatches() {
           <span class="tag ${hasScore ? "status-finished" : ""}">${status}</span>
           <div class="match-header-tags">
             ${superclassic ? `<span class="tag">Superclássico</span>` : ""}
-            ${superclassicEligible && !superclassic ? `<span class="tag">Elegível</span>` : ""}
           </div>
         </div>
         <div class="teams">

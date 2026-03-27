@@ -426,26 +426,42 @@ function renderMatches() {
       <button class="tab-button ${activeResultsTab === "LEAGUE" ? "is-active" : ""}" onclick="setResultsTab('LEAGUE')">Primeira fase</button>
       <button class="tab-button ${activeResultsTab === "PLAYOFF" ? "is-active" : ""}" onclick="setResultsTab('PLAYOFF')">Playoffs</button>
       <button class="tab-button ${activeResultsTab === "ROUND_OF_16" ? "is-active" : ""}" onclick="setResultsTab('ROUND_OF_16')">Oitavas</button>
+      <button class="tab-button ${activeResultsTab === "QUARTER" ? "is-active" : ""}" onclick="setResultsTab('QUARTER')">Quartas</button>
+      <button class="tab-button ${activeResultsTab === "SEMI" ? "is-active" : ""}" onclick="setResultsTab('SEMI')">Semi</button>
+      <button class="tab-button ${activeResultsTab === "FINAL" ? "is-active" : ""}" onclick="setResultsTab('FINAL')">Final</button>
     </div>
   `;
 
   const renderMatchCard = (match, meta = {}) => {
     const matchId = meta.matchId || match.id;
     const superclassic = isManualSuperclassic(matchId);
-    const status = meta.statusLabel || "Finalizado";
+    const superclassicEligible = ["LEAGUE", "PLAYOFF", "ROUND_OF_16", "QUARTER"].includes(
+      match.phase
+    );
+    const hasScore =
+      typeof match?.scoreFinal?.home === "number" && typeof match?.scoreFinal?.away === "number";
+    const status = meta.statusLabel || match.status || (hasScore ? "Finalizado" : "Agendado");
     const secondary = meta.secondaryLine
       ? `<p class="muted match-card-note">${meta.secondaryLine}</p>`
       : "";
+    const homeScore = hasScore ? match.scoreFinal.home : "-";
+    const awayScore = hasScore ? match.scoreFinal.away : "-";
 
     return `
       <article class="match-card ${superclassic ? "is-superclassic" : ""}">
         <div class="match-header">
-          <span class="tag status-finished">${status}</span>
+          <span class="tag ${hasScore ? "status-finished" : ""}">${status}</span>
           <div class="match-header-tags">
             ${superclassic ? `<span class="tag">Superclássico</span>` : ""}
+            ${
+              superclassicEligible
+                ? `
             <button type="button" class="superclassic-toggle" data-superclassic-id="${matchId}">
               ${superclassic ? "Remover superclássico" : "Marcar superclássico"}
             </button>
+            `
+                : ""
+            }
           </div>
         </div>
         <div class="teams">
@@ -459,8 +475,8 @@ function renderMatches() {
           </span>
         </div>
         <div class="scoreline">
-          <strong>${match.scoreFinal.home}</strong>
-          <strong>${match.scoreFinal.away}</strong>
+          <strong>${homeScore}</strong>
+          <strong>${awayScore}</strong>
         </div>
         ${secondary}
       </article>
@@ -533,12 +549,16 @@ function renderMatches() {
     const titleByPhase = {
       PLAYOFF: "Playoffs completos",
       ROUND_OF_16: "Oitavas completas",
+      QUARTER: "Quartas de final",
+      SEMI: "Semifinais",
+      FINAL: "Final",
     };
 
     const phasesMarkup = Object.entries(grouped)
       .map(([roundLabel, phaseMatches]) =>
         renderGroup(roundLabel, phaseMatches, (match) =>
           renderMatchCard(match, {
+            statusLabel: match.status || undefined,
             secondaryLine: [
               match.aggregate ? `Agregado: ${match.aggregate}` : "",
               match.qualified ? `Classificado: ${match.qualified}` : "",
@@ -556,7 +576,7 @@ function renderMatches() {
         <h3>${titleByPhase[activeResultsTab] || "Mata-mata"}</h3>
         <p class="muted">${matches.length} jogos oficiais carregados</p>
       </div>
-      ${phasesMarkup}
+      ${phasesMarkup || `<p class="muted">Sem jogos carregados para esta fase ainda.</p>`}
     `;
   }
 
@@ -1243,7 +1263,7 @@ function loadImmediateData() {
   backtestData = window.backtestData || { ranking: [] };
   leaguePhaseData = window.leaguePhaseData || { records: [] };
   superclassicData = window.superclassicData || { blocks: [] };
-  if (window.apiMatchesData) {
+  if (window.apiMatchesData?.matches?.length) {
     knockoutResults = window.apiMatchesData.matches.map(m => ({
       id: m.id.toString(),
       phase: m.phase_key,
@@ -1254,6 +1274,7 @@ function loadImmediateData() {
       scoreFinal: { home: m.score_home_90, away: m.score_away_90 },
       aggregate: m.score_home_90 !== null ? `${m.score_home_90}-${m.score_away_90}` : null,
       qualified: m.qualified_team_name,
+      status: m.score_home_90 !== null && m.score_away_90 !== null ? "Finalizado" : "Agendado",
     }));
   } else {
     knockoutResults = staticKnockoutResults;

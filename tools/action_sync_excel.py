@@ -269,10 +269,16 @@ def main():
     with open(out_dir / "ranking.json", "w", encoding="utf-8") as f:
         json.dump(ranking_json, f, ensure_ascii=False, indent=2)
 
+    with open(out_dir / "ranking.js", "w", encoding="utf-8") as f:
+        f.write("window.backtestData = " + json.dumps(ranking_json, ensure_ascii=False) + ";\n")
+
     with open(out_dir / "matches.json", "w", encoding="utf-8") as f:
         json.dump({"matches": matches_list}, f, ensure_ascii=False, indent=2)
 
-    print(f"=== SUCESSO! api/ranking.json GERAÇÃO CONCLUÍDA ({len(ranking_list)} particpantes) ===")
+    with open(out_dir / "matches.js", "w", encoding="utf-8") as f:
+        f.write("window.apiMatchesData = " + json.dumps({"matches": matches_list}, ensure_ascii=False) + ";\n")
+
+    print(f"=== SUCESSO! api/ranking.js E api/matches.js GERAÇÃO CONCLUÍDA ({len(ranking_list)} particpantes) ===")
 
 if __name__ == "__main__":
     main()

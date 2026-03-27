@@ -1,3 +1,1 @@
-window.apiMatchesData = {
-  "matches": []
-};
+window.apiMatchesData = {"matches": []};

@@ -1213,9 +1213,13 @@ function toggleLoginState() {
 }
 
 function renderApp() {
+  console.log("Entrando no renderApp... Resolvendo ranking.");
   const leaderboard = getRankingRows();
+  console.log("Leaderboard resolvido:", leaderboard.length, "linhas.");
   renderOverview(leaderboard);
+  console.log("Overview resolvido.");
   renderUserSummary(leaderboard);
+  console.log("User summary resolvido.");
   renderAwards(leaderboard);
   renderRanking(leaderboard);
   renderMatches();
@@ -1327,8 +1331,12 @@ tabRules.addEventListener("click", () => setActiveTab("rules"));
 tabSubmitQf.addEventListener("click", () => setActiveTab("submit-qf"));
 
 console.log(">>> APP.JS CARREGADO NO FINAL DO ARQUIVO! ATRIBUINDO LISTENERS...");
-loadImmediateData();
-populateLoginSelect();
-renderRules();
-renderApp();
-loadQuarterFinalsFormsData().then(renderApp);
+
+window.addEventListener("DOMContentLoaded", () => {
+  console.log(">>> DOM COMPLETAMENTE CARREGADO! INICIANDO APP...");
+  loadImmediateData();
+  populateLoginSelect();
+  renderRules();
+  renderApp();
+  loadQuarterFinalsFormsData().then(renderApp);
+});

@@ -267,12 +267,16 @@
       </form>
     </div>
 
-    <script src="./league-phase.js?v=29.0"></script>
-    <script src="./superclassicos.js?v=29.0"></script>
-    <script src="./api/ranking.js?v=29.0"></script>
-    <script src="./api/matches.js?v=29.0"></script>
-    <script src="./data.js?v=29.0"></script>
-    <script src="./results-data.js?v=29.0"></script>
-    <script src="./app.js?v=29.0"></script>
+    <script src="./league-phase.js?v=30.0"></script>
+    <script src="./superclassicos.js?v=30.0"></script>
+    <script src="./api/ranking.js?v=30.0"></script>
+    <script>
+      console.log("[INSPECTION] api/ranking.js evaluated. typeof window.backtestData:", typeof window.backtestData);
+      if (window.backtestData) console.log("Size:", window.backtestData.ranking.length);
+    </script>
+    <script src="./api/matches.js?v=30.0"></script>
+    <script src="./data.js?v=30.0"></script>
+    <script src="./results-data.js?v=30.0"></script>
+    <script src="./app.js?v=30.0"></script>
   </body>
 </html>

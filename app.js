@@ -830,6 +830,69 @@ function renderSuperclassicPanel() {
     return officialResultByFixture.get(key) || "";
   };
 
+  const eligibleSuperclassicTeams = new Set([
+    "real madrid",
+    "barcelona",
+    "bayern munchen",
+    "manchester city",
+    "liverpool",
+    "chelsea",
+    "paris saint-germain",
+  ]);
+
+  const isEligibleSuperclassicMatch = (homeTeam, awayTeam) =>
+    eligibleSuperclassicTeams.has(canonicalTeamKey(homeTeam)) &&
+    eligibleSuperclassicTeams.has(canonicalTeamKey(awayTeam));
+
+  const autoDetectedSuperclassics = [];
+
+  const leagueByMatchday = (leaguePhaseResults || []).reduce((acc, match) => {
+    if (!acc[match.matchday]) acc[match.matchday] = [];
+    acc[match.matchday].push(match);
+    return acc;
+  }, {});
+
+  Object.entries(leagueByMatchday).forEach(([matchday, matches]) => {
+    matches.forEach((match, index) => {
+      if (!isEligibleSuperclassicMatch(match.homeTeam, match.awayTeam)) return;
+      autoDetectedSuperclassics.push({
+        id: createLeagueMatchId(matchday, index),
+        title: `${match.homeTeam} x ${match.awayTeam}`,
+        phase: matchday.replace("Matchday", "Rodada"),
+        official:
+          typeof match?.scoreFinal?.home === "number" && typeof match?.scoreFinal?.away === "number"
+            ? `${match.scoreFinal.home}x${match.scoreFinal.away}`
+            : "",
+      });
+    });
+  });
+
+  (knockoutResults || [])
+    .filter((match) => ["PLAYOFF", "ROUND_OF_16", "QUARTER"].includes(match.phase))
+    .forEach((match) => {
+      if (!isEligibleSuperclassicMatch(match.homeTeam, match.awayTeam)) return;
+      autoDetectedSuperclassics.push({
+        id: String(match.id),
+        title: `${match.homeTeam} x ${match.awayTeam}`,
+        phase: match.roundLabel || phaseRules[match.phase]?.label || match.phase,
+        official:
+          typeof match?.scoreFinal?.home === "number" && typeof match?.scoreFinal?.away === "number"
+            ? `${match.scoreFinal.home}x${match.scoreFinal.away}`
+            : "",
+      });
+    });
+
+  const existingSuperclassicTitles = new Set(
+    [
+      ...manualEntries.map((entry) => normalizeText(entry.title)),
+      ...blocks.flatMap((block) => (block.matches || []).map((match) => normalizeText(match.title))),
+    ]
+  );
+
+  const newAutoDetectedSuperclassics = autoDetectedSuperclassics.filter(
+    (match) => !existingSuperclassicTitles.has(normalizeText(match.title))
+  );
+
   const renderSuperclassicMatrix = (block) => {
     const matchCols = (block.matches || []).map((match) => ({
       label: match.title,
@@ -968,7 +1031,39 @@ function renderSuperclassicPanel() {
     )
     .join("");
 
-  superclassicPanel.innerHTML = `${matrixStyles}${manualMarkup}${blockMarkup}`;
+  const autoScanMarkup = autoDetectedSuperclassics.length
+    ? `
+      <article class="rules-card">
+        <h3>Varredura automática de superclássicos</h3>
+        <p class="muted">Times elegíveis: Real Madrid, Barcelona, Bayern de Munique, Manchester City, Liverpool, Chelsea e Paris Saint-Germain.</p>
+        <div class="result-chip-row" style="margin-bottom:12px;">
+          <span class="result-chip exact">Total encontrados: ${autoDetectedSuperclassics.length}</span>
+          <span class="result-chip ${newAutoDetectedSuperclassics.length ? "trend" : "hit"}">Novos não cadastrados: ${newAutoDetectedSuperclassics.length}</span>
+        </div>
+        ${
+          newAutoDetectedSuperclassics.length
+            ? `
+              <div class="superclassic-manual-grid">
+                ${newAutoDetectedSuperclassics
+                  .map(
+                    (match) => `
+                      <article class="league-row-card is-superclassic">
+                        <p class="eyebrow">${match.phase}</p>
+                        <strong>${match.title}</strong>
+                        <span class="muted">Resultado oficial: ${match.official || "pendente"}</span>
+                      </article>
+                    `
+                  )
+                  .join("")}
+              </div>
+            `
+            : `<p class="muted">Nenhum superclássico adicional fora dos blocos já cadastrados na aba.</p>`
+        }
+      </article>
+    `
+    : "";
+
+  superclassicPanel.innerHTML = `${matrixStyles}${manualMarkup}${autoScanMarkup}${blockMarkup}`;
 }
 
 function setActiveTab(tab) {

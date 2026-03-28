@@ -1891,7 +1891,7 @@ function renderSuperclassicPanel() {
     )
     .join("");
 
-  superclassicPanel.innerHTML = `${matrixStyles}${leagueFormMarkup}${leagueTableMarkup}${overviewMarkup}${blockMarkup}`;
+  superclassicPanel.innerHTML = `${matrixStyles}${leagueTableMarkup}${overviewMarkup}${blockMarkup}`;
 
   const leagueForm = superclassicPanel.querySelector("#league-superclassic-form");
   const leagueFeedback = superclassicPanel.querySelector("#league-superclassic-feedback");

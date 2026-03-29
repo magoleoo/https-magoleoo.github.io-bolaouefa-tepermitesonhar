@@ -106,6 +106,17 @@ function normalizeText(text) {
     .replace(/\s+/g, " ");
 }
 
+function normalizePhaseKey(rawPhase) {
+  const normalized = normalizeText(String(rawPhase || ""));
+  if (normalized === "round of 16" || normalized === "round_of_16") return "ROUND_OF_16";
+  if (normalized === "quarter finals" || normalized === "quarter") return "QUARTER";
+  if (normalized === "semi finals" || normalized === "semi") return "SEMI";
+  if (normalized === "playoff" || normalized === "play offs" || normalized === "play-off") return "PLAYOFF";
+  if (normalized === "league") return "LEAGUE";
+  if (normalized === "final") return "FINAL";
+  return String(rawPhase || "").toUpperCase();
+}
+
 const fallbackSuperclassicConfig = {
   eligiblePhases: ["LEAGUE", "PLAYOFF", "ROUND_OF_16", "QUARTER"],
   eligibleTeams: [
@@ -778,9 +789,254 @@ function renderTournamentOutcomePanel(leaderboard, flashMessage = "") {
   }
 }
 
+const liveRankingPhaseRules = {
+  LEAGUE: {
+    result: 0.85,
+  },
+  PLAYOFF: {
+    result: 0.5,
+    exact: 3,
+  },
+  ROUND_OF_16: {
+    result: 1,
+    exact: 6,
+  },
+};
+
+function roundToTwo(value) {
+  if (!Number.isFinite(value)) return 0;
+  return Math.round((value + Number.EPSILON) * 100) / 100;
+}
+
+function createEmptyPhaseScoreRow() {
+  return {
+    firstPhase: 0,
+    playoff: 0,
+    roundOf16: 0,
+    superclassic: 0,
+    hopeSolo: 0,
+  };
+}
+
+function parseScoreFromText(value) {
+  const normalized = normalizeScoreToken(value);
+  if (!normalized) return null;
+  const [homeToken, awayToken] = normalized.split("x");
+  const home = parseIntegerScore(homeToken);
+  const away = parseIntegerScore(awayToken);
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+  return { home, away };
+}
+
+function resolveTrendTokenFromPick(value, homeTeam, awayTeam) {
+  const normalized = normalizeText(String(value || ""));
+  if (!normalized) return null;
+  if (normalized === "empate" || normalized === "draw") return "DRAW";
+
+  const pickKey = canonicalTeamKey(String(value || ""));
+  if (pickKey === canonicalTeamKey(homeTeam)) return "HOME";
+  if (pickKey === canonicalTeamKey(awayTeam)) return "AWAY";
+  return null;
+}
+
+function resolveFixtureTeams(fixture) {
+  if (!fixture || typeof fixture !== "object") return null;
+  const home = String(fixture.home || "").trim();
+  const away = String(fixture.away || "").trim();
+  if (home && away) {
+    return {
+      homeTeam: home,
+      awayTeam: away,
+    };
+  }
+  return splitFixtureLabel(String(fixture.label || "").trim());
+}
+
+function isLeagueClassificationFixture(fixture) {
+  return /^classificado em\s+\d+/i.test(String(fixture?.label || "").trim());
+}
+
+function buildLiveScoreLookupMaps() {
+  const leagueByTeams = new Map();
+  const knockoutByPhaseTeams = new Map();
+
+  (liveLeaguePhaseResults || []).forEach((match) => {
+    const home = parseIntegerScore(match?.scoreFinal?.home);
+    const away = parseIntegerScore(match?.scoreFinal?.away);
+    if (!Number.isFinite(home) || !Number.isFinite(away)) return;
+    const key = `${canonicalTeamKey(match.homeTeam)}::${canonicalTeamKey(match.awayTeam)}`;
+    leagueByTeams.set(key, { home, away });
+  });
+
+  (knockoutResults || []).forEach((match) => {
+    if (!match?.phase || match.phase === "LEAGUE") return;
+    const home = parseIntegerScore(match?.scoreFinal?.home);
+    const away = parseIntegerScore(match?.scoreFinal?.away);
+    if (!Number.isFinite(home) || !Number.isFinite(away)) return;
+    const key = `${match.phase}::${canonicalTeamKey(match.homeTeam)}::${canonicalTeamKey(match.awayTeam)}`;
+    knockoutByPhaseTeams.set(key, { home, away });
+  });
+
+  return {
+    leagueByTeams,
+    knockoutByPhaseTeams,
+  };
+}
+
+function computePhaseScoringSnapshot({ useLiveOfficial = false } = {}) {
+  const byParticipant = new Map(
+    participants.map((participant) => [normalizeText(participant.name), createEmptyPhaseScoreRow()])
+  );
+
+  const ensureParticipantScore = (participantName) => {
+    const key = normalizeText(String(participantName || ""));
+    if (!key) return null;
+    if (!byParticipant.has(key)) {
+      byParticipant.set(key, createEmptyPhaseScoreRow());
+    }
+    return byParticipant.get(key);
+  };
+
+  const lookups = buildLiveScoreLookupMaps();
+  const phaseDescriptors = [
+    { phase: "LEAGUE", field: "firstPhase" },
+    { phase: "PLAYOFF", field: "playoff" },
+    { phase: "ROUND_OF_16", field: "roundOf16" },
+  ];
+
+  phaseDescriptors.forEach(({ phase, field }) => {
+    const rules = liveRankingPhaseRules[phase];
+    if (!rules) return;
+
+    const fixtures = backtestData?.phases?.[phase]?.fixtures || [];
+    fixtures.forEach((fixture) => {
+      if (phase === "LEAGUE" && isLeagueClassificationFixture(fixture)) {
+        return;
+      }
+
+      const teams = resolveFixtureTeams(fixture);
+      if (!teams) return;
+
+      let officialScore = null;
+      if (useLiveOfficial) {
+        if (phase === "LEAGUE") {
+          const leagueKey = `${canonicalTeamKey(teams.homeTeam)}::${canonicalTeamKey(teams.awayTeam)}`;
+          officialScore = lookups.leagueByTeams.get(leagueKey) || null;
+        } else {
+          const knockoutKey = `${phase}::${canonicalTeamKey(teams.homeTeam)}::${canonicalTeamKey(teams.awayTeam)}`;
+          officialScore = lookups.knockoutByPhaseTeams.get(knockoutKey) || null;
+        }
+      }
+
+      let officialTrend = null;
+      if (phase === "LEAGUE") {
+        if (officialScore) {
+          officialTrend = matchResultFromScores(officialScore.home, officialScore.away);
+        } else {
+          officialTrend = resolveTrendTokenFromPick(
+            fixture.official,
+            teams.homeTeam,
+            teams.awayTeam
+          );
+        }
+      } else {
+        const fallbackScore = parseScoreFromText(fixture.official);
+        const resolvedScore = officialScore || fallbackScore;
+        if (!resolvedScore) return;
+        officialScore = resolvedScore;
+        officialTrend = matchResultFromScores(officialScore.home, officialScore.away);
+      }
+
+      if (!officialTrend) return;
+
+      const isSuperclassicKnockout =
+        phase !== "LEAGUE" &&
+        superclassicEligiblePhases.has(phase) &&
+        isEligibleSuperclassicMatch(teams.homeTeam, teams.awayTeam);
+
+      const hits = [];
+      (fixture.picks || []).forEach((pick) => {
+        const participantScores = ensureParticipantScore(pick?.participant);
+        if (!participantScores) return;
+
+        let pointsAwarded = 0;
+        let superclassicBonus = 0;
+
+        if (phase === "LEAGUE") {
+          const predictedTrend = resolveTrendTokenFromPick(
+            pick?.pick,
+            teams.homeTeam,
+            teams.awayTeam
+          );
+          if (predictedTrend && predictedTrend === officialTrend) {
+            pointsAwarded = rules.result;
+          }
+        } else {
+          const predictedScore = parseScoreFromText(pick?.pick);
+          if (!predictedScore) return;
+
+          const predictedTrend = matchResultFromScores(
+            predictedScore.home,
+            predictedScore.away
+          );
+
+          if (
+            predictedScore.home === officialScore.home &&
+            predictedScore.away === officialScore.away
+          ) {
+            pointsAwarded = rules.exact;
+            if (isSuperclassicKnockout) {
+              superclassicBonus = rules.exact;
+              pointsAwarded += superclassicBonus;
+            }
+          } else if (predictedTrend && predictedTrend === officialTrend) {
+            pointsAwarded = rules.result;
+          }
+        }
+
+        if (!pointsAwarded) return;
+        participantScores[field] += pointsAwarded;
+        if (superclassicBonus) {
+          participantScores.superclassic += superclassicBonus;
+        }
+        hits.push({
+          participantScores,
+          pointsAwarded,
+        });
+      });
+
+      if (hits.length === 1) {
+        hits[0].participantScores[field] += hits[0].pointsAwarded;
+        hits[0].participantScores.hopeSolo += 1;
+      }
+    });
+  });
+
+  byParticipant.forEach((row) => {
+    row.firstPhase = roundToTwo(row.firstPhase);
+    row.playoff = roundToTwo(row.playoff);
+    row.roundOf16 = roundToTwo(row.roundOf16);
+    row.superclassic = roundToTwo(row.superclassic);
+    row.hopeSolo = roundToTwo(row.hopeSolo);
+  });
+
+  return {
+    byParticipant,
+  };
+}
+
 function getRankingRows() {
   if (!backtestData || !backtestData.ranking) return [];
+
   const quarterContext = buildQuarterScoringContext();
+  const hasApiMatches =
+    Array.isArray(window.apiMatchesData?.matches) &&
+    window.apiMatchesData.matches.length > 0;
+  const baselineSnapshot = computePhaseScoringSnapshot({ useLiveOfficial: false });
+  const liveSnapshot = hasApiMatches
+    ? computePhaseScoringSnapshot({ useLiveOfficial: true })
+    : baselineSnapshot;
+
   const mapped = backtestData.ranking.map((row) => {
     let nameToMatch = row.name;
     const participant = participants.find(
@@ -796,15 +1052,33 @@ function getRankingRows() {
       superclassic: 0,
       hopeSolo: 0,
     };
+
+    const participantKey = normalizeText(participant.name);
+    const baselineScores =
+      baselineSnapshot.byParticipant.get(participantKey) || createEmptyPhaseScoreRow();
+    const liveScores = liveSnapshot.byParticipant.get(participantKey) || baselineScores;
+
+    const deltaFirstPhase = roundToTwo(liveScores.firstPhase - baselineScores.firstPhase);
+    const deltaPlayoff = roundToTwo(liveScores.playoff - baselineScores.playoff);
+    const deltaRoundOf16 = roundToTwo(liveScores.roundOf16 - baselineScores.roundOf16);
+    const deltaSuperclassic = roundToTwo(liveScores.superclassic - baselineScores.superclassic);
+    const deltaHopeSolo = roundToTwo(liveScores.hopeSolo - baselineScores.hopeSolo);
+
     return { 
       participant: participant,
-      total: row.total_points + quarterAdd.quarter,
-      firstPhase: row.first_phase_points,
-      playoff: row.playoff_points,
-      roundOf16: row.round_of_16_points,
+      total:
+        row.total_points +
+        deltaFirstPhase +
+        deltaPlayoff +
+        deltaRoundOf16 +
+        quarterAdd.quarter,
+      firstPhase: row.first_phase_points + deltaFirstPhase,
+      playoff: row.playoff_points + deltaPlayoff,
+      roundOf16: row.round_of_16_points + deltaRoundOf16,
       quarter: quarterAdd.quarter,
-      superclassic: row.superclassic_points + quarterAdd.superclassic,
-      hopeSolo: row.hope_solo_hits + quarterAdd.hopeSolo,
+      superclassic:
+        row.superclassic_points + deltaSuperclassic + quarterAdd.superclassic,
+      hopeSolo: row.hope_solo_hits + deltaHopeSolo + quarterAdd.hopeSolo,
       favoriteTeam: row.favorite_team || "-",
       scorerPick: row.scorer_pick || "-",
       assistPick: row.assist_pick || "-"
@@ -2665,16 +2939,6 @@ function loadImmediateData() {
   const toNumberOrNull = (value) => {
     const parsed = Number(value);
     return Number.isFinite(parsed) ? parsed : null;
-  };
-  const normalizePhaseKey = (rawPhase) => {
-    const normalized = normalizeText(String(rawPhase || ""));
-    if (normalized === "round of 16" || normalized === "round_of_16") return "ROUND_OF_16";
-    if (normalized === "quarter finals" || normalized === "quarter") return "QUARTER";
-    if (normalized === "semi finals" || normalized === "semi") return "SEMI";
-    if (normalized === "playoff" || normalized === "play offs" || normalized === "play-off") return "PLAYOFF";
-    if (normalized === "league") return "LEAGUE";
-    if (normalized === "final") return "FINAL";
-    return String(rawPhase || "").toUpperCase();
   };
   const resolveStatusLabel = (statusShort, home, away) => {
     const key = String(statusShort || "").toUpperCase();

@@ -18,9 +18,19 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Exibir origem da planilha
+        env:
+          BOLAO_SOURCE_XLSX_URL: ${{ vars.BOLAO_SOURCE_XLSX_URL }}
+        run: |
+          if [ -n "$BOLAO_SOURCE_XLSX_URL" ]; then
+            echo "Origem: URL remota configurada em BOLAO_SOURCE_XLSX_URL."
+          else
+            echo "Origem: arquivo local versionado em data/Bolao_UEFA_25_26_OFICIAL.xlsx."
+          fi
+
       - name: Executar Sincronização do Bolão
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          BOLAO_SOURCE_XLSX_URL: ${{ vars.BOLAO_SOURCE_XLSX_URL }}
         run: |
           pip install -r requirements.txt
           python tools/action_sync_excel.py
@@ -30,5 +40,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add api/
-          git commit -m "auto(bot): Atualizando resultados da API e ranking calculado" || exit 0
+          git commit -m "auto(bot): atualiza ranking e resultados via planilha oficial" || exit 0
           git push

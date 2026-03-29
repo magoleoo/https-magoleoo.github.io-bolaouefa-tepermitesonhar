@@ -44,8 +44,8 @@ Motivos:
 2. Gerar o bundle de Forms da temporada.
 3. Abrir janela de envio dos palpites da fase.
 4. Encerrar prazo da fase.
-5. Sincronizar resultados oficiais.
-6. Rodar recálculo.
+5. Atualizar a planilha oficial com resultados/palpites.
+6. Rodar `Bolao Auto-Sync` no GitHub Actions (ou `python tools/action_sync_excel.py` localmente).
 7. Publicar atualização do site.
 
 ## Virada para a próxima temporada

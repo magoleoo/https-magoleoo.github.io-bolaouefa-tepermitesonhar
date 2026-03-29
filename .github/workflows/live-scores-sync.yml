@@ -2,8 +2,6 @@ name: Live Scores Sync (API Providers)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/20 * * * *"
 
 jobs:
   sync-live-scores:
@@ -15,8 +13,8 @@ jobs:
       - name: Modo sem API (padrão)
         if: ${{ vars.ENABLE_API_SYNC != 'true' }}
         run: |
-          echo "Sincronização via API desativada (ENABLE_API_SYNC != true)."
-          echo "Fluxo ativo: atualização do bolão via Forms/planilha oficial."
+          echo "Sincronização via API desativada."
+          echo "Fluxo oficial do projeto: Forms/planilha + tools/action_sync_excel.py."
 
       - name: Checkout
         if: ${{ vars.ENABLE_API_SYNC == 'true' }}

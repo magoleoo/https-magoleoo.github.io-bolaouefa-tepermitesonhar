@@ -124,7 +124,13 @@ function buildExactHitMap(participants, allPredictions, matches) {
   return exactHits;
 }
 
-function scoreFinishedMatch(match, prediction, exactHitMap) {
+function scoreFinishedMatch(
+  match,
+  prediction,
+  exactHitMap,
+  participantChampionPick,
+  officialChampion
+) {
   if (!prediction || match.status !== "FINISHED") {
     return 0;
   }
@@ -146,12 +152,24 @@ function scoreFinishedMatch(match, prediction, exactHitMap) {
     exactPoints = rules.exactScorePoints / 2;
   }
 
-  if (exactPoints > 0 && match.superclassic) {
-    exactPoints *= 2;
-  }
+  const finalDrawWrongChampion =
+    match.phase === "FINAL"
+    && regulationResult === "DRAW"
+    && participantChampionPick
+    && officialChampion
+    && participantChampionPick !== officialChampion;
 
-  if (exactRegulation && exactHitMap[match.id]?.length === 1) {
-    exactPoints *= 2;
+  if (finalDrawWrongChampion && exactPoints > 0) {
+    // Regra especial: final empatada + campeão errado = apenas 23,80 por placar.
+    exactPoints = rules.exactScorePoints;
+  } else {
+    if (exactPoints > 0 && match.superclassic) {
+      exactPoints *= 2;
+    }
+
+    if (exactRegulation && exactHitMap[match.id]?.length === 1) {
+      exactPoints *= 2;
+    }
   }
 
   total += exactPoints;
@@ -176,10 +194,13 @@ export function computeLeaderboard({ participants, matches, official, prediction
     };
 
     matches.forEach((match) => {
+      const participantChampionPick = participantPredictions.classifications?.champion;
       categoryTotals[match.phase] += scoreFinishedMatch(
         match,
         participantPredictions.matches[match.id],
-        exactHitMap
+        exactHitMap,
+        participantChampionPick,
+        official.classifications?.champion
       );
     });
 

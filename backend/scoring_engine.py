@@ -248,6 +248,10 @@ def calculate_leaderboard(connection: sqlite3.Connection, season: int) -> list[d
         }
         total_hits = 0
         matches_predicted = 0
+        participant_champion_pick = None
+        final_phase_picks = picks_by_participant.get(participant["id"], {}).get("FINAL", [])
+        if final_phase_picks:
+            participant_champion_pick = final_phase_picks[0].get("value")
 
         for match in matches:
             prediction = predictions_by_participant.get(participant["id"], {}).get(match["id"])
@@ -265,13 +269,28 @@ def calculate_leaderboard(connection: sqlite3.Connection, season: int) -> list[d
                 exact_points = rules.get("exact", 0.0)
                 if hit_type == "exact_et":
                     exact_points *= 0.5
-                if match["id"] in superclassic_match_ids:
-                    superclassic_bonus = exact_points
-                    exact_points *= 2
-                    totals["superclassic"] += superclassic_bonus
-                if (participant["id"], match["id"]) in solo_hit_lookup:
-                    exact_points *= 2
-                    totals["hope_solo_hits"] += 1
+
+                final_draw_wrong_champion = (
+                    phase_key == "FINAL"
+                    and match_result(match["score_home_90"], match["score_away_90"]) == "DRAW"
+                    and champion_name
+                    and participant_champion_pick
+                    and participant_champion_pick != champion_name
+                )
+
+                if final_draw_wrong_champion:
+                    # Regra especial: final empatada + campeão errado = apenas 23.80 por placar.
+                    exact_points = rules.get("exact", 0.0)
+                    if (participant["id"], match["id"]) in solo_hit_lookup:
+                        totals["hope_solo_hits"] += 1
+                else:
+                    if match["id"] in superclassic_match_ids:
+                        superclassic_bonus = exact_points
+                        exact_points *= 2
+                        totals["superclassic"] += superclassic_bonus
+                    if (participant["id"], match["id"]) in solo_hit_lookup:
+                        exact_points *= 2
+                        totals["hope_solo_hits"] += 1
                 totals[phase_key] += exact_points
             elif hit_type == "result":
                 total_hits += 1

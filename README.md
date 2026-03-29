@@ -31,8 +31,8 @@ Depois abra no navegador:
 ## Observações importantes
 
 - Este MVP usa autenticação local no navegador. Para produção, o ideal é trocar por backend com sessões reais.
-- O app usa fallback local de resultados quando a API está indisponível, para evitar tela vazia.
-- A sincronização via API-Football está com validação fail-fast para bloquear escrita de `matches` vazio.
+- O fluxo oficial do projeto agora é **sem API**, usando Forms/planilha oficial.
+- O ranking/resultados são atualizados por importação da planilha em `tools/action_sync_excel.py`.
 
 ## Próximo passo técnico
 
@@ -40,7 +40,7 @@ Agora o projeto também tem uma base de backend em [backend/README.md](/Users/le
 
 - schema inicial de banco
 - rotas HTTP para ranking, jogos, sync e recálculo
-- sincronização preparada para API-Football
+- sincronização por base oficial (planilha/Forms)
 - motor de pontuação isolado do frontend
 
 ## Forms para operação recorrente
@@ -51,42 +51,27 @@ Para rodar o bolão temporada após temporada com Google Forms:
 - script de criação dos Forms: [tools/forms/create_bolao_forms.gs](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/tools/forms/create_bolao_forms.gs)
 - guia rápido: [tools/forms/README.md](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/tools/forms/README.md)
 
-## Atualização de placares via API (multi-provider)
+## Atualização oficial do site (Forms/Planilha)
 
-O projeto possui um workflow dedicado para sincronizar placares:
+O projeto possui um workflow dedicado para sincronizar dados oficiais:
 
-- arquivo: `.github/workflows/live-scores-sync.yml`
-- disparo manual (`workflow_dispatch`) e agendado (a cada 20 min)
-- observação: só executa de fato quando `ENABLE_API_SYNC=true`
-- saída atualizada: `api/matches.json` e `api/matches.js`
+- arquivo: `.github/workflows/bolao-sync.yml`
+- disparo manual (`workflow_dispatch`)
+- saída atualizada: `api/ranking.json`, `api/ranking.js`, `api/matches.json`, `api/matches.js`
 
 ### Configuração no GitHub (uma vez)
 
 No repositório, abra `Settings > Secrets and variables > Actions`.
 
-1. Variáveis obrigatórias:
-- `ENABLE_API_SYNC` = `true`
-- `LIVE_SCORES_PROVIDER` = `api_football` ou `football_data`
-- `UCL_API_SEASON` = `2025` (Champions 2025/26)
+1. Opcional:
+- `BOLAO_SOURCE_XLSX_URL` = URL pública direta do `.xlsx` oficial
 
-2. Se usar `api_football`:
-- Secret: `API_FOOTBALL_KEY`
-- Variáveis opcionais:
-- `API_FOOTBALL_HOST` (padrão: `v3.football.api-sports.io`)
-- `API_FOOTBALL_BASE_URL` (padrão: `https://v3.football.api-sports.io`)
-- `API_FOOTBALL_LEAGUE_ID` (padrão: `2`)
-
-3. Se usar `football_data`:
-- Secret: `FOOTBALL_DATA_API_KEY` (ou reaproveite `API_FOOTBALL_KEY`)
-- Variáveis opcionais:
-- `FOOTBALL_DATA_BASE_URL` (padrão: `https://api.football-data.org/v4`)
-- `FOOTBALL_DATA_COMPETITION_CODE` (padrão: `CL`)
-
-4. Validação de segurança:
-- `API_FOOTBALL_REQUIRE_NON_EMPTY` = `true` (recomendado para bloquear sync vazio)
+2. Se não configurar `BOLAO_SOURCE_XLSX_URL`:
+- o workflow usa o arquivo versionado no repositório:
+- `data/Bolao_UEFA_25_26_OFICIAL.xlsx`
 
 ### Primeiro disparo manual
 
 1. Abra `Actions` no GitHub.
-2. Selecione `Live Scores Sync (API Providers)`.
+2. Selecione `Bolao Auto-Sync`.
 3. Clique em `Run workflow`.

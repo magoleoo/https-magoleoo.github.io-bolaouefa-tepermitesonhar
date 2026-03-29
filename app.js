@@ -1955,14 +1955,14 @@ function setActiveTab(tab) {
   const showRules = tab === "rules";
   tabRanking.classList.toggle("is-active", showRanking);
   tabResults.classList.toggle("is-active", showResults);
-  tabSubmitQf.classList.toggle("is-active", showSubmitQf);
+  if (tabSubmitQf) tabSubmitQf.classList.toggle("is-active", showSubmitQf);
   tabSuperclassic.classList.toggle("is-active", showSuperclassic);
   tabPredictions.classList.toggle("is-active", showPredictions);
   tabHistory.classList.toggle("is-active", showHistory);
   tabRules.classList.toggle("is-active", showRules);
   panelRanking.classList.toggle("is-active", showRanking);
   panelResults.classList.toggle("is-active", showResults);
-  panelSubmitQf.classList.toggle("is-active", showSubmitQf);
+  if (panelSubmitQf) panelSubmitQf.classList.toggle("is-active", showSubmitQf);
   panelSuperclassic.classList.toggle("is-active", showSuperclassic);
   panelPredictions.classList.toggle("is-active", showPredictions);
   panelHistory.classList.toggle("is-active", showHistory);
@@ -2207,6 +2207,7 @@ function hasQuarterFormsSubmitConfigured() {
 }
 
 function renderQuarterFinalsFormsPanel() {
+  if (!qfFormsPanel) return;
   const csvConfigured = hasQuarterFormsCsvConfigured();
   const submitConfigured = hasQuarterFormsSubmitConfigured();
   const rows = extractQuarterFormsRows(quarterFinalsFormsData || []);
@@ -2299,6 +2300,7 @@ function renderQuarterFinalsFormsPanel() {
 }
 
 function renderQuarterFinalsForm() {
+  if (!qfPredictForm) return;
   const draft = getQfDraft();
   const formsSubmissionActive = hasQuarterFormsSubmitConfigured();
   qfPredictForm.innerHTML = `
@@ -2731,7 +2733,7 @@ tabSuperclassic.addEventListener("click", () => setActiveTab("superclassic"));
 tabPredictions.addEventListener("click", () => setActiveTab("predictions"));
 tabHistory.addEventListener("click", () => setActiveTab("history"));
 tabRules.addEventListener("click", () => setActiveTab("rules"));
-tabSubmitQf.addEventListener("click", () => setActiveTab("submit-qf"));
+if (tabSubmitQf) tabSubmitQf.addEventListener("click", () => setActiveTab("submit-qf"));
 
 console.log(">>> APP.JS CARREGADO NO FINAL DO ARQUIVO! ATRIBUINDO LISTENERS...");
 

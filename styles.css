@@ -6,6 +6,8 @@
   --line: rgba(178, 201, 255, 0.24);
   --text: #f5f8ff;
   --muted: #b7c8ff;
+  --gold-text: #ffe6a0;
+  --gold-text-strong: #ffd166;
   --accent: #75d1ff;
   --accent-strong: #00ff87; /* Vibrant green for exact/success */
   --accent-gold: #f7b801; /* Gold for Superclássico */
@@ -58,6 +60,16 @@ select {
   max-width: 1440px;
   margin: 0 auto;
   padding: 28px;
+  /* Tema ouro global para leitura consultiva */
+  --text: var(--gold-text);
+  --muted: #f0cf7d;
+}
+
+/* Exceções pedidas: manter visual original nas abas Superclássicos e Palpites */
+#panel-superclassic,
+#panel-predictions {
+  --text: #f5f8ff;
+  --muted: #b7c8ff;
 }
 
 .topbar {

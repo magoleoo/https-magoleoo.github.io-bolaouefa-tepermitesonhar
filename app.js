@@ -36,7 +36,6 @@ const loginFeedback = document.querySelector("#login-feedback");
 const logoutButton = document.querySelector("#logout-button");
 const overviewCards = document.querySelector("#overview-cards");
 const rankingTable = document.querySelector("#ranking-table");
-const rankingMobileList = document.querySelector("#ranking-mobile-list");
 const matchesGrid =
   document.querySelector("#matches-grid") || document.querySelector("#matches-list");
 const predictionsForm = document.querySelector("#predictions-form");
@@ -1280,34 +1279,6 @@ function renderRanking(leaderboard) {
           <td>${row.scorerPick || "-"}</td>
           <td>${row.assistPick || "-"}</td>
         </tr>
-      `
-    )
-    .join("");
-
-  if (!rankingMobileList) return;
-  rankingMobileList.innerHTML = leaderboard
-    .map(
-      (row) => `
-        <article class="ranking-mobile-card ${row.position <= 4 ? "is-award" : ""}">
-          <header class="ranking-mobile-head">
-            <div class="ranking-mobile-name">
-              <span class="ranking-mobile-position">#${row.position}</span>
-              ${row.position <= 4 ? `<span class="prize-mark ${prizeClass(row.position)}">🏆</span>` : ""}
-              <strong>${row.participant.name}</strong>
-            </div>
-            <div class="ranking-mobile-total">${formatPoints(row.total)} pts</div>
-          </header>
-          <div class="ranking-mobile-grid">
-            <span><b>1ª fase:</b> ${formatPoints(row.firstPhase)}</span>
-            <span><b>Playoff:</b> ${formatPoints(row.playoff)}</span>
-            <span><b>Oitavas:</b> ${formatPoints(row.roundOf16)}</span>
-            <span><b>Superclássico:</b> ${formatPoints(row.superclassic)}</span>
-            <span><b>Hope Solo:</b> 🧤 ${row.hopeSolo || 0}</span>
-            <span><b>Favorito:</b> ${row.favoriteTeam || "-"}</span>
-            <span><b>Artilheiro:</b> ${row.scorerPick || "-"}</span>
-            <span><b>Garçom:</b> ${row.assistPick || "-"}</span>
-          </div>
-        </article>
       `
     )
     .join("");

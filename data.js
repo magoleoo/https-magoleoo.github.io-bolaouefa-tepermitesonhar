@@ -121,6 +121,20 @@ window.leagueSuperclassicFormsConfig = {
     "Espaço para palpites de placar dos superclássicos da 1ª fase. Você pode preencher aqui e copiar o texto para enviar no fluxo oficial.",
 };
 
+window.tournamentOutcomeFormsConfig = {
+  csvUrl: "",
+  formUrl: "",
+  description:
+    "Defina a URL CSV publicada do Forms para carregar campeão, artilheiro e garçom oficiais em modo somente leitura no site.",
+  expectedColumns: [
+    "Timestamp",
+    "Campeão oficial",
+    "Artilheiro oficial",
+    "Garçom oficial",
+    "Atualizado por",
+  ],
+};
+
 window.teamLogos = {
   Ajax: "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.ajax.nl",
   "Real Madrid": "https://www.google.com/s2/favicons?sz=128&domain_url=https://www.realmadrid.com",

@@ -11,6 +11,7 @@ const {
   predictionHighlightsByMatchTitle,
   predictionsGallery,
   quarterFinalsFormsConfig,
+  tournamentOutcomeFormsConfig,
   rulesHighlights,
   rulesSections,
   superclassicConfig,
@@ -91,6 +92,7 @@ let activeMainTab = "ranking";
 let leaguePhaseData = null;
 let backtestData = null;
 let quarterFinalsFormsData = null;
+let tournamentOutcomeFormsData = null;
 
 function getParticipantById(id) {
   return participants.find((participant) => participant.id === id);
@@ -674,10 +676,110 @@ function createDefaultTournamentOutcome() {
     assist: "",
     updatedAt: "",
     updatedBy: "",
+    source: "none",
+  };
+}
+
+function hasTournamentOutcomeCsvConfigured() {
+  return Boolean(String(tournamentOutcomeFormsConfig?.csvUrl || "").trim());
+}
+
+function resolveFirstNonEmptyField(row, aliases) {
+  if (!row || typeof row !== "object") return "";
+
+  for (const alias of aliases) {
+    const directValue = String(row[alias] || "").trim();
+    if (directValue) return directValue;
+  }
+
+  const normalizedAliases = new Set(aliases.map((alias) => normalizeText(alias)));
+  for (const [key, value] of Object.entries(row)) {
+    if (!normalizedAliases.has(normalizeText(key))) continue;
+    const parsedValue = String(value || "").trim();
+    if (parsedValue) return parsedValue;
+  }
+
+  return "";
+}
+
+function extractLatestTournamentOutcomeFromForms(rawRows) {
+  if (!Array.isArray(rawRows) || !rawRows.length) return createDefaultTournamentOutcome();
+
+  const candidates = rawRows
+    .map((row, sourceIndex) => {
+      const champion = resolveFirstNonEmptyField(row, [
+        "Campeão oficial",
+        "Campeao oficial",
+        "Campeão",
+        "Campeao",
+        "Champion",
+        "Time campeão",
+        "Time campeao",
+      ]);
+      const scorer = resolveFirstNonEmptyField(row, [
+        "Artilheiro oficial",
+        "Artilheiro",
+        "Top Scorer",
+        "Scorer",
+      ]);
+      const assist = resolveFirstNonEmptyField(row, [
+        "Garçom oficial",
+        "Garcom oficial",
+        "Garçom",
+        "Garcom",
+        "Assist king",
+        "Assist",
+      ]);
+      const updatedBy = resolveFirstNonEmptyField(row, [
+        "Atualizado por",
+        "Atualizado_por",
+        "Responsável",
+        "Responsavel",
+        "Admin",
+      ]);
+
+      return {
+        champion,
+        scorer,
+        assist,
+        updatedBy,
+        timestamp: parseFormsTimestamp(row),
+        sourceIndex,
+      };
+    })
+    .filter((entry) => entry.champion || entry.scorer || entry.assist);
+
+  if (!candidates.length) {
+    return createDefaultTournamentOutcome();
+  }
+
+  candidates.sort((a, b) => {
+    const timeA = Number.isFinite(a.timestamp) ? a.timestamp : Number.NEGATIVE_INFINITY;
+    const timeB = Number.isFinite(b.timestamp) ? b.timestamp : Number.NEGATIVE_INFINITY;
+    if (timeA !== timeB) return timeA - timeB;
+    return a.sourceIndex - b.sourceIndex;
+  });
+
+  const latest = candidates[candidates.length - 1];
+  return {
+    champion: latest.champion,
+    scorer: latest.scorer,
+    assist: latest.assist,
+    updatedAt: Number.isFinite(latest.timestamp) ? new Date(latest.timestamp).toISOString() : "",
+    updatedBy: latest.updatedBy || "Forms oficial",
+    source: "forms",
   };
 }
 
 function loadTournamentOutcome() {
+  if (hasTournamentOutcomeCsvConfigured()) {
+    return {
+      ...createDefaultTournamentOutcome(),
+      ...extractLatestTournamentOutcomeFromForms(tournamentOutcomeFormsData || []),
+      source: "forms",
+    };
+  }
+
   try {
     const raw = localStorage.getItem(storageKeys.tournamentOutcome);
     const parsed = raw ? JSON.parse(raw) : {};
@@ -685,6 +787,7 @@ function loadTournamentOutcome() {
     return {
       ...createDefaultTournamentOutcome(),
       ...parsed,
+      source: "legacy-local",
     };
   } catch (error) {
     console.error("Falha ao ler dados de encerramento do bolão.", error);
@@ -692,33 +795,16 @@ function loadTournamentOutcome() {
   }
 }
 
-function saveTournamentOutcome(payload) {
-  localStorage.setItem(storageKeys.tournamentOutcome, JSON.stringify(payload));
-}
-
-function buildTournamentOutcomeSuggestions(leaderboard) {
-  const championSet = new Set([
-    ...(window.leaguePhaseTopEight || []),
-    ...(knockoutResults || [])
-      .flatMap((match) => [match.homeTeam, match.awayTeam])
-      .filter((team) => team && !String(team).includes("/")),
-    ...(leaderboard || []).map((row) => row.favoriteTeam).filter(Boolean),
-  ]);
-  const scorerSet = new Set((leaderboard || []).map((row) => row.scorerPick).filter(Boolean));
-  const assistSet = new Set((leaderboard || []).map((row) => row.assistPick).filter(Boolean));
-
-  return {
-    champion: [...championSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
-    scorer: [...scorerSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
-    assist: [...assistSet].sort((a, b) => a.localeCompare(b, "pt-BR")),
-  };
-}
-
-function renderTournamentOutcomePanel(leaderboard, flashMessage = "") {
+function renderTournamentOutcomePanel(_leaderboard, flashMessage = "") {
   if (!tournamentOutcomePanel) return;
 
   const outcome = loadTournamentOutcome();
-  const suggestions = buildTournamentOutcomeSuggestions(leaderboard);
+  const csvConfigured = hasTournamentOutcomeCsvConfigured();
+  const formUrl = String(tournamentOutcomeFormsConfig?.formUrl || "").trim();
+  const sourceLabel =
+    outcome.source === "forms"
+      ? "Fonte oficial: Forms (somente admin)"
+      : "Fonte local (legado do navegador)";
   const updatedAtLabel = outcome.updatedAt
     ? new Date(outcome.updatedAt).toLocaleString("pt-BR", {
         day: "2-digit",
@@ -730,73 +816,53 @@ function renderTournamentOutcomePanel(leaderboard, flashMessage = "") {
     : "";
 
   tournamentOutcomePanel.innerHTML = `
-    <form id="tournament-outcome-form" class="predictions-form">
+    <article class="rules-card">
       <section class="form-block">
-        <p class="muted">Quando o bolão terminar, preencha os resultados oficiais abaixo.</p>
+        <p class="muted">Consulta oficial em modo leitura. O preenchimento de campeão, artilheiro e garçom deve ser feito no Forms do admin.</p>
+        <div class="result-chip-row" style="margin: 10px 0 12px;">
+          <span class="result-chip ${csvConfigured ? "hit" : ""}">Leitura CSV: ${csvConfigured ? "ativa" : "pendente"}</span>
+          <span class="result-chip">${sourceLabel}</span>
+          ${
+            formUrl
+              ? `<a class="ghost-button" href="${formUrl}" target="_blank" rel="noopener noreferrer">Abrir Forms (admin)</a>`
+              : ""
+          }
+        </div>
         <div class="classification-grid">
           <label>
             Campeão oficial
-            <input type="text" name="champion" list="tournament-champion-options" value="${outcome.champion || ""}" placeholder="Ex.: Real Madrid" />
+            <input type="text" value="${outcome.champion || "Pendente"}" disabled />
           </label>
           <label>
             Artilheiro oficial
-            <input type="text" name="scorer" list="tournament-scorer-options" value="${outcome.scorer || ""}" placeholder="Ex.: Erling Haaland" />
+            <input type="text" value="${outcome.scorer || "Pendente"}" disabled />
           </label>
           <label>
             Garçom oficial
-            <input type="text" name="assist" list="tournament-assist-options" value="${outcome.assist || ""}" placeholder="Ex.: Lamine Yamal" />
+            <input type="text" value="${outcome.assist || "Pendente"}" disabled />
           </label>
-        </div>
-        <datalist id="tournament-champion-options">
-          ${suggestions.champion.map((name) => `<option value="${name}"></option>`).join("")}
-        </datalist>
-        <datalist id="tournament-scorer-options">
-          ${suggestions.scorer.map((name) => `<option value="${name}"></option>`).join("")}
-        </datalist>
-        <datalist id="tournament-assist-options">
-          ${suggestions.assist.map((name) => `<option value="${name}"></option>`).join("")}
-        </datalist>
-        <div class="form-actions" style="display:flex; gap:10px; justify-content:flex-start; margin-top:12px;">
-          <button class="primary-button" type="submit">Salvar encerramento</button>
-          <button class="ghost-button" id="tournament-outcome-clear" type="button">Limpar</button>
         </div>
         ${
           updatedAtLabel
             ? `<p class="muted" style="margin-top:10px;">Última atualização: ${updatedAtLabel}${outcome.updatedBy ? ` • por ${outcome.updatedBy}` : ""}</p>`
             : `<p class="muted" style="margin-top:10px;">Sem preenchimento oficial ainda.</p>`
         }
-        <p id="tournament-outcome-feedback" class="feedback ${flashMessage ? "success" : ""}">${flashMessage}</p>
+        ${
+          !csvConfigured
+            ? `
+              <p class="muted" style="margin-top: 10px;">${tournamentOutcomeFormsConfig?.description || "Configure a URL CSV do Forms para ativar essa seção."}</p>
+              <div class="result-chip-row" style="margin-top: 10px;">
+                ${(tournamentOutcomeFormsConfig?.expectedColumns || [])
+                  .map((column) => `<span class="result-chip">${column}</span>`)
+                  .join("")}
+              </div>
+            `
+            : ""
+        }
+        <p id="tournament-outcome-feedback" class="feedback ${flashMessage ? "success" : ""}">${flashMessage || ""}</p>
       </section>
-    </form>
+    </article>
   `;
-
-  const form = tournamentOutcomePanel.querySelector("#tournament-outcome-form");
-  const clearButton = tournamentOutcomePanel.querySelector("#tournament-outcome-clear");
-
-  if (form) {
-    form.onsubmit = (event) => {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const payload = {
-        champion: String(formData.get("champion") || "").trim(),
-        scorer: String(formData.get("scorer") || "").trim(),
-        assist: String(formData.get("assist") || "").trim(),
-        updatedAt: new Date().toISOString(),
-        updatedBy: getActiveParticipantLabel(),
-      };
-      saveTournamentOutcome(payload);
-      renderAwards(leaderboard);
-      renderTournamentOutcomePanel(leaderboard, "Encerramento salvo com sucesso.");
-    };
-  }
-
-  if (clearButton) {
-    clearButton.onclick = () => {
-      saveTournamentOutcome(createDefaultTournamentOutcome());
-      renderAwards(leaderboard);
-      renderTournamentOutcomePanel(leaderboard, "Encerramento limpo.");
-    };
-  }
 }
 
 const liveRankingPhaseRules = {
@@ -3704,6 +3770,25 @@ async function loadQuarterFinalsFormsData() {
   }
 }
 
+async function loadTournamentOutcomeFormsData() {
+  if (!hasTournamentOutcomeCsvConfigured()) {
+    tournamentOutcomeFormsData = [];
+    return;
+  }
+
+  try {
+    const response = await fetch(tournamentOutcomeFormsConfig.csvUrl, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Falha ao carregar CSV de encerramento: ${response.status}`);
+    }
+    const csvText = await response.text();
+    tournamentOutcomeFormsData = parseCsv(csvText);
+  } catch (error) {
+    console.error(error);
+    tournamentOutcomeFormsData = [];
+  }
+}
+
 loginForm.addEventListener("submit", (event) => {
   if (PUBLIC_CONSULT_MODE) {
     event.preventDefault();
@@ -3768,5 +3853,5 @@ window.addEventListener("DOMContentLoaded", () => {
   renderRules();
   renderApp();
   setActiveTab(activeMainTab);
-  loadQuarterFinalsFormsData().then(renderApp);
+  Promise.all([loadQuarterFinalsFormsData(), loadTournamentOutcomeFormsData()]).then(renderApp);
 });

@@ -51,6 +51,12 @@ Para rodar o bolão temporada após temporada com Google Forms:
 - script de criação dos Forms: [tools/forms/create_bolao_forms.gs](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/tools/forms/create_bolao_forms.gs)
 - guia rápido: [tools/forms/README.md](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/tools/forms/README.md)
 
+### Encerramento oficial (campeão, artilheiro, garçom) via Forms
+
+- o painel de encerramento no site está em **modo leitura**
+- a fonte oficial vem de `window.tournamentOutcomeFormsConfig.csvUrl` em [data.js](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/data.js)
+- opcionalmente, adicione `formUrl` para exibir botão "Abrir Forms (admin)" no painel
+
 ## Atualização oficial do site (Forms/Planilha)
 
 O projeto possui um workflow dedicado para sincronizar dados oficiais:

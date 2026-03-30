@@ -2875,15 +2875,6 @@ function buildPredictionMatrixSection(fixtures, sectionTitle = "") {
   };
 }
 
-function sanitizeDownloadFileName(value) {
-  const safe = normalizeText(String(value || "palpites"))
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .slice(0, 80);
-  return safe || "palpites";
-}
-
 function drawWrappedCanvasText(ctx, text, x, y, maxWidth, lineHeight, maxLines = 3) {
   const words = String(text || "").split(/\s+/).filter(Boolean);
   if (!words.length) return 0;
@@ -3060,20 +3051,6 @@ function setPredictionsExportFeedback(message, isSuccess = false) {
   feedback.classList.toggle("success", Boolean(isSuccess));
 }
 
-function exportPredictionsAsImage() {
-  const canvas = buildPredictionExportCanvas(latestPredictionExportPayload);
-  if (!canvas) {
-    setPredictionsExportFeedback("Nada para exportar nesta visão.");
-    return;
-  }
-
-  const link = document.createElement("a");
-  link.href = canvas.toDataURL("image/png");
-  link.download = `${sanitizeDownloadFileName(latestPredictionExportPayload.title)}.png`;
-  link.click();
-  setPredictionsExportFeedback("Imagem exportada com sucesso.", true);
-}
-
 function exportPredictionsAsPdf() {
   const canvas = buildPredictionExportCanvas(latestPredictionExportPayload);
   if (!canvas) {
@@ -3214,14 +3191,6 @@ function renderPredictionConsultation() {
     <div class="predictions-export-actions">
       <button
         type="button"
-        id="predictions-export-image"
-        class="ghost-button"
-        ${matrixSections.length ? "" : "disabled"}
-      >
-        Exportar imagem (PNG)
-      </button>
-      <button
-        type="button"
         id="predictions-export-pdf"
         class="ghost-button"
         ${matrixSections.length ? "" : "disabled"}
@@ -3239,9 +3208,7 @@ function renderPredictionConsultation() {
       secondaryTabsHTML +
       exportActionsHTML +
       `<div class="empty-state">Nenhum palpite registrado nesta etapa ainda.</div>`;
-    const imageButton = container.querySelector("#predictions-export-image");
     const pdfButton = container.querySelector("#predictions-export-pdf");
-    if (imageButton) imageButton.addEventListener("click", exportPredictionsAsImage);
     if (pdfButton) pdfButton.addEventListener("click", exportPredictionsAsPdf);
     return;
   }
@@ -3374,17 +3341,13 @@ function renderPredictionConsultation() {
       secondaryTabsHTML +
       exportActionsHTML +
       `<div class="empty-state">Nenhum palpite registrado nesta etapa ainda.</div>`;
-    const imageButton = container.querySelector("#predictions-export-image");
     const pdfButton = container.querySelector("#predictions-export-pdf");
-    if (imageButton) imageButton.addEventListener("click", exportPredictionsAsImage);
     if (pdfButton) pdfButton.addEventListener("click", exportPredictionsAsPdf);
     return;
   }
 
   container.innerHTML = phaseTabsHTML + secondaryTabsHTML + exportActionsHTML + tablesMarkup;
-  const imageButton = container.querySelector("#predictions-export-image");
   const pdfButton = container.querySelector("#predictions-export-pdf");
-  if (imageButton) imageButton.addEventListener("click", exportPredictionsAsImage);
   if (pdfButton) pdfButton.addEventListener("click", exportPredictionsAsPdf);
 }
 

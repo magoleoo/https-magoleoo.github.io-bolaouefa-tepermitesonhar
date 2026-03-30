@@ -1551,6 +1551,7 @@ function renderRanking(leaderboard) {
     if (position === 3) return "prize-bronze";
     return "prize-top4";
   };
+  const hasQuarterRows = extractQuarterFormsRows(quarterFinalsFormsData || []).length > 0;
 
   rankingTable.innerHTML = leaderboard
     .map(
@@ -1567,6 +1568,7 @@ function renderRanking(leaderboard) {
           <td>${formatPoints(row.firstPhase)}</td>
           <td>${formatPoints(row.playoff)}</td>
           <td>${formatPoints(row.roundOf16)}</td>
+          <td>${hasQuarterRows ? formatPoints(row.quarter || 0) : ""}</td>
           <td>${formatPoints(row.superclassic)}</td>
           <td>
             <span class="hope-solo-cell" title="Quantidade de placares exatos solitários identificados no backtest">

@@ -1455,6 +1455,7 @@ function renderRules() {
 }
 
 function renderOverview(leaderboard) {
+  if (!overviewCards) return;
   const currentRow = leaderboard.find((row) => row.participant.id === currentUserId);
   const leader = leaderboard[0];
   const biggestRoundOf16 = [...leaderboard].sort((a, b) => b.roundOf16 - a.roundOf16)[0];

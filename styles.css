@@ -6,11 +6,8 @@
   --line: rgba(178, 201, 255, 0.24);
   --text: #f5f8ff;
   --muted: #b7c8ff;
-  --gold-text: #ffe6a0;
-  --gold-text-strong: #ffd166;
   --accent: #75d1ff;
   --accent-strong: #00ff87; /* Vibrant green for exact/success */
-  --accent-gold: #f7b801; /* Gold for Superclássico */
   --danger: #ff4757;
   --shadow: 0 24px 70px rgba(2, 8, 48, 0.55);
   --glass-blur: blur(16px);
@@ -60,9 +57,8 @@ select {
   max-width: 1440px;
   margin: 0 auto;
   padding: 28px;
-  /* Tema ouro global para leitura consultiva */
-  --text: var(--gold-text);
-  --muted: #f0cf7d;
+  --text: #f5f8ff;
+  --muted: #b7c8ff;
 }
 
 /* Exceções pedidas: manter visual original nas abas Superclássicos e Palpites */
@@ -607,8 +603,8 @@ select {
 }
 
 .predictions-matrix-table td.hit-trend {
-  background: rgba(255, 200, 0, 0.18) !important;
-  color: #ffe6a0;
+  background: rgba(117, 209, 255, 0.18) !important;
+  color: #f5f8ff;
 }
 
 .predictions-cell-mark {
@@ -624,7 +620,7 @@ select {
 }
 
 .predictions-cell-mark.trend {
-  color: #ffd166;
+  color: #cfe2ff;
 }
 
 .predictions-mobile-board {
@@ -672,9 +668,9 @@ select {
 }
 
 .prediction-mobile-stat.trend {
-  border-color: rgba(255, 200, 0, 0.35);
-  background: rgba(255, 200, 0, 0.18);
-  color: #ffe6a0;
+  border-color: rgba(117, 209, 255, 0.35);
+  background: rgba(117, 209, 255, 0.18);
+  color: #f5f8ff;
 }
 
 .prediction-mobile-stat.neutral {
@@ -726,8 +722,8 @@ select {
 }
 
 .prediction-mobile-row.is-trend {
-  border-color: rgba(255, 200, 0, 0.36);
-  background: rgba(255, 200, 0, 0.16);
+  border-color: rgba(117, 209, 255, 0.36);
+  background: rgba(117, 209, 255, 0.16);
 }
 
 .prediction-mobile-row.is-neutral {
@@ -885,9 +881,9 @@ select {
 }
 
 .result-chip.trend {
-  background: rgba(255, 200, 0, 0.16);
-  border-color: rgba(255, 200, 0, 0.3);
-  color: #ffe6a0;
+  background: rgba(117, 209, 255, 0.16);
+  border-color: rgba(117, 209, 255, 0.3);
+  color: #f5f8ff;
 }
 
 .prediction-highlights {
@@ -999,19 +995,6 @@ table {
   vertical-align: middle;
 }
 
-/* TESTE VISUAL: ranking em tom ouro (somente aba Ranking). */
-#panel-ranking .section-heading h2 {
-  color: #ffd166;
-}
-
-#panel-ranking .dashboard-table th {
-  color: #ffd166;
-}
-
-#panel-ranking .dashboard-table td {
-  color: #ffe6a0;
-}
-
 #panel-ranking .ranking-col-superclassic {
   width: 84px;
   min-width: 84px;
@@ -1079,8 +1062,8 @@ thead th {
 }
 
 .prize-gold {
-  background: rgba(255, 200, 0, 0.18);
-  border-color: rgba(255, 200, 0, 0.34);
+  background: rgba(117, 209, 255, 0.2);
+  border-color: rgba(117, 209, 255, 0.34);
 }
 
 .prize-silver {
@@ -1167,10 +1150,10 @@ thead th {
 
 .match-card.is-superclassic,
 .league-row-card.is-superclassic {
-  border-color: rgba(255, 200, 0, 0.48);
-  box-shadow: 0 0 0 1px rgba(255, 200, 0, 0.16), 0 18px 40px rgba(255, 200, 0, 0.12);
+  border-color: rgba(117, 209, 255, 0.48);
+  box-shadow: 0 0 0 1px rgba(117, 209, 255, 0.16), 0 18px 40px rgba(117, 209, 255, 0.12);
   background:
-    radial-gradient(circle at top right, rgba(255, 200, 0, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(117, 209, 255, 0.18), transparent 28%),
     linear-gradient(180deg, rgba(20, 44, 166, 0.98), rgba(7, 18, 88, 0.96));
 }
 
@@ -1267,9 +1250,9 @@ thead th {
 }
 
 .status-live {
-  color: #ffd166;
-  background: rgba(255, 209, 102, 0.12);
-  border-color: rgba(255, 209, 102, 0.28);
+  color: #eaf2ff;
+  background: rgba(117, 209, 255, 0.14);
+  border-color: rgba(117, 209, 255, 0.28);
 }
 
 .status-finished {
@@ -1500,9 +1483,9 @@ option {
   gap: 6px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 200, 0, 0.16);
-  border: 1px solid rgba(255, 200, 0, 0.34);
-  color: #ffe6a0;
+  background: rgba(117, 209, 255, 0.16);
+  border: 1px solid rgba(117, 209, 255, 0.34);
+  color: #f5f8ff;
   font-weight: 700;
 }
 
@@ -1512,9 +1495,9 @@ option {
   justify-content: center;
   padding: 7px 12px;
   border-radius: 999px;
-  background: rgba(255, 200, 0, 0.16);
-  border: 1px solid rgba(255, 200, 0, 0.36);
-  color: #ffe6a0;
+  background: rgba(117, 209, 255, 0.16);
+  border: 1px solid rgba(117, 209, 255, 0.36);
+  color: #f5f8ff;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1527,10 +1510,10 @@ option {
 }
 
 .superclassic-trend-hit {
-  background: rgba(255, 200, 0, 0.18);
-  color: #ffe6a0;
+  background: rgba(117, 209, 255, 0.18);
+  color: #f5f8ff;
   font-weight: 650;
-  box-shadow: inset 0 0 0 1px rgba(255, 200, 0, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(117, 209, 255, 0.3);
 }
 
 .superclassic-exact-hit {
@@ -1555,18 +1538,18 @@ option {
   font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffd166;
+  color: #cfe2ff;
 }
 
 .superclassic-mobile-board .prediction-mobile-stat.trend {
-  border-color: rgba(255, 200, 0, 0.35);
-  background: rgba(255, 200, 0, 0.18);
-  color: #ffe6a0;
+  border-color: rgba(117, 209, 255, 0.35);
+  background: rgba(117, 209, 255, 0.18);
+  color: #f5f8ff;
 }
 
 .superclassic-mobile-board .prediction-mobile-row.is-trend {
-  border-color: rgba(255, 200, 0, 0.36);
-  background: rgba(255, 200, 0, 0.16);
+  border-color: rgba(117, 209, 255, 0.36);
+  background: rgba(117, 209, 255, 0.16);
 }
 
 .superclassic-official-pill {

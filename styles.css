@@ -242,7 +242,7 @@ select {
 
 .layout {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -251,6 +251,10 @@ select {
   display: grid;
   gap: 20px;
   align-content: start;
+}
+
+.sidebar {
+  display: none;
 }
 
 .card {

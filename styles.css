@@ -70,11 +70,13 @@ select {
 
 .topbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 32px;
+  position: relative;
+  text-align: center;
 }
 
 .user-mini {
@@ -92,11 +94,12 @@ select {
 .brand-block {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+  margin: 0 auto;
 }
 
 .brand-logo {
-  width: 74px;
+  width: 92px;
   height: auto;
   display: block;
   border-radius: 8px;
@@ -108,15 +111,15 @@ select {
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: clamp(2.4rem, 4vw, 3rem);
   line-height: 1;
   letter-spacing: 0.04em;
   color: var(--text);
 }
 
 .brand-subtitle {
-  margin: 4px 0 0;
-  font-size: 0.82rem;
+  margin: 8px 0 0;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -124,6 +127,10 @@ select {
   display: flex;
   align-items: center;
   gap: 12px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .topbar-button {
@@ -1648,7 +1655,15 @@ option {
   }
 
   .brand-logo {
-    width: 58px;
+    width: 74px;
+  }
+
+  .brand-title {
+    font-size: clamp(2rem, 10vw, 2.4rem);
+  }
+
+  .brand-subtitle {
+    font-size: 0.9rem;
   }
   
   .competition-mark {

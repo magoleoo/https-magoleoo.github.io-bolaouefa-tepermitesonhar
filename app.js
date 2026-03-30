@@ -93,6 +93,7 @@ let leaguePhaseData = null;
 let backtestData = null;
 let quarterFinalsFormsData = null;
 let tournamentOutcomeFormsData = null;
+let latestClosingAuditContext = null;
 
 function getParticipantById(id) {
   return participants.find((participant) => participant.id === id);
@@ -795,10 +796,76 @@ function loadTournamentOutcome() {
   }
 }
 
-function renderTournamentOutcomePanel(_leaderboard, flashMessage = "") {
+function renderClosingAuditChip(status, points) {
+  if (status === "hit") {
+    return `<span class="result-chip hit">+${formatPoints(points)}</span>`;
+  }
+  if (status === "miss") {
+    return `<span class="result-chip miss">0</span>`;
+  }
+  if (status === "missing") {
+    return `<span class="result-chip">Sem pick</span>`;
+  }
+  return `<span class="result-chip">Pendente</span>`;
+}
+
+function renderClosingAuditTable(leaderboard, closingContext) {
+  if (!Array.isArray(leaderboard) || !leaderboard.length) {
+    return `<p class="muted">Sem participantes para auditar.</p>`;
+  }
+
+  const championHeader = closingContext?.hasChampionPicks
+    ? "Campeão (+7)"
+    : "Campeão (+7) • aguardando pick na base";
+
+  return `
+    <div class="table-wrap closing-audit-table-wrap">
+      <table class="dashboard-table is-wide compact-table closing-audit-table">
+        <thead>
+          <tr>
+            <th>Participante</th>
+            <th>${championHeader}</th>
+            <th>Artilheiro (+15)</th>
+            <th>Garçom (+15)</th>
+            <th>Favorito campeão (+10)</th>
+            <th>Bônus de fechamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${leaderboard
+            .map((row) => {
+              const audit =
+                closingContext?.byParticipant?.get(normalizeText(row.participant.name)) ||
+                createEmptyClosingAuditRow();
+              return `
+                <tr>
+                  <td>${row.participant.name}</td>
+                  <td>${renderClosingAuditChip(audit.championStatus, audit.championPoints)}</td>
+                  <td>${renderClosingAuditChip(audit.scorerStatus, audit.scorerPoints)}</td>
+                  <td>${renderClosingAuditChip(audit.assistStatus, audit.assistPoints)}</td>
+                  <td>${renderClosingAuditChip(
+                    audit.favoriteStatus,
+                    audit.favoriteChampionPoints
+                  )}</td>
+                  <td><strong>${formatPoints(audit.totalBonus || 0)}</strong></td>
+                </tr>
+              `;
+            })
+            .join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderTournamentOutcomePanel(leaderboard, flashMessage = "") {
   if (!tournamentOutcomePanel) return;
 
   const outcome = loadTournamentOutcome();
+  const safeLeaderboard = Array.isArray(leaderboard) ? leaderboard : [];
+  const closingContext =
+    latestClosingAuditContext || buildClosingAuditContext(safeLeaderboard, outcome);
+  const closingAuditMarkup = renderClosingAuditTable(safeLeaderboard, closingContext);
   const csvConfigured = hasTournamentOutcomeCsvConfigured();
   const formUrl = String(tournamentOutcomeFormsConfig?.formUrl || "").trim();
   const sourceLabel =
@@ -859,6 +926,11 @@ function renderTournamentOutcomePanel(_leaderboard, flashMessage = "") {
             `
             : ""
         }
+        <section class="closing-audit-block">
+          <h3>Auditoria automática do fechamento</h3>
+          <p class="muted">Quando campeão, artilheiro e garçom forem atualizados no Forms, o ranking soma os bônus finais automaticamente e mostra o detalhamento por participante.</p>
+          ${closingAuditMarkup}
+        </section>
         <p id="tournament-outcome-feedback" class="feedback ${flashMessage ? "success" : ""}">${flashMessage || ""}</p>
       </section>
     </article>
@@ -1101,6 +1173,119 @@ function computePhaseScoringSnapshot({ useLiveOfficial = false } = {}) {
   };
 }
 
+const closingScoringRules = {
+  champion: 7,
+  scorer: 15,
+  assist: 15,
+  favoriteChampion: 10,
+};
+
+function normalizeLooseToken(value) {
+  const normalized = normalizeText(String(value || ""));
+  return normalized.replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function resolveChampionPickFromRow(row) {
+  const candidates = [
+    row?.champion_pick,
+    row?.championPick,
+    row?.champion,
+    row?.campeao_pick,
+    row?.campeao,
+  ];
+  return String(candidates.find((item) => String(item || "").trim()) || "").trim();
+}
+
+function createEmptyClosingAuditRow() {
+  return {
+    championPoints: 0,
+    scorerPoints: 0,
+    assistPoints: 0,
+    favoriteChampionPoints: 0,
+    totalBonus: 0,
+    championStatus: "pending",
+    scorerStatus: "pending",
+    assistStatus: "pending",
+    favoriteStatus: "pending",
+    championPick: "",
+  };
+}
+
+function buildClosingAuditContext(rows, outcome = loadTournamentOutcome()) {
+  const byParticipant = new Map();
+  const championOfficialKey = canonicalTeamKey(outcome?.champion);
+  const scorerOfficialKey = normalizeLooseToken(outcome?.scorer);
+  const assistOfficialKey = normalizeLooseToken(outcome?.assist);
+  let hasChampionPicks = false;
+
+  (rows || []).forEach((row) => {
+    const audit = createEmptyClosingAuditRow();
+    const participantKey = normalizeText(row?.participant?.name || "");
+    const championPick = String(row?.championPick || "").trim();
+    const championPickKey = canonicalTeamKey(championPick);
+    const hasChampionPick = Boolean(championPick && championPick !== "-");
+    if (hasChampionPick) {
+      hasChampionPicks = true;
+      audit.championPick = championPick;
+    }
+
+    if (championOfficialKey) {
+      if (hasChampionPick) {
+        if (championPickKey === championOfficialKey) {
+          audit.championStatus = "hit";
+          audit.championPoints = closingScoringRules.champion;
+        } else {
+          audit.championStatus = "miss";
+        }
+      } else {
+        audit.championStatus = "missing";
+      }
+
+      const favoriteKey = canonicalTeamKey(row?.favoriteTeam);
+      if (favoriteKey && favoriteKey === championOfficialKey) {
+        audit.favoriteStatus = "hit";
+        audit.favoriteChampionPoints = closingScoringRules.favoriteChampion;
+      } else {
+        audit.favoriteStatus = "miss";
+      }
+    }
+
+    if (scorerOfficialKey) {
+      const scorerPickKey = normalizeLooseToken(row?.scorerPick);
+      if (scorerPickKey && scorerPickKey === scorerOfficialKey) {
+        audit.scorerStatus = "hit";
+        audit.scorerPoints = closingScoringRules.scorer;
+      } else {
+        audit.scorerStatus = "miss";
+      }
+    }
+
+    if (assistOfficialKey) {
+      const assistPickKey = normalizeLooseToken(row?.assistPick);
+      if (assistPickKey && assistPickKey === assistOfficialKey) {
+        audit.assistStatus = "hit";
+        audit.assistPoints = closingScoringRules.assist;
+      } else {
+        audit.assistStatus = "miss";
+      }
+    }
+
+    audit.totalBonus = roundToTwo(
+      audit.championPoints +
+        audit.scorerPoints +
+        audit.assistPoints +
+        audit.favoriteChampionPoints
+    );
+    byParticipant.set(participantKey, audit);
+  });
+
+  return {
+    byParticipant,
+    hasChampionPicks,
+    official: outcome,
+  };
+}
+
 function getRankingRows() {
   if (!backtestData || !backtestData.ranking) return [];
 
@@ -1156,12 +1341,30 @@ function getRankingRows() {
         row.superclassic_points + deltaSuperclassic + quarterAdd.superclassic,
       hopeSolo: row.hope_solo_hits + deltaHopeSolo + quarterAdd.hopeSolo,
       favoriteTeam: row.favorite_team || "-",
+      championPick: resolveChampionPickFromRow(row) || "-",
       scorerPick: row.scorer_pick || "-",
       assistPick: row.assist_pick || "-"
     };
   });
-  mapped.sort((a, b) => b.total - a.total);
-  return mapped.map((r, i) => ({ ...r, position: i + 1 }));
+
+  const outcome = loadTournamentOutcome();
+  const closingContext = buildClosingAuditContext(mapped, outcome);
+  latestClosingAuditContext = closingContext;
+
+  const mappedWithClosing = mapped.map((row) => {
+    const audit =
+      closingContext.byParticipant.get(normalizeText(row.participant.name)) ||
+      createEmptyClosingAuditRow();
+    return {
+      ...row,
+      closingBonus: audit.totalBonus,
+      closingAudit: audit,
+      total: roundToTwo(row.total + audit.totalBonus),
+    };
+  });
+
+  mappedWithClosing.sort((a, b) => b.total - a.total);
+  return mappedWithClosing.map((r, i) => ({ ...r, position: i + 1 }));
 }
 
 function formatPoints(value) {

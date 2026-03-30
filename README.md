@@ -56,6 +56,12 @@ Para rodar o bolão temporada após temporada com Google Forms:
 - o painel de encerramento no site está em **modo leitura**
 - a fonte oficial vem de `window.tournamentOutcomeFormsConfig.csvUrl` em [data.js](/Users/leopicca/Downloads/06_Projetos_e_Criacao/champions-bolao/data.js)
 - opcionalmente, adicione `formUrl` para exibir botão "Abrir Forms (admin)" no painel
+- ao preencher no Forms, o ranking aplica automaticamente os bônus finais:
+  - campeão (`+7`, quando existir pick de campeão na base)
+  - artilheiro (`+15`)
+  - garçom (`+15`)
+  - favorito campeão (`+10`)
+- a própria aba de Resultados exibe uma tabela de auditoria por participante com o detalhamento desses bônus
 
 ## Atualização oficial do site (Forms/Planilha)
 

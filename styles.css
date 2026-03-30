@@ -1338,6 +1338,28 @@ thead th {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.closing-audit-block {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 10px;
+}
+
+.closing-audit-block h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.closing-audit-table-wrap {
+  margin-top: 2px;
+}
+
+.closing-audit-table td {
+  white-space: nowrap;
+}
+
 .prediction-row {
   grid-template-columns: minmax(0, 1fr) 88px 88px;
   align-items: end;

@@ -3046,56 +3046,80 @@ function buildPredictionExportCanvas(payload) {
   ctx.scale(scale, scale);
 
   const gradient = ctx.createLinearGradient(0, 0, 0, height);
-  gradient.addColorStop(0, "#030d2d");
-  gradient.addColorStop(1, "#000a24");
+  gradient.addColorStop(0, "#1a46ff");
+  gradient.addColorStop(0.45, "#0a23b8");
+  gradient.addColorStop(1, "#041356");
   ctx.fillStyle = gradient;
   ctx.fillRect(0, 0, width, height);
 
-  ctx.fillStyle = "#eaf2ff";
+  // Glow decor para aproximar do visual atual do bolão.
+  ctx.fillStyle = "rgba(117, 209, 255, 0.16)";
+  ctx.beginPath();
+  ctx.arc(width - 140, 90, 120, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "#f5f8ff";
   ctx.font = '700 24px "Space Grotesk", sans-serif';
   ctx.fillText(payload.title || "Palpites do bolão", padding, padding + 24);
 
-  ctx.fillStyle = "#9fb3cf";
+  ctx.fillStyle = "#c4d5ff";
   ctx.font = '500 13px "Space Grotesk", sans-serif';
   const generatedAt = new Date().toLocaleString("pt-BR");
   ctx.fillText(`Gerado em ${generatedAt}`, padding, padding + 44);
 
+  const legendY = padding + 42;
+  ctx.fillStyle = "rgba(0, 255, 135, 0.26)";
+  ctx.fillRect(width - 340, legendY - 12, 18, 12);
+  ctx.fillStyle = "#d8f3dc";
+  ctx.font = '600 11px "Space Grotesk", sans-serif';
+  ctx.fillText("Placar exato", width - 316, legendY - 2);
+  ctx.fillStyle = "rgba(255, 200, 0, 0.24)";
+  ctx.fillRect(width - 210, legendY - 12, 18, 12);
+  ctx.fillStyle = "#ffe6a0";
+  ctx.fillText("Tendência", width - 186, legendY - 2);
+
   let y = padding + titleHeight;
   sections.forEach((section) => {
-    ctx.fillStyle = "#cfe2ff";
+    const sectionHeight = sectionTitleHeight + headerHeight + section.rows.length * rowHeight;
+    ctx.fillStyle = "rgba(8, 26, 122, 0.68)";
+    ctx.fillRect(padding, y - 4, contentWidth, sectionHeight + 8);
+    ctx.strokeStyle = "rgba(173, 199, 255, 0.24)";
+    ctx.strokeRect(padding, y - 4, contentWidth, sectionHeight + 8);
+
+    ctx.fillStyle = "#eaf2ff";
     ctx.font = '700 17px "Space Grotesk", sans-serif';
     const sectionName = section.sectionTitle || "Tabela";
     ctx.fillText(sectionName, padding, y + 20);
     y += sectionTitleHeight;
 
-    ctx.fillStyle = "rgba(255,255,255,0.03)";
+    ctx.fillStyle = "rgba(22, 44, 188, 0.5)";
     ctx.fillRect(padding, y, contentWidth, headerHeight);
 
-    ctx.fillStyle = "rgba(255,255,255,0.06)";
+    ctx.fillStyle = "rgba(8, 20, 90, 0.94)";
     ctx.fillRect(padding, y, firstColWidth, headerHeight);
 
-    ctx.strokeStyle = "rgba(255,255,255,0.12)";
+    ctx.strokeStyle = "rgba(173, 199, 255, 0.24)";
     ctx.lineWidth = 1;
     ctx.strokeRect(padding, y, contentWidth, headerHeight);
 
-    ctx.fillStyle = "#9fb3cf";
+    ctx.fillStyle = "#75d1ff";
     ctx.font = '700 12px "Space Grotesk", sans-serif';
     ctx.fillText("Participante", padding + 12, y + 22);
 
     section.columns.forEach((column, columnIndex) => {
       const columnX = padding + firstColWidth + columnIndex * colWidth;
-      ctx.strokeStyle = "rgba(255,255,255,0.12)";
+      ctx.strokeStyle = "rgba(173, 199, 255, 0.24)";
       ctx.strokeRect(columnX, y, colWidth, headerHeight);
 
-      ctx.fillStyle = "#9fb3cf";
+      ctx.fillStyle = "#c4d5ff";
       ctx.font = '700 10px "Space Grotesk", sans-serif';
       ctx.fillText(column.subtitle || "Jogo", columnX + 10, y + 18);
 
-      ctx.fillStyle = "#f3f8ff";
+      ctx.fillStyle = "#f5f8ff";
       ctx.font = '600 12px "Space Grotesk", sans-serif';
       drawWrappedCanvasText(ctx, column.label || "-", columnX + 10, y + 38, colWidth - 20, 14, 3);
 
-      ctx.fillStyle = "#8de5ff";
+      ctx.fillStyle = "#d8f3dc";
       ctx.font = '700 11px "Space Grotesk", sans-serif';
       drawWrappedCanvasText(
         ctx,
@@ -3112,17 +3136,17 @@ function buildPredictionExportCanvas(payload) {
 
     section.rows.forEach((row, rowIndex) => {
       const rowY = y + rowIndex * rowHeight;
-      const rowBase = rowIndex % 2 ? "rgba(255,255,255,0.015)" : "rgba(255,255,255,0.005)";
+      const rowBase = rowIndex % 2 ? "rgba(255,255,255,0.03)" : "rgba(255,255,255,0.012)";
       ctx.fillStyle = rowBase;
       ctx.fillRect(padding, rowY, contentWidth, rowHeight);
 
       ctx.fillStyle = "rgba(6,18,48,0.92)";
       ctx.fillRect(padding, rowY, firstColWidth, rowHeight);
 
-      ctx.strokeStyle = "rgba(255,255,255,0.12)";
+      ctx.strokeStyle = "rgba(173, 199, 255, 0.24)";
       ctx.strokeRect(padding, rowY, firstColWidth, rowHeight);
 
-      ctx.fillStyle = "#f0f5ff";
+      ctx.fillStyle = "#f5f8ff";
       ctx.font = '600 12px "Space Grotesk", sans-serif';
       const participantName = String(row.participantName || "-");
       drawWrappedCanvasText(ctx, participantName, padding + 10, rowY + 20, firstColWidth - 20, 13, 2);
@@ -3130,16 +3154,16 @@ function buildPredictionExportCanvas(payload) {
       row.cells.forEach((cell, cellIndex) => {
         const cellX = padding + firstColWidth + cellIndex * colWidth;
         if (cell.hitType === "exact") {
-          ctx.fillStyle = "rgba(0,255,135,0.2)";
+          ctx.fillStyle = "rgba(0,255,135,0.24)";
           ctx.fillRect(cellX, rowY, colWidth, rowHeight);
         } else if (cell.hitType === "trend") {
-          ctx.fillStyle = "rgba(0,212,255,0.16)";
+          ctx.fillStyle = "rgba(255,200,0,0.24)";
           ctx.fillRect(cellX, rowY, colWidth, rowHeight);
         }
 
-        ctx.strokeStyle = "rgba(255,255,255,0.12)";
+        ctx.strokeStyle = "rgba(173, 199, 255, 0.24)";
         ctx.strokeRect(cellX, rowY, colWidth, rowHeight);
-        ctx.fillStyle = "#f3f8ff";
+        ctx.fillStyle = cell.hitType === "trend" ? "#ffe6a0" : "#f5f8ff";
         ctx.font = '600 12px "Space Grotesk", sans-serif';
         ctx.fillText(String(cell.value || "-"), cellX + 12, rowY + 21);
       });
@@ -3180,21 +3204,42 @@ function exportPredictionsAsPdf() {
         <meta charset="UTF-8" />
         <title>${safeTitle}</title>
         <style>
-          body { margin: 0; padding: 20px; font-family: Arial, sans-serif; background: #fff; color: #111; }
-          h1 { margin: 0 0 12px; font-size: 18px; }
-          p { margin: 0 0 16px; font-size: 12px; color: #444; }
-          img { width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; }
+          body {
+            margin: 0;
+            padding: 24px;
+            font-family: "Space Grotesk", Arial, sans-serif;
+            background: linear-gradient(180deg, #1434d8 0%, #0b1ca6 34%, #060d62 72%, #040a42 100%);
+            color: #f5f8ff;
+          }
+          .sheet {
+            border: 1px solid rgba(178, 201, 255, 0.24);
+            border-radius: 18px;
+            padding: 16px;
+            background: rgba(8, 26, 122, 0.72);
+          }
+          h1 { margin: 0 0 8px; font-size: 20px; letter-spacing: .02em; }
+          p { margin: 0 0 14px; font-size: 12px; color: #c4d5ff; }
+          img {
+            width: 100%;
+            height: auto;
+            border: 1px solid rgba(178, 201, 255, 0.24);
+            border-radius: 12px;
+            background: rgba(4, 19, 86, 0.85);
+          }
           @media print {
-            body { padding: 0; }
-            h1, p { margin-left: 10mm; margin-right: 10mm; }
-            img { border: 0; border-radius: 0; }
+            body { padding: 0; background: #ffffff; }
+            .sheet { border: 0; border-radius: 0; background: #ffffff; padding: 0; }
+            h1, p { margin-left: 10mm; margin-right: 10mm; color: #111; }
+            img { border: 0; border-radius: 0; background: #fff; }
           }
         </style>
       </head>
       <body>
-        <h1>${safeTitle}</h1>
-        <p>Selecione "Salvar como PDF" na janela de impressão para baixar o arquivo.</p>
-        <img src="${imageUrl}" alt="Tabela de palpites" />
+        <main class="sheet">
+          <h1>${safeTitle}</h1>
+          <p>Selecione "Salvar como PDF" na janela de impressão para baixar o arquivo.</p>
+          <img src="${imageUrl}" alt="Tabela de palpites" />
+        </main>
         <script>
           window.addEventListener("load", function () {
             setTimeout(function () { window.print(); }, 250);

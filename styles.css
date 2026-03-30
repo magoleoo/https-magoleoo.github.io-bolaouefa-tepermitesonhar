@@ -123,6 +123,23 @@ select {
   color: var(--muted);
 }
 
+.brand-motto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 209, 255, 0.42);
+  background: linear-gradient(180deg, rgba(117, 209, 255, 0.2), rgba(117, 209, 255, 0.1));
+  color: #f5f8ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(117, 209, 255, 0.24);
+}
+
 .topbar-actions {
   display: flex;
   align-items: center;
@@ -1664,6 +1681,12 @@ option {
 
   .brand-subtitle {
     font-size: 0.9rem;
+  }
+
+  .brand-motto {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
   }
   
   .competition-mark {

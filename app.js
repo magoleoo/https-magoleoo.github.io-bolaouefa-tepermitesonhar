@@ -1991,19 +1991,19 @@ function renderSuperclassicPanel() {
                           const className = pick === "-"
                             ? ""
                             : hitType === "exact"
-                              ? "superclassic-exact-hit"
+                              ? "hit-exact"
                               : hitType === "trend"
-                                ? "superclassic-trend-hit"
-                                : "superclassic-pick-cell";
+                                ? "hit-trend"
+                                : "";
 
                           return `
                             <td class="${className}">
                               ${pick}
                               ${
                                 hitType === "exact"
-                                  ? `<span class="superclassic-exact-mark">Placar exato</span>`
+                                  ? `<span class="predictions-cell-mark exact">Placar exato</span>`
                                   : hitType === "trend"
-                                    ? `<span class="superclassic-trend-mark">Tendência</span>`
+                                    ? `<span class="predictions-cell-mark trend">Tendência</span>`
                                     : ""
                               }
                             </td>
@@ -2154,18 +2154,18 @@ function renderSuperclassicPanel() {
                         const className = pick === "-"
                           ? ""
                           : hitType === "exact"
-                            ? "superclassic-exact-hit"
+                            ? "hit-exact"
                             : hitType === "trend"
-                              ? "superclassic-trend-hit"
-                            : "superclassic-pick-cell";
+                              ? "hit-trend"
+                            : "";
                         return `
                           <td class="${className}">
                             ${pick}
                             ${
                               hitType === "exact"
-                                ? `<span class="superclassic-exact-mark">Placar exato</span>`
+                                ? `<span class="predictions-cell-mark exact">Placar exato</span>`
                                 : hitType === "trend"
-                                  ? `<span class="superclassic-trend-mark">Tendência</span>`
+                                  ? `<span class="predictions-cell-mark trend">Tendência</span>`
                                   : ""
                             }
                           </td>

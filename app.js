@@ -26,6 +26,10 @@ const storageKeys = {
   tournamentOutcome: "ucl-bolao-tournament-outcome",
 };
 
+// Modo consultivo: acesso único para todos, sem identificação por participante.
+const PUBLIC_CONSULT_MODE = true;
+const PUBLIC_ACCESS_LABEL = "Consulta pública";
+
 const loginModal = document.querySelector("#login-modal");
 const loginForm = document.querySelector("#login-form");
 const loginUser = document.querySelector("#login-user");
@@ -76,8 +80,11 @@ const panelHistory = document.querySelector("#panel-history");
 const panelRules = document.querySelector("#panel-rules");
 const qfPredictForm = document.querySelector("#qf-predict-form");
 
-let currentUserId = localStorage.getItem(storageKeys.session) || "";
-if (!localStorage.getItem("ucl-bolao-guest") && !currentUserId) {
+let currentUserId = PUBLIC_CONSULT_MODE ? "" : localStorage.getItem(storageKeys.session) || "";
+if (PUBLIC_CONSULT_MODE) {
+  localStorage.removeItem(storageKeys.session);
+  localStorage.setItem("ucl-bolao-guest", "1");
+} else if (!localStorage.getItem("ucl-bolao-guest") && !currentUserId) {
   localStorage.setItem("ucl-bolao-guest", "1");
 }
 let activeMainTab = "ranking";
@@ -656,6 +663,7 @@ function getParticipantByAccessCode(accessCode) {
 }
 
 function getActiveParticipantLabel() {
+  if (PUBLIC_CONSULT_MODE) return PUBLIC_ACCESS_LABEL;
   return getParticipantById(currentUserId)?.name || loginUser.value.trim() || "Visitante";
 }
 
@@ -1153,6 +1161,14 @@ function populateLoginSelect() {
   if (!loginUserList) {
     return;
   }
+  if (PUBLIC_CONSULT_MODE) {
+    loginUserList.innerHTML = "";
+    if (loginUser) {
+      loginUser.value = "";
+      loginUser.disabled = true;
+    }
+    return;
+  }
   loginUserList.innerHTML = participants
     .map((participant) => `<option value="${participant.name}"></option>`)
     .join("");
@@ -1175,7 +1191,9 @@ function renderOverview(leaderboard) {
     {
       label: "Sua posição",
       value: currentRow ? `${currentRow.position}º` : "-",
-      note: currentRow ? `${currentRow.participant.name} com ${formatPoints(currentRow.total)} pts` : "Faça login para ver",
+      note: currentRow
+        ? `${currentRow.participant.name} com ${formatPoints(currentRow.total)} pts`
+        : (PUBLIC_CONSULT_MODE ? "Modo consulta geral (sem login individual)." : "Faça login para ver"),
     },
     {
       label: "Líder geral",
@@ -1208,7 +1226,9 @@ function renderOverview(leaderboard) {
 function renderUserSummary(leaderboard) {
   const participant = getParticipantById(currentUserId);
   if (!participant) {
-    userSummary.innerHTML = "<p class='muted'>Faça login para liberar a área exclusiva.</p>";
+    userSummary.innerHTML = PUBLIC_CONSULT_MODE
+      ? "<p class='muted'>Acesso único liberado para todos. O site está em modo consulta pública.</p>"
+      : "<p class='muted'>Faça login para liberar a área exclusiva.</p>";
     return;
   }
 
@@ -1471,7 +1491,9 @@ function renderMatches() {
 function renderParticipantSnapshot() {
   const participant = getParticipantById(currentUserId);
   if (!participant) {
-    predictionsForm.innerHTML = "<p class='muted'>Entre com um participante para ver o recorte oficial atualizado até as oitavas.</p>";
+    predictionsForm.innerHTML = PUBLIC_CONSULT_MODE
+      ? "<p class='muted'>Modo consulta pública ativo: recorte individual por participante está desativado.</p>"
+      : "<p class='muted'>Entre com um participante para ver o recorte oficial atualizado até as oitavas.</p>";
     return;
   }
 
@@ -3560,6 +3582,13 @@ window.setPredictFilter = (f) => {
 };
 
 function toggleLoginState() {
+  if (PUBLIC_CONSULT_MODE) {
+    if (loginModal) {
+      loginModal.classList.add("hidden");
+      loginModal.style.display = "none";
+    }
+    return;
+  }
   const isLogged = localStorage.getItem("ucl-bolao-guest") === "1" || Boolean(currentUserId);
   loginModal.classList.toggle("hidden", isLogged);
   loginModal.style.display = isLogged ? "none" : "grid";
@@ -3581,6 +3610,9 @@ function renderApp() {
   renderSuperclassicPanel();
   renderQuarterFinalsForm();
   renderQuarterFinalsFormsPanel();
+  if (logoutButton) {
+    logoutButton.style.display = PUBLIC_CONSULT_MODE ? "none" : "";
+  }
   toggleLoginState();
 }
 
@@ -3665,6 +3697,10 @@ async function loadQuarterFinalsFormsData() {
 }
 
 loginForm.addEventListener("submit", (event) => {
+  if (PUBLIC_CONSULT_MODE) {
+    event.preventDefault();
+    return;
+  }
   event.preventDefault();
   const participant = getParticipantByName(loginUser.value);
   if (!participant && loginUser.value.trim()) {
@@ -3684,6 +3720,7 @@ loginForm.addEventListener("submit", (event) => {
 });
 
 logoutButton.addEventListener("click", () => {
+  if (PUBLIC_CONSULT_MODE) return;
   currentUserId = "";
   localStorage.removeItem(storageKeys.session);
   localStorage.removeItem("ucl-bolao-guest");
@@ -3692,6 +3729,7 @@ logoutButton.addEventListener("click", () => {
 });
 
 skipLoginButton.addEventListener("click", () => {
+  if (PUBLIC_CONSULT_MODE) return;
   currentUserId = "";
   localStorage.removeItem(storageKeys.session);
   localStorage.setItem("ucl-bolao-guest", "1");

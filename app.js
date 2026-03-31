@@ -3154,6 +3154,9 @@ function renderPredictionsGallery() {
 let activePredictionsPhase = "LEAGUE";
 let activePredictionsFilter = "Matchday 1";
 const PREDICTIONS_FILTER_CLASSIFIED = "CLASSIFIED_TOP8";
+const KNOCKOUT_PREDICTIONS_VIEW_MATCHES = "MATCHES";
+const KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED = "CLASSIFIED";
+let activePredictionsKnockoutView = KNOCKOUT_PREDICTIONS_VIEW_MATCHES;
 let latestPredictionExportPayload = {
   title: "",
   sections: [],
@@ -3176,7 +3179,7 @@ function getLegToken(value) {
   return "";
 }
 
-function isLeagueClassificationFixture(fixture) {
+function isPredictionClassificationFixture(fixture) {
   const label = normalizeText(String(fixture?.label || ""));
   const matchday = normalizeText(String(fixture?.matchday || ""));
   return (
@@ -3190,6 +3193,13 @@ function getClassificationSlotNumber(fixture) {
   const label = String(fixture?.label || fixture?.matchday || "");
   const match = label.match(/(\d+)/);
   return match ? Number(match[1]) : Number.POSITIVE_INFINITY;
+}
+
+function getFixtureOrderNumber(fixture) {
+  const matchday = String(fixture?.matchday || "");
+  const label = String(fixture?.label || "");
+  const direct = matchday.match(/(\d+)/) || label.match(/(\d+)/);
+  return direct ? Number(direct[1]) : Number.POSITIVE_INFINITY;
 }
 
 function resolvePredictionHitType(fixture, pickValue) {
@@ -3385,6 +3395,80 @@ function buildLeagueClassificationMatrixSection(fixtures) {
       trend: "classificado(s) certo(s)",
     },
     mobileEmptyLabel: "Ninguém acertou posição ou classificado neste slot.",
+  };
+}
+
+function buildKnockoutClassificationMatrixSection(fixtures, phaseLabel = "") {
+  const knownParticipants = participants.map((participant) => participant.name);
+  const knownParticipantsKeys = new Set(knownParticipants.map((name) => normalizeText(name)));
+  const extraParticipantsByKey = new Map();
+
+  const orderedFixtures = [...fixtures].sort((a, b) => {
+    const aOrder = getFixtureOrderNumber(a);
+    const bOrder = getFixtureOrderNumber(b);
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    return String(a?.label || "").localeCompare(String(b?.label || ""), "pt-BR");
+  });
+
+  const columns = orderedFixtures.map((fixture, index) => {
+    const picksByParticipant = new Map();
+    (fixture?.picks || []).forEach((pick) => {
+      const participantName = String(pick?.participant || "").trim();
+      if (!participantName) return;
+      const participantKey = normalizeText(participantName);
+      const pickValue = String(pick?.pick || "").trim();
+      picksByParticipant.set(participantKey, pickValue || "-");
+      if (!knownParticipantsKeys.has(participantKey) && !extraParticipantsByKey.has(participantKey)) {
+        extraParticipantsByKey.set(participantKey, participantName);
+      }
+    });
+
+    const subtitle = fixture?.matchday
+      ? String(fixture.matchday)
+      : `Confronto ${index + 1}`;
+    const label = String(fixture?.label || "").trim() || `Confronto ${index + 1}`;
+    const official = String(fixture?.official || "").trim() || "-";
+
+    return {
+      fixture,
+      subtitle,
+      label,
+      official,
+      picksByParticipant,
+    };
+  });
+
+  const extraParticipants = [...extraParticipantsByKey.values()].sort((a, b) =>
+    a.localeCompare(b, "pt-BR")
+  );
+  const allParticipants = [...knownParticipants, ...extraParticipants];
+
+  const rows = allParticipants.map((participantName) => {
+    const participantKey = normalizeText(participantName);
+    const cells = columns.map((column) => {
+      const value = column.picksByParticipant.get(participantKey) || "-";
+      const hitType =
+        value !== "-" && normalizeText(value) === normalizeText(column.official)
+          ? "exact"
+          : "";
+      return { value, hitType };
+    });
+    return { participantName, cells };
+  });
+
+  return {
+    sectionTitle: `Classificados ${phaseLabel ? `- ${phaseLabel}` : ""}`.trim(),
+    columns,
+    rows,
+    hitLabels: {
+      exact: "Classificado certo",
+      trend: "Tendência",
+    },
+    mobileStatLabels: {
+      exact: "classificado(s) certo(s)",
+      trend: "tendência(s)",
+    },
+    mobileEmptyLabel: "Ninguém acertou o classificado neste confronto.",
   };
 }
 
@@ -3675,6 +3759,13 @@ function renderPredictionConsultation() {
   ];
 
   const leagueRounds = Array.from({ length: 8 }, (_, i) => `Matchday ${i + 1}`);
+  const phasesWithClassifiedSubview = new Set([
+    "PLAYOFF",
+    "ROUND_OF_16",
+    "QUARTER_FINALS",
+    "SEMI_FINALS",
+  ]);
+  const hasKnockoutClassifiedSubview = phasesWithClassifiedSubview.has(activePredictionsPhase);
 
   let phaseTabsHTML = `<div class="predictions-subtabs predictions-subtabs--framed">`;
   validPhases.forEach(ph => {
@@ -3711,13 +3802,32 @@ function renderPredictionConsultation() {
       `;
     });
     secondaryTabsHTML += `</div>`;
+  } else if (hasKnockoutClassifiedSubview) {
+    secondaryTabsHTML = `
+      <div class="predictions-subtabs">
+        <button
+          type="button"
+          class="predictions-tab-button ${activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_MATCHES ? "is-active" : ""}"
+          onclick="window.setPredictKnockoutView('${KNOCKOUT_PREDICTIONS_VIEW_MATCHES}')"
+        >
+          Jogos
+        </button>
+        <button
+          type="button"
+          class="predictions-tab-button ${activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED ? "is-active" : ""}"
+          onclick="window.setPredictKnockoutView('${KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED}')"
+        >
+          Classificados
+        </button>
+      </div>
+    `;
   }
 
   let srcFixtures = [];
   if (activePredictionsPhase === "LEAGUE") {
     const rawMatches = backtestData?.phases?.[activePredictionsPhase]?.fixtures || [];
     if (activePredictionsFilter === PREDICTIONS_FILTER_CLASSIFIED) {
-      srcFixtures = rawMatches.filter((fixture) => isLeagueClassificationFixture(fixture));
+      srcFixtures = rawMatches.filter((fixture) => isPredictionClassificationFixture(fixture));
     } else {
       const targetRound = getMatchdayNumber(activePredictionsFilter);
       srcFixtures = rawMatches.filter((fixture) => {
@@ -3729,23 +3839,45 @@ function renderPredictionConsultation() {
       });
     }
   } else {
-    srcFixtures = backtestData?.phases?.[activePredictionsPhase]?.fixtures || [];
+    const rawFixtures = backtestData?.phases?.[activePredictionsPhase]?.fixtures || [];
+    if (hasKnockoutClassifiedSubview) {
+      srcFixtures =
+        activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+          ? rawFixtures.filter((fixture) => isPredictionClassificationFixture(fixture))
+          : rawFixtures.filter((fixture) => !isPredictionClassificationFixture(fixture));
+    } else {
+      srcFixtures = rawFixtures;
+    }
   }
 
   const activePhaseMeta = validPhases.find((phase) => phase.id === activePredictionsPhase);
-  const exportTitle = activePredictionsPhase === "LEAGUE"
-    ? (
-      activePredictionsFilter === PREDICTIONS_FILTER_CLASSIFIED
-        ? `Palpites ${activePhaseMeta?.label || "Primeira Fase"} - Classificados`
-        : `Palpites ${activePhaseMeta?.label || "Primeira Fase"} - ${activePredictionsFilter.replace("Matchday", "Rodada")}`
-    )
-    : `Palpites ${activePhaseMeta?.label || activePredictionsPhase}`;
+  const exportTitle =
+    activePredictionsPhase === "LEAGUE"
+      ? (
+        activePredictionsFilter === PREDICTIONS_FILTER_CLASSIFIED
+          ? `Palpites ${activePhaseMeta?.label || "Primeira Fase"} - Classificados`
+          : `Palpites ${activePhaseMeta?.label || "Primeira Fase"} - ${activePredictionsFilter.replace("Matchday", "Rodada")}`
+      )
+      : hasKnockoutClassifiedSubview &&
+          activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+        ? `Palpites ${activePhaseMeta?.label || activePredictionsPhase} - Classificados`
+        : `Palpites ${activePhaseMeta?.label || activePredictionsPhase}`;
 
   let matrixSections = [];
-  const phasesWithTwoLegs = ["PLAYOFF", "ROUND_OF_16"];
+  const phasesWithTwoLegs = ["PLAYOFF", "ROUND_OF_16", "QUARTER_FINALS", "SEMI_FINALS"];
   if (srcFixtures.length) {
     if (activePredictionsPhase === "LEAGUE" && activePredictionsFilter === PREDICTIONS_FILTER_CLASSIFIED) {
       matrixSections = [buildLeagueClassificationMatrixSection(srcFixtures)];
+    } else if (
+      hasKnockoutClassifiedSubview &&
+      activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+    ) {
+      matrixSections = [
+        buildKnockoutClassificationMatrixSection(
+          srcFixtures,
+          activePhaseMeta?.label || activePredictionsPhase
+        ),
+      ];
     } else if (phasesWithTwoLegs.includes(activePredictionsPhase)) {
       const { idaFixtures, voltaFixtures } = splitPredictionFixturesByLeg(srcFixtures);
       if (idaFixtures.length) matrixSections.push(buildPredictionMatrixSection(idaFixtures, "Jogos de Ida"));
@@ -3776,12 +3908,18 @@ function renderPredictionConsultation() {
     <p id="predictions-export-feedback" class="feedback"></p>
   `;
 
+  const emptyStateMessage =
+    hasKnockoutClassifiedSubview &&
+    activePredictionsKnockoutView === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+      ? "Nenhum palpite de classificados registrado nesta etapa ainda."
+      : "Nenhum palpite registrado nesta etapa ainda.";
+
   if (!srcFixtures.length) {
     container.innerHTML =
       phaseTabsHTML +
       secondaryTabsHTML +
       exportActionsHTML +
-      `<div class="empty-state">Nenhum palpite registrado nesta etapa ainda.</div>`;
+      `<div class="empty-state">${emptyStateMessage}</div>`;
     const pdfButton = container.querySelector("#predictions-export-pdf");
     if (pdfButton) pdfButton.addEventListener("click", exportPredictionsAsPdf);
     return;
@@ -3965,7 +4103,7 @@ function renderPredictionConsultation() {
       phaseTabsHTML +
       secondaryTabsHTML +
       exportActionsHTML +
-      `<div class="empty-state">Nenhum palpite registrado nesta etapa ainda.</div>`;
+      `<div class="empty-state">${emptyStateMessage}</div>`;
     const pdfButton = container.querySelector("#predictions-export-pdf");
     if (pdfButton) pdfButton.addEventListener("click", exportPredictionsAsPdf);
     return;
@@ -3978,12 +4116,23 @@ function renderPredictionConsultation() {
 
 window.setPredictPhase = (ph) => {
   activePredictionsPhase = ph;
-  if(ph === "LEAGUE") activePredictionsFilter = "Matchday 1";
+  if (ph === "LEAGUE") {
+    activePredictionsFilter = "Matchday 1";
+  } else {
+    activePredictionsKnockoutView = KNOCKOUT_PREDICTIONS_VIEW_MATCHES;
+  }
   renderPredictionConsultation();
 };
 
 window.setPredictFilter = (f) => {
   activePredictionsFilter = f;
+  renderPredictionConsultation();
+};
+
+window.setPredictKnockoutView = (view) => {
+  activePredictionsKnockoutView = view === KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+    ? KNOCKOUT_PREDICTIONS_VIEW_CLASSIFIED
+    : KNOCKOUT_PREDICTIONS_VIEW_MATCHES;
   renderPredictionConsultation();
 };
 

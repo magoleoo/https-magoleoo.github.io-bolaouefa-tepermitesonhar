@@ -2579,7 +2579,7 @@ function renderSuperclassicPanel() {
     )
     .join("");
 
-  superclassicPanel.innerHTML = `${leagueTableMarkup}${overviewMarkup}${blockMarkup}`;
+  superclassicPanel.innerHTML = `${overviewMarkup}${leagueTableMarkup}${blockMarkup}`;
 
   const leagueForm = superclassicPanel.querySelector("#league-superclassic-form");
   const leagueFeedback = superclassicPanel.querySelector("#league-superclassic-feedback");

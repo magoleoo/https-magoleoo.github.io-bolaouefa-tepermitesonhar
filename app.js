@@ -559,6 +559,7 @@ function buildAutomaticSuperclassicFixtures() {
     const fixtures = backtestData?.phases?.[phaseKey]?.fixtures || [];
 
     fixtures.forEach((fixture) => {
+      if (isPredictionClassificationFixture(fixture)) return;
       const parsed = splitFixtureLabel(fixture.label);
       if (!parsed) return;
       if (!isEligibleSuperclassicMatch(parsed.homeTeam, parsed.awayTeam)) return;
@@ -596,13 +597,15 @@ function buildAutomaticSuperclassicFixtures() {
 
     const title = `${match.homeTeam} x ${match.awayTeam}`;
     let phaseDetail = match.roundLabel || phaseRules[match.phase]?.label || match.phase;
-    const legMatch = String(match.roundLabel || "").match(/\b(ida|volta)\b/i);
+    const roundLabelText = String(match.roundLabel || "");
+    const legMatch = roundLabelText.match(/\b(ida|volta)\b/i);
     if (legMatch) {
       phaseDetail = `${phaseRules[match.phase]?.label || match.phase} • ${legMatch[1].toUpperCase()}`;
     }
 
     const hasScore =
       typeof match?.scoreFinal?.home === "number" && typeof match?.scoreFinal?.away === "number";
+    if (!hasScore && !legMatch) return;
     const official = hasScore ? `${match.scoreFinal.home}x${match.scoreFinal.away}` : "";
 
     upsertFixture({

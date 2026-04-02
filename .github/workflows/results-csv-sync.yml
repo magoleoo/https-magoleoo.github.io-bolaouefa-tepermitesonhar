@@ -10,21 +10,31 @@ jobs:
       contents: write
 
     steps:
+      - name: Modo aguardando resultados oficiais
+        if: ${{ vars.BOLAO_RESULTS_CSV_URL == '' }}
+        run: |
+          echo "BOLAO_RESULTS_CSV_URL não configurada."
+          echo "Workflow encerrado em modo espera (sem erro)."
+
       - name: Checkout Repo
+        if: ${{ vars.BOLAO_RESULTS_CSV_URL != '' }}
         uses: actions/checkout@v6
 
       - name: Setup Python
+        if: ${{ vars.BOLAO_RESULTS_CSV_URL != '' }}
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Sincronizar resultados via CSV oficial
+        if: ${{ vars.BOLAO_RESULTS_CSV_URL != '' }}
         env:
           BOLAO_RESULTS_CSV_URL: ${{ vars.BOLAO_RESULTS_CSV_URL }}
         run: |
           python tools/sync_results_from_csv.py
 
       - name: Commit e push de api/matches
+        if: ${{ vars.BOLAO_RESULTS_CSV_URL != '' }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

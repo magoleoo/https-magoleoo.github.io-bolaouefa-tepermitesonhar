@@ -49,6 +49,19 @@ window.participants = [
   color: ["#4ecdc4", "#ffd166", "#ff6b6b", "#7b9cff"][index % 4],
 }));
 
+window.emailLoginConfig = {
+  enabled: true,
+  strict: true,
+  sharedInitialPassword: "BOLAOUEFA2526",
+  forcePasswordChange: true,
+  resetPasswordRedirectUrl: "",
+};
+
+window.participantEmailRegistry = {
+  // Exemplo:
+  // "leo-picca": "leo@email.com",
+};
+
 window.competitionAssets = {
   mark: "./assets/champions-league-mark.png",
   trophy: "./assets/champions-league-trophy.jpeg",
@@ -113,6 +126,13 @@ window.quarterFinalsFormsConfig = {
     "Q4_volta_away",
     "Q4_classificado",
   ],
+};
+
+window.supabaseShadowConfig = {
+  enabled: false,
+  url: "",
+  anonKey: "",
+  seasonId: "2025-26",
 };
 
 window.leagueSuperclassicFormsConfig = {

@@ -200,6 +200,18 @@
             <section class="card">
               <div class="section-heading">
                 <div>
+                  <p class="eyebrow">Participação</p>
+                  <h2>Preencher palpites das quartas</h2>
+                </div>
+                <span class="tag">Fluxo paralelo via Supabase</span>
+              </div>
+              <form id="qf-predict-form"></form>
+              <div id="qf-forms-panel"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <div>
                   <p class="eyebrow">Consulta estruturada</p>
                   <h2>Palpites da galera</h2>
                 </div>
@@ -232,10 +244,22 @@
         <p class="eyebrow">Acesso livre</p>
         <h2>Identificar participante</h2>
         <p class="login-copy">
-          O site está sem senha por enquanto. Se quiser, escolha seu nome para personalizar a área
-          do participante. Você também pode fechar e navegar sem login.
+          No primeiro acesso, use a senha inicial comum do bolão. Antes de enviar palpites das
+          quartas, a troca para senha pessoal é obrigatória.
         </p>
-        <div class="input-group" style="margin-bottom:24px">
+        <p id="login-mode-hint" class="muted"></p>
+        <div id="login-email-group" class="input-group" style="margin-bottom: 12px; display: none">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+        </div>
+        <div id="login-password-group" class="input-group" style="margin-bottom: 12px; display: none">
+          <label for="login-password">Senha</label>
+          <input type="password" id="login-password" placeholder="Digite sua senha" autocomplete="current-password" />
+        </div>
+        <button id="forgot-password-button" class="ghost-button" type="button" style="margin-top: 8px; display: none">
+          Esqueci a senha
+        </button>
+        <div id="login-participant-group" class="input-group" style="margin-bottom:24px">
           <label for="login-user">Seu nome de palpiteiro</label>
           <input type="text" id="login-user" list="participant-list" placeholder="Digite ou selecione..." autocomplete="off" />
           <datalist id="participant-list"></datalist>
@@ -250,9 +274,9 @@
     <script src="./league-phase.js?v=30.0"></script>
     <script src="./api/ranking.js?v=40.0"></script>
     <script src="./api/matches.js?v=39.0"></script>
-    <script src="./data.js?v=37.0"></script>
+    <script src="./data.js?v=41.0"></script>
     <script src="./results-data.js?v=32.0"></script>
     <script src="./superclassicos.js?v=38.0"></script>
-    <script src="./app.js?v=73.0"></script>
+    <script src="./app.js?v=77.0"></script>
   </body>
 </html>

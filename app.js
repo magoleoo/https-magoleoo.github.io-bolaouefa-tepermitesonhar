@@ -1,10 +1,12 @@
 const {
   competitionSnapshot,
   competitionAssets,
+  emailLoginConfig,
   knockoutResults: staticKnockoutResults,
   leaguePhaseSnapshot,
   officialSources,
   participantSnapshots,
+  participantEmailRegistry,
   participants,
   phaseRules,
   leagueSuperclassicFormsConfig,
@@ -16,6 +18,7 @@ const {
   rulesSections,
   superclassicConfig,
   superclassicData,
+  supabaseShadowConfig,
   teamLogos,
   winnersHistory,
 } = window;
@@ -25,15 +28,44 @@ const storageKeys = {
   leagueSuperclassicDrafts: "ucl-bolao-league-superclassic-drafts",
   qfDrafts: "ucl-bolao-qf-drafts",
   tournamentOutcome: "ucl-bolao-tournament-outcome",
+  supabaseSession: "ucl-bolao-supabase-session",
+  passwordChangeByUser: "ucl-bolao-password-change-by-user",
 };
 
-// Modo consultivo: acesso único para todos, sem identificação por participante.
-const PUBLIC_CONSULT_MODE = true;
+const shadowConfig = supabaseShadowConfig && typeof supabaseShadowConfig === "object" ? supabaseShadowConfig : {};
+const SUPABASE_SHADOW_ENABLED = Boolean(
+  shadowConfig.enabled &&
+    String(shadowConfig.url || "").trim() &&
+    String(shadowConfig.anonKey || "").trim()
+);
+const SUPABASE_URL = String(shadowConfig.url || "")
+  .trim()
+  .replace(/\/+$/, "");
+const SUPABASE_ANON_KEY = String(shadowConfig.anonKey || "").trim();
+const SUPABASE_SEASON_ID = String(shadowConfig.seasonId || "2025-26").trim() || "2025-26";
+const emailRegistry =
+  participantEmailRegistry && typeof participantEmailRegistry === "object"
+    ? participantEmailRegistry
+    : {};
+const emailLoginSettings =
+  emailLoginConfig && typeof emailLoginConfig === "object" ? emailLoginConfig : {};
+const SHARED_INITIAL_PASSWORD = String(emailLoginSettings.sharedInitialPassword || "").trim();
+const FORCE_PASSWORD_CHANGE = Boolean(emailLoginSettings.forcePasswordChange);
+
+// Modo consultivo continua padrão. Login real só ativa quando Supabase estiver configurado.
+const PUBLIC_CONSULT_MODE = !SUPABASE_SHADOW_ENABLED;
 const PUBLIC_ACCESS_LABEL = "Consulta pública";
 
 const loginModal = document.querySelector("#login-modal");
 const loginForm = document.querySelector("#login-form");
 const loginUser = document.querySelector("#login-user");
+const loginEmail = document.querySelector("#login-email");
+const loginPassword = document.querySelector("#login-password");
+const loginModeHint = document.querySelector("#login-mode-hint");
+const loginEmailGroup = document.querySelector("#login-email-group");
+const loginPasswordGroup = document.querySelector("#login-password-group");
+const loginParticipantGroup = document.querySelector("#login-participant-group");
+const forgotPasswordButton = document.querySelector("#forgot-password-button");
 const loginUserList =
   document.querySelector("#login-user-list") || document.querySelector("#participant-list");
 const skipLoginButton = document.querySelector("#skip-login-button");
@@ -87,10 +119,13 @@ const panelRules = document.querySelector("#panel-rules");
 const qfPredictForm = document.querySelector("#qf-predict-form");
 
 let currentUserId = PUBLIC_CONSULT_MODE ? "" : localStorage.getItem(storageKeys.session) || "";
+let supabaseSession = null;
+let supabaseProfile = null;
+let quarterSupabaseMatches = null;
 if (PUBLIC_CONSULT_MODE) {
   localStorage.removeItem(storageKeys.session);
   localStorage.setItem("ucl-bolao-guest", "1");
-} else if (!localStorage.getItem("ucl-bolao-guest") && !currentUserId) {
+} else if (!isSupabaseShadowMode() && !localStorage.getItem("ucl-bolao-guest") && !currentUserId) {
   localStorage.setItem("ucl-bolao-guest", "1");
 }
 let activeMainTab = "ranking";
@@ -124,6 +159,100 @@ function normalizeText(text) {
     .replace(/\s+/g, " ");
 }
 
+function normalizeEmail(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase();
+}
+
+function getParticipantConfiguredEmail(participantId) {
+  const fromRegistry = normalizeEmail(emailRegistry?.[participantId] || "");
+  if (fromRegistry) return fromRegistry;
+  const participant = getParticipantById(participantId);
+  return normalizeEmail(participant?.email || "");
+}
+
+function getParticipantByEmail(email) {
+  const normalized = normalizeEmail(email);
+  if (!normalized) return null;
+
+  const byRegistry = participants.find(
+    (participant) => getParticipantConfiguredEmail(participant.id) === normalized
+  );
+  if (byRegistry) return byRegistry;
+
+  return participants.find((participant) => normalizeEmail(participant.email || "") === normalized) || null;
+}
+
+function isEmailRegistryActive() {
+  return participants.some((participant) => Boolean(getParticipantConfiguredEmail(participant.id)));
+}
+
+function isStrictEmailLoginEnabled() {
+  return Boolean(emailLoginSettings?.strict) && isEmailRegistryActive();
+}
+
+function hasSharedInitialPasswordConfigured() {
+  return Boolean(SHARED_INITIAL_PASSWORD);
+}
+
+function isUsingSharedInitialPassword(password) {
+  return hasSharedInitialPasswordConfigured() && String(password || "") === SHARED_INITIAL_PASSWORD;
+}
+
+function readPasswordChangeFlags() {
+  try {
+    const raw = localStorage.getItem(storageKeys.passwordChangeByUser);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return {};
+    return parsed;
+  } catch (error) {
+    console.error("Falha ao ler flags de troca de senha.", error);
+    return {};
+  }
+}
+
+function writePasswordChangeFlags(flags) {
+  try {
+    localStorage.setItem(storageKeys.passwordChangeByUser, JSON.stringify(flags || {}));
+  } catch (error) {
+    console.error("Falha ao salvar flags de troca de senha.", error);
+  }
+}
+
+function setPasswordChangeRequired(userId, required) {
+  const key = String(userId || "").trim();
+  if (!key) return;
+  const flags = readPasswordChangeFlags();
+  if (required) {
+    flags[key] = true;
+  } else {
+    delete flags[key];
+  }
+  writePasswordChangeFlags(flags);
+}
+
+function isPasswordChangeRequired(userId) {
+  const key = String(userId || "").trim();
+  if (!key) return false;
+  const flags = readPasswordChangeFlags();
+  return Boolean(flags[key]);
+}
+
+function getAuthRecoveryRedirectUrl() {
+  const configured = String(emailLoginSettings?.resetPasswordRedirectUrl || "").trim();
+  if (configured) return configured;
+  try {
+    if (window?.location?.origin && window?.location?.pathname) {
+      return `${window.location.origin}${window.location.pathname}`;
+    }
+  } catch (error) {
+    console.error("Falha ao resolver URL de recuperação.", error);
+  }
+  return "";
+}
+
 function normalizePhaseKey(rawPhase) {
   const normalized = normalizeText(String(rawPhase || ""));
   if (normalized === "round of 16" || normalized === "round_of_16") return "ROUND_OF_16";
@@ -133,6 +262,247 @@ function normalizePhaseKey(rawPhase) {
   if (normalized === "league") return "LEAGUE";
   if (normalized === "final") return "FINAL";
   return String(rawPhase || "").toUpperCase();
+}
+
+function isSupabaseShadowMode() {
+  return SUPABASE_SHADOW_ENABLED;
+}
+
+function readStoredSupabaseSession() {
+  try {
+    const raw = localStorage.getItem(storageKeys.supabaseSession);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return null;
+    if (!parsed.access_token || !parsed.user) return null;
+    return parsed;
+  } catch (error) {
+    console.error("Falha ao ler sessão Supabase.", error);
+    return null;
+  }
+}
+
+function saveSupabaseSession(session) {
+  supabaseSession = session || null;
+  if (supabaseSession?.access_token) {
+    localStorage.setItem(storageKeys.supabaseSession, JSON.stringify(supabaseSession));
+  } else {
+    localStorage.removeItem(storageKeys.supabaseSession);
+  }
+}
+
+function clearSupabaseSession() {
+  supabaseProfile = null;
+  saveSupabaseSession(null);
+}
+
+function decodeJwtPayload(token) {
+  try {
+    const chunk = String(token || "").split(".")[1] || "";
+    if (!chunk) return {};
+    const normalized = chunk.replace(/-/g, "+").replace(/_/g, "/");
+    const decoded = atob(normalized);
+    return JSON.parse(decoded);
+  } catch (error) {
+    return {};
+  }
+}
+
+function getSupabaseUserIdFromSession(session = supabaseSession) {
+  if (session?.user?.id) return String(session.user.id);
+  const payload = decodeJwtPayload(session?.access_token || "");
+  return String(payload.sub || "");
+}
+
+function buildSupabaseHeaders(accessToken = "", includeContentType = true) {
+  const headers = {
+    apikey: SUPABASE_ANON_KEY,
+  };
+  if (accessToken) {
+    headers.Authorization = `Bearer ${accessToken}`;
+  }
+  if (includeContentType) {
+    headers["Content-Type"] = "application/json";
+  }
+  return headers;
+}
+
+async function supabaseFetchJson(url, options = {}) {
+  const response = await fetch(url, options);
+  const raw = await response.text();
+  let payload = null;
+  if (raw) {
+    try {
+      payload = JSON.parse(raw);
+    } catch (error) {
+      payload = raw;
+    }
+  }
+  if (!response.ok) {
+    const fallback = `Supabase retornou erro ${response.status}`;
+    let message = fallback;
+    if (payload && typeof payload === "object") {
+      message =
+        payload.error_description ||
+        payload.msg ||
+        payload.message ||
+        payload.error ||
+        fallback;
+    } else if (typeof payload === "string" && payload.trim()) {
+      message = payload.trim();
+    }
+    throw new Error(message);
+  }
+  return payload;
+}
+
+function buildSupabaseRestUrl(table, params = {}) {
+  const url = new URL(`${SUPABASE_URL}/rest/v1/${table}`);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value === undefined || value === null || value === "") return;
+    url.searchParams.set(key, String(value));
+  });
+  return url.toString();
+}
+
+async function supabaseSignIn(email, password) {
+  const url = `${SUPABASE_URL}/auth/v1/token?grant_type=password`;
+  return supabaseFetchJson(url, {
+    method: "POST",
+    headers: buildSupabaseHeaders("", true),
+    body: JSON.stringify({ email, password }),
+  });
+}
+
+async function supabaseSignUp(email, password) {
+  const url = `${SUPABASE_URL}/auth/v1/signup`;
+  return supabaseFetchJson(url, {
+    method: "POST",
+    headers: buildSupabaseHeaders("", true),
+    body: JSON.stringify({ email, password }),
+  });
+}
+
+async function supabaseRequestPasswordReset(email) {
+  const url = `${SUPABASE_URL}/auth/v1/recover`;
+  const payload = { email };
+  const redirectUrl = getAuthRecoveryRedirectUrl();
+  if (redirectUrl) {
+    payload.redirect_to = redirectUrl;
+  }
+  return supabaseFetchJson(url, {
+    method: "POST",
+    headers: buildSupabaseHeaders("", true),
+    body: JSON.stringify(payload),
+  });
+}
+
+async function supabaseUpdateOwnPassword(accessToken, newPassword) {
+  const url = `${SUPABASE_URL}/auth/v1/user`;
+  return supabaseFetchJson(url, {
+    method: "PUT",
+    headers: buildSupabaseHeaders(accessToken, true),
+    body: JSON.stringify({ password: newPassword }),
+  });
+}
+
+async function loadSupabaseOwnProfile(accessToken, userId) {
+  const url = buildSupabaseRestUrl("bolao_profiles", {
+    select: "user_id,participant_id,display_name",
+    user_id: `eq.${userId}`,
+    limit: "1",
+  });
+  const rows = await supabaseFetchJson(url, {
+    headers: buildSupabaseHeaders(accessToken, false),
+  });
+  if (!Array.isArray(rows) || !rows.length) return null;
+  return rows[0];
+}
+
+async function createSupabaseOwnProfile(accessToken, profile) {
+  const url = buildSupabaseRestUrl("bolao_profiles", {});
+  const created = await supabaseFetchJson(url, {
+    method: "POST",
+    headers: {
+      ...buildSupabaseHeaders(accessToken, true),
+      Prefer: "return=representation",
+    },
+    body: JSON.stringify([profile]),
+  });
+  return Array.isArray(created) && created.length ? created[0] : null;
+}
+
+function setupLoginModeUi() {
+  const useEmailLogin =
+    isSupabaseShadowMode() &&
+    Boolean(emailLoginSettings?.enabled) &&
+    isEmailRegistryActive();
+  if (loginEmailGroup) loginEmailGroup.style.display = isSupabaseShadowMode() ? "" : "none";
+  if (loginPasswordGroup) loginPasswordGroup.style.display = isSupabaseShadowMode() ? "" : "none";
+  if (forgotPasswordButton) forgotPasswordButton.style.display = isSupabaseShadowMode() ? "" : "none";
+  if (loginParticipantGroup)
+    loginParticipantGroup.style.display =
+      isSupabaseShadowMode() && useEmailLogin ? "none" : isSupabaseShadowMode() ? "" : "none";
+
+  if (loginModeHint) {
+    loginModeHint.textContent = isSupabaseShadowMode()
+      ? useEmailLogin
+        ? hasSharedInitialPasswordConfigured()
+          ? "Primeiro acesso: use o e-mail cadastrado + senha inicial comum. Antes de enviar quartas, a troca para senha pessoal será obrigatória."
+          : "Login por e-mail cadastrado ativo. O participante será identificado automaticamente."
+        : hasSharedInitialPasswordConfigured()
+          ? "Primeiro acesso: use a senha inicial comum e selecione seu participante. Antes de enviar quartas, a troca para senha pessoal será obrigatória."
+          : "Entre com e-mail/senha e escolha seu participante para salvar os palpites das quartas no Supabase."
+      : "Modo consulta pública ativo. O login individual está desativado.";
+  }
+}
+
+function resolveParticipantIdFromProfile(profile) {
+  if (!profile) return "";
+  const byId = getParticipantById(profile.participant_id);
+  if (byId) return byId.id;
+  const byName = getParticipantByName(profile.display_name || "");
+  return byName?.id || "";
+}
+
+async function ensureSupabaseSessionAndProfile() {
+  if (!isSupabaseShadowMode()) return;
+  const stored = readStoredSupabaseSession();
+  if (!stored?.access_token) {
+    localStorage.removeItem("ucl-bolao-guest");
+    return;
+  }
+  saveSupabaseSession(stored);
+  const userId = getSupabaseUserIdFromSession(stored);
+  if (!userId) {
+    clearSupabaseSession();
+    return;
+  }
+  try {
+    const profile = await loadSupabaseOwnProfile(stored.access_token, userId);
+    supabaseProfile = profile;
+    currentUserId = resolveParticipantIdFromProfile(profile);
+    if (currentUserId) {
+      localStorage.setItem(storageKeys.session, currentUserId);
+      localStorage.setItem("ucl-bolao-guest", "1");
+    }
+  } catch (error) {
+    console.error("Sessão Supabase inválida. Limpando sessão local.", error);
+    clearSupabaseSession();
+    currentUserId = "";
+    localStorage.removeItem(storageKeys.session);
+  }
+}
+
+function getCurrentSupabaseUserId() {
+  return getSupabaseUserIdFromSession(supabaseSession);
+}
+
+function shouldForcePasswordChangeForCurrentUser() {
+  if (!isSupabaseShadowMode() || !FORCE_PASSWORD_CHANGE) return false;
+  const userId = getCurrentSupabaseUserId();
+  if (!userId) return false;
+  return isPasswordChangeRequired(userId);
 }
 
 const fallbackSuperclassicConfig = {
@@ -675,6 +1045,13 @@ function getParticipantByAccessCode(accessCode) {
 }
 
 function getActiveParticipantLabel() {
+  if (supabaseProfile?.participant_id) {
+    return (
+      getParticipantById(supabaseProfile.participant_id)?.name ||
+      supabaseProfile.display_name ||
+      "Participante"
+    );
+  }
   if (PUBLIC_CONSULT_MODE) return PUBLIC_ACCESS_LABEL;
   return getParticipantById(currentUserId)?.name || loginUser.value.trim() || "Visitante";
 }
@@ -1442,6 +1819,10 @@ function populateLoginSelect() {
   if (!loginUserList) {
     return;
   }
+  const useEmailLogin =
+    isSupabaseShadowMode() &&
+    Boolean(emailLoginSettings?.enabled) &&
+    isEmailRegistryActive();
   if (PUBLIC_CONSULT_MODE) {
     loginUserList.innerHTML = "";
     if (loginUser) {
@@ -1453,7 +1834,7 @@ function populateLoginSelect() {
   loginUserList.innerHTML = participants
     .map((participant) => `<option value="${participant.name}"></option>`)
     .join("");
-  loginUser.disabled = participants.length === 0;
+  loginUser.disabled = participants.length === 0 || useEmailLogin;
   loginUser.value = currentUserId && getParticipantById(currentUserId) ? getParticipantById(currentUserId).name : "";
 }
 
@@ -2823,6 +3204,166 @@ async function submitQuarterPicksToForms(formData) {
   return { ok: true };
 }
 
+function normalizeLegValue(value) {
+  const normalized = normalizeText(String(value || ""));
+  if (normalized.includes("ida") || normalized === "first leg" || normalized === "first") return "IDA";
+  if (normalized.includes("volta") || normalized === "second leg" || normalized === "second") return "VOLTA";
+  return "";
+}
+
+function inferQuarterLegFromMatch(match) {
+  const fromLeg = normalizeLegValue(match.leg);
+  if (fromLeg) return fromLeg;
+  return normalizeLegValue(match.round_label || match.matchday_label || "");
+}
+
+function resolveQuarterMatchKey(matches, homeTeam, awayTeam, desiredLeg) {
+  const homeKey = canonicalTeamKey(homeTeam);
+  const awayKey = canonicalTeamKey(awayTeam);
+  const leg = String(desiredLeg || "").toUpperCase();
+
+  const exact = matches.find((row) => {
+    const rowHome = canonicalTeamKey(row.home_team_name);
+    const rowAway = canonicalTeamKey(row.away_team_name);
+    return (
+      rowHome === homeKey &&
+      rowAway === awayKey &&
+      inferQuarterLegFromMatch(row) === leg
+    );
+  });
+  if (exact) return exact.match_key;
+
+  const fallbackByTeams = matches.find((row) => {
+    const rowHome = canonicalTeamKey(row.home_team_name);
+    const rowAway = canonicalTeamKey(row.away_team_name);
+    return rowHome === homeKey && rowAway === awayKey;
+  });
+  return fallbackByTeams?.match_key || "";
+}
+
+function getKickoffMs(match) {
+  const raw = String(match?.kickoff_utc || "").trim();
+  if (!raw) return null;
+  const parsed = Date.parse(raw);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function isPredictionWindowOpenForMatch(match) {
+  const kickoffMs = getKickoffMs(match);
+  if (kickoffMs === null) return false;
+  return Date.now() < kickoffMs - 5 * 60 * 1000;
+}
+
+async function loadQuarterMatchesFromSupabase() {
+  if (!isSupabaseShadowMode() || !supabaseSession?.access_token) return [];
+  if (Array.isArray(quarterSupabaseMatches)) return quarterSupabaseMatches;
+
+  const url = buildSupabaseRestUrl("bolao_matches", {
+    select: "match_key,home_team_name,away_team_name,leg,round_label,matchday_label,kickoff_utc",
+    season_id: `eq.${SUPABASE_SEASON_ID}`,
+    phase_key: "eq.QUARTER",
+    order: "home_team_name.asc",
+  });
+  const rows = await supabaseFetchJson(url, {
+    headers: buildSupabaseHeaders(supabaseSession.access_token, false),
+  });
+  quarterSupabaseMatches = Array.isArray(rows) ? rows : [];
+  return quarterSupabaseMatches;
+}
+
+async function submitQuarterPicksToSupabase(formData) {
+  if (!isSupabaseShadowMode()) {
+    return { ok: false, reason: "not-configured" };
+  }
+  if (!supabaseSession?.access_token || !supabaseProfile?.participant_id) {
+    return { ok: false, reason: "not-authenticated" };
+  }
+
+  const matches = await loadQuarterMatchesFromSupabase();
+  if (!matches.length) {
+    return { ok: false, reason: "no-quarter-matches" };
+  }
+
+  const payload = [];
+  const missingMatchKeys = [];
+  const lockedMatches = [];
+  const missingKickoff = [];
+  const matchesByKey = new Map(matches.map((row) => [String(row.match_key), row]));
+  qrMatches.forEach((match) => {
+    const qualifiedTeam = String(formData.get(`${match.id}_classificado`) || "").trim() || null;
+
+    const idaKey = resolveQuarterMatchKey(matches, match.home1, match.away1, "IDA");
+    if (idaKey) {
+      const idaMatch = matchesByKey.get(idaKey);
+      if (getKickoffMs(idaMatch) === null) {
+        missingKickoff.push(`${match.home1} x ${match.away1} (IDA)`);
+      } else if (!isPredictionWindowOpenForMatch(idaMatch)) {
+        lockedMatches.push(`${match.home1} x ${match.away1} (IDA)`);
+      } else {
+        payload.push({
+          season_id: SUPABASE_SEASON_ID,
+          participant_id: supabaseProfile.participant_id,
+          match_key: idaKey,
+          pick_home: Number(formData.get(`${match.id}_ida_home`)),
+          pick_away: Number(formData.get(`${match.id}_ida_away`)),
+          predicted_qualified_team: qualifiedTeam,
+          source: "site-supabase",
+        });
+      }
+    } else {
+      missingMatchKeys.push(`${match.home1} x ${match.away1} (IDA)`);
+    }
+
+    const voltaKey = resolveQuarterMatchKey(matches, match.home2, match.away2, "VOLTA");
+    if (voltaKey) {
+      const voltaMatch = matchesByKey.get(voltaKey);
+      if (getKickoffMs(voltaMatch) === null) {
+        missingKickoff.push(`${match.home2} x ${match.away2} (VOLTA)`);
+      } else if (!isPredictionWindowOpenForMatch(voltaMatch)) {
+        lockedMatches.push(`${match.home2} x ${match.away2} (VOLTA)`);
+      } else {
+        payload.push({
+          season_id: SUPABASE_SEASON_ID,
+          participant_id: supabaseProfile.participant_id,
+          match_key: voltaKey,
+          pick_home: Number(formData.get(`${match.id}_volta_home`)),
+          pick_away: Number(formData.get(`${match.id}_volta_away`)),
+          predicted_qualified_team: qualifiedTeam,
+          source: "site-supabase",
+        });
+      }
+    } else {
+      missingMatchKeys.push(`${match.home2} x ${match.away2} (VOLTA)`);
+    }
+  });
+
+  if (missingKickoff.length) {
+    return { ok: false, reason: "kickoff-missing", missingKickoff, missingMatchKeys };
+  }
+
+  if (lockedMatches.length) {
+    return { ok: false, reason: "deadline-expired", lockedMatches, missingMatchKeys };
+  }
+
+  if (!payload.length) {
+    return { ok: false, reason: "no-match-keys", missingMatchKeys, lockedMatches };
+  }
+
+  const url = buildSupabaseRestUrl("bolao_predictions", {
+    on_conflict: "season_id,participant_id,match_key",
+  });
+  await supabaseFetchJson(url, {
+    method: "POST",
+    headers: {
+      ...buildSupabaseHeaders(supabaseSession.access_token, true),
+      Prefer: "resolution=merge-duplicates,return=minimal",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  return { ok: true, missingMatchKeys, lockedMatches };
+}
+
 function loadLeagueSuperclassicDrafts() {
   try {
     const raw = localStorage.getItem(storageKeys.leagueSuperclassicDrafts);
@@ -2967,6 +3508,8 @@ function renderQuarterFinalsFormsPanel() {
   if (!qfFormsPanel) return;
   const csvConfigured = hasQuarterFormsCsvConfigured();
   const submitConfigured = hasQuarterFormsSubmitConfigured();
+  const supabaseConfigured = isSupabaseShadowMode();
+  const supabaseLogged = Boolean(supabaseConfigured && supabaseSession?.access_token && supabaseProfile?.participant_id);
   const rows = extractQuarterFormsRows(quarterFinalsFormsData || []);
 
   if (!csvConfigured) {
@@ -2976,6 +3519,7 @@ function renderQuarterFinalsFormsPanel() {
         <p class="muted">${quarterFinalsFormsConfig.description}</p>
         <p class="muted">Status do fluxo:</p>
         <div class="result-chip-row">
+          <span class="result-chip ${supabaseLogged ? "hit" : ""}">Supabase: ${supabaseConfigured ? (supabaseLogged ? "logado" : "configurado") : "desligado"}</span>
           <span class="result-chip ${submitConfigured ? "hit" : ""}">Envio direto ao Forms: ${submitConfigured ? "ativo" : "pendente"}</span>
           <span class="result-chip">Leitura CSV para ranking: pendente</span>
         </div>
@@ -3012,6 +3556,7 @@ function renderQuarterFinalsFormsPanel() {
     <article class="rules-card" style="margin-bottom: 16px;">
       <h3>Status da integração</h3>
       <div class="result-chip-row">
+        <span class="result-chip ${supabaseLogged ? "hit" : ""}">Supabase: ${supabaseConfigured ? (supabaseLogged ? "logado" : "configurado") : "desligado"}</span>
         <span class="result-chip hit">Leitura CSV: ativa</span>
         <span class="result-chip ${submitConfigured ? "hit" : ""}">Envio direto ao Forms: ${submitConfigured ? "ativo" : "pendente"}</span>
       </div>
@@ -3058,8 +3603,97 @@ function renderQuarterFinalsFormsPanel() {
 
 function renderQuarterFinalsForm() {
   if (!qfPredictForm) return;
+  const supabaseSubmissionEnabled = isSupabaseShadowMode();
+  const supabaseReadyForSubmit = Boolean(
+    supabaseSubmissionEnabled && supabaseSession?.access_token && supabaseProfile?.participant_id
+  );
+  if (supabaseSubmissionEnabled && !supabaseReadyForSubmit) {
+    qfPredictForm.innerHTML = `
+      <article class="rules-card">
+        <h3>Login necessário para enviar quartas</h3>
+        <p class="muted">Entre com e-mail + senha e selecione seu participante no modal de login para salvar os palpites no Supabase.</p>
+      </article>
+    `;
+    return;
+  }
+  if (supabaseReadyForSubmit && shouldForcePasswordChangeForCurrentUser()) {
+    qfPredictForm.innerHTML = `
+      <article class="rules-card">
+        <h3>Troca de senha obrigatória</h3>
+        <p class="muted">Seu acesso ainda está com a senha inicial comum. Defina uma senha pessoal para liberar o envio dos palpites das quartas.</p>
+        <label style="display:block; margin-top: 12px;">
+          Nova senha
+          <input id="qf-new-password" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" />
+        </label>
+        <label style="display:block; margin-top: 12px;">
+          Confirmar nova senha
+          <input id="qf-confirm-password" type="password" autocomplete="new-password" placeholder="Repita a nova senha" />
+        </label>
+        <button id="qf-change-password-button" class="primary-button" type="button" style="margin-top: 14px;">Salvar nova senha</button>
+        <p id="qf-password-feedback" class="feedback"></p>
+      </article>
+    `;
+
+    const changePasswordButton = document.querySelector("#qf-change-password-button");
+    const passwordFeedback = document.querySelector("#qf-password-feedback");
+    if (changePasswordButton && passwordFeedback) {
+      changePasswordButton.onclick = async () => {
+        const newPassword = String(document.querySelector("#qf-new-password")?.value || "");
+        const confirmPassword = String(document.querySelector("#qf-confirm-password")?.value || "");
+        if (!newPassword || !confirmPassword) {
+          passwordFeedback.textContent = "Preencha e confirme a nova senha.";
+          passwordFeedback.classList.remove("success");
+          return;
+        }
+        if (newPassword.length < 8) {
+          passwordFeedback.textContent = "A nova senha deve ter pelo menos 8 caracteres.";
+          passwordFeedback.classList.remove("success");
+          return;
+        }
+        if (newPassword !== confirmPassword) {
+          passwordFeedback.textContent = "A confirmação da senha não confere.";
+          passwordFeedback.classList.remove("success");
+          return;
+        }
+
+        changePasswordButton.disabled = true;
+        passwordFeedback.textContent = "Atualizando senha...";
+        passwordFeedback.classList.remove("success");
+
+        try {
+          await supabaseUpdateOwnPassword(supabaseSession.access_token, newPassword);
+          const userId = getCurrentSupabaseUserId();
+          setPasswordChangeRequired(userId, false);
+          if (loginPassword) loginPassword.value = "";
+          passwordFeedback.textContent = "Senha atualizada com sucesso. Formulário liberado.";
+          passwordFeedback.classList.add("success");
+          renderQuarterFinalsForm();
+        } catch (error) {
+          passwordFeedback.textContent = `Falha ao atualizar senha: ${error.message || error}`;
+          passwordFeedback.classList.remove("success");
+        } finally {
+          changePasswordButton.disabled = false;
+        }
+      };
+    }
+    return;
+  }
   const draft = getQfDraft();
   const formsSubmissionActive = hasQuarterFormsSubmitConfigured();
+  const submitLabel = supabaseReadyForSubmit && formsSubmissionActive
+    ? "Enviar no Supabase + Forms + Copiar para WhatsApp"
+    : supabaseReadyForSubmit
+      ? "Enviar no Supabase + Copiar para WhatsApp"
+      : formsSubmissionActive
+        ? "Enviar no Forms + Copiar para WhatsApp"
+        : "Copiar para WhatsApp";
+  const submitHint = supabaseReadyForSubmit && formsSubmissionActive
+    ? "Ao enviar, o palpite é salvo no Supabase e no Forms (base oficial do ranking via CSV)."
+    : supabaseReadyForSubmit
+      ? "Ao enviar, o palpite fica salvo no Supabase para evolução do fluxo com login por participante."
+      : formsSubmissionActive
+        ? "Ao enviar, o palpite é salvo no Forms e entra na base oficial do ranking assim que o CSV atualizar."
+        : "Depois de preencher, o app monta o texto pronto para colar no grupo. Para ranking oficial, ative Forms ou Supabase.";
   qfPredictForm.innerHTML = `
     <section class="qf-form-shell">
       <article class="form-block">
@@ -3117,12 +3751,8 @@ function renderQuarterFinalsForm() {
       `).join("")}
       </div>
       <div class="form-block qf-actions-block">
-        <button class="primary-button" type="submit">${formsSubmissionActive ? "Enviar no Forms + Copiar para WhatsApp" : "Copiar para WhatsApp"}</button>
-        <p class="muted">
-          ${formsSubmissionActive
-            ? "Ao enviar, o palpite é salvo no Forms e entra na base oficial do ranking assim que o CSV atualizar."
-            : "Depois de preencher, o app monta o texto pronto para colar no grupo. Para ranking oficial, ative a integração com Forms."}
-        </p>
+        <button class="primary-button" type="submit">${submitLabel}</button>
+        <p class="muted">${submitHint}</p>
       </div>
       <p id="qf-feedback" class="feedback"></p>
     </section>
@@ -3150,35 +3780,60 @@ function renderQuarterFinalsForm() {
       return;
     }
 
-    if (!formsSubmissionActive) {
-      feedbackEl.textContent =
-        "Copiado para a área de transferência. Para entrar no ranking oficial, envie também pelo Forms.";
-      feedbackEl.classList.add("success");
-      return;
-    }
+    const statusMessages = [];
 
     try {
-      const submitResult = await submitQuarterPicksToForms(fd);
-      if (!submitResult.ok) {
-        feedbackEl.textContent =
-          "Copiado para WhatsApp, mas o envio ao Forms não está configurado.";
-        feedbackEl.classList.remove("success");
-        return;
+      if (formsSubmissionActive) {
+        const submitFormsResult = await submitQuarterPicksToForms(fd);
+        if (submitFormsResult.ok) {
+          statusMessages.push("Forms: salvo");
+          if (hasQuarterFormsCsvConfigured()) {
+            await loadQuarterFinalsFormsData();
+          }
+        } else {
+          statusMessages.push("Forms: não configurado");
+        }
       }
 
-      if (hasQuarterFormsCsvConfigured()) {
-        await loadQuarterFinalsFormsData();
+      if (supabaseReadyForSubmit) {
+        const submitSupabaseResult = await submitQuarterPicksToSupabase(fd);
+        if (submitSupabaseResult.ok) {
+          statusMessages.push("Supabase: salvo");
+          if (submitSupabaseResult.missingMatchKeys?.length) {
+            statusMessages.push(
+              `mapeamento parcial (${submitSupabaseResult.missingMatchKeys.length} jogo(s) sem chave)`
+            );
+          }
+        } else if (submitSupabaseResult.reason === "kickoff-missing") {
+          const withoutKickoff = submitSupabaseResult.missingKickoff || [];
+          feedbackEl.textContent = withoutKickoff.length
+            ? `Agenda não carregada no Supabase para: ${withoutKickoff.join(", ")}. Defina o kickoff antes de liberar palpites.`
+            : "Agenda não carregada no Supabase. Defina kickoff dos jogos para liberar palpites.";
+          feedbackEl.classList.remove("success");
+          return;
+        } else if (submitSupabaseResult.reason === "deadline-expired") {
+          const locked = submitSupabaseResult.lockedMatches || [];
+          feedbackEl.textContent = locked.length
+            ? `Prazo encerrado (limite: 5 min antes). Jogos bloqueados: ${locked.join(", ")}.`
+            : "Prazo encerrado para envio dos palpites.";
+          feedbackEl.classList.remove("success");
+          return;
+        } else {
+          statusMessages.push("Supabase: não foi possível salvar");
+        }
       }
+
+      if (!formsSubmissionActive && !supabaseReadyForSubmit) {
+        statusMessages.push("Somente cópia para WhatsApp");
+      }
+
       renderApp();
       const refreshedFeedbackEl = document.querySelector("#qf-feedback") || feedbackEl;
-      refreshedFeedbackEl.textContent =
-        copied
-          ? "Palpite enviado ao Forms e copiado para WhatsApp. Esse envio entra na base usada no ranking."
-          : "Palpite enviado ao Forms. Esse envio entra na base usada no ranking.";
+      const copyMessage = copied ? "Copiado para WhatsApp." : "";
+      refreshedFeedbackEl.textContent = [copyMessage, ...statusMessages].filter(Boolean).join(" ");
       refreshedFeedbackEl.classList.add("success");
     } catch (error) {
-      feedbackEl.textContent =
-        `Copiado para WhatsApp, mas falhou o envio ao Forms: ${error}`;
+      feedbackEl.textContent = `Copiado para WhatsApp, mas falhou o envio: ${error}`;
       feedbackEl.classList.remove("success");
     }
   };
@@ -3188,8 +3843,11 @@ function renderQuarterFinalsForm() {
     clearButton.onclick = () => {
       clearQfDraft();
       renderQuarterFinalsForm();
-      document.querySelector("#qf-feedback").textContent = "Rascunho limpo.";
-      document.querySelector("#qf-feedback").classList.add("success");
+      const nextFeedback = document.querySelector("#qf-feedback");
+      if (nextFeedback) {
+        nextFeedback.textContent = "Rascunho limpo.";
+        nextFeedback.classList.add("success");
+      }
     };
   }
 }
@@ -4202,19 +4860,22 @@ window.setPredictKnockoutView = (view) => {
 };
 
 function toggleLoginState() {
-  if (PUBLIC_CONSULT_MODE) {
+  if (PUBLIC_CONSULT_MODE && !isSupabaseShadowMode()) {
     if (loginModal) {
       loginModal.classList.add("hidden");
       loginModal.style.display = "none";
     }
     return;
   }
-  const isLogged = localStorage.getItem("ucl-bolao-guest") === "1" || Boolean(currentUserId);
-  loginModal.classList.toggle("hidden", isLogged);
-  loginModal.style.display = isLogged ? "none" : "grid";
+  const guestMode = localStorage.getItem("ucl-bolao-guest") === "1";
+  const hasSupabaseAuth = Boolean(isSupabaseShadowMode() && supabaseSession?.access_token && supabaseProfile?.participant_id);
+  const canBrowse = isSupabaseShadowMode() ? guestMode || hasSupabaseAuth : guestMode || Boolean(currentUserId);
+  loginModal.classList.toggle("hidden", canBrowse);
+  loginModal.style.display = canBrowse ? "none" : "grid";
 }
 
 function renderApp() {
+  setupLoginModeUi();
   loadImmediateData();
   const leaderboard = getRankingRows();
   renderOverview(leaderboard);
@@ -4235,6 +4896,11 @@ function renderApp() {
   }
   if (logoutButton) {
     logoutButton.style.display = PUBLIC_CONSULT_MODE ? "none" : "";
+    if (isSupabaseShadowMode()) {
+      logoutButton.textContent = supabaseProfile?.participant_id ? "Logout" : "Login";
+    } else {
+      logoutButton.textContent = "Logout";
+    }
   }
   toggleLoginState();
 }
@@ -4338,12 +5004,119 @@ async function loadTournamentOutcomeFormsData() {
   }
 }
 
-loginForm.addEventListener("submit", (event) => {
-  if (PUBLIC_CONSULT_MODE) {
+loginForm.addEventListener("submit", async (event) => {
+  if (PUBLIC_CONSULT_MODE && !isSupabaseShadowMode()) {
     event.preventDefault();
     return;
   }
   event.preventDefault();
+  if (isSupabaseShadowMode()) {
+    const email = String(loginEmail?.value || "").trim();
+    const password = String(loginPassword?.value || "").trim();
+    const participantFromEmail = getParticipantByEmail(email);
+    const participantFromField = getParticipantByName(loginUser.value);
+    const strictEmailLogin = Boolean(emailLoginSettings?.enabled) && isStrictEmailLoginEnabled();
+    const sharedPasswordEnabled = hasSharedInitialPasswordConfigured();
+
+    let participant = participantFromEmail || participantFromField;
+
+    if (participantFromEmail && participantFromField && participantFromEmail.id !== participantFromField.id) {
+      loginFeedback.textContent = "O e-mail informado pertence a outro participante.";
+      return;
+    }
+
+    if (strictEmailLogin && !participantFromEmail) {
+      loginFeedback.textContent = "E-mail não cadastrado para nenhum participante.";
+      return;
+    }
+
+    if (!participant) {
+      loginFeedback.textContent = strictEmailLogin
+        ? "E-mail não reconhecido."
+        : "Selecione seu nome de participante para vincular o login.";
+      return;
+    }
+    if (!email || !password) {
+      loginFeedback.textContent = "Preencha e-mail e senha para entrar.";
+      return;
+    }
+
+    loginFeedback.textContent = "Entrando no Supabase...";
+    loginFeedback.classList.remove("success");
+
+    try {
+      let authSession = null;
+      try {
+        authSession = await supabaseSignIn(email, password);
+      } catch (signInError) {
+        const signInMessage = String(signInError?.message || "");
+        const canTrySignUp =
+          signInMessage.toLowerCase().includes("invalid login") ||
+          signInMessage.toLowerCase().includes("invalid credentials");
+        if (!canTrySignUp) throw signInError;
+        if (sharedPasswordEnabled && !isUsingSharedInitialPassword(password)) {
+          throw new Error("Use a senha inicial comum do bolão no primeiro acesso.");
+        }
+
+        const signUpResult = await supabaseSignUp(email, password);
+        if (signUpResult?.access_token) {
+          authSession = signUpResult;
+        } else {
+          authSession = await supabaseSignIn(email, password);
+        }
+      }
+
+      if (!authSession?.access_token) {
+        throw new Error("Conta criada sem sessão ativa. Verifique confirmação de e-mail no Supabase Auth.");
+      }
+
+      saveSupabaseSession(authSession);
+      const userId = getSupabaseUserIdFromSession(authSession);
+      if (!userId) {
+        throw new Error("Não foi possível identificar o usuário autenticado.");
+      }
+      setPasswordChangeRequired(
+        userId,
+        Boolean(FORCE_PASSWORD_CHANGE && sharedPasswordEnabled && isUsingSharedInitialPassword(password))
+      );
+
+      let profile = await loadSupabaseOwnProfile(authSession.access_token, userId);
+      if (!profile) {
+        profile = await createSupabaseOwnProfile(authSession.access_token, {
+          user_id: userId,
+          participant_id: participant.id,
+          display_name: participant.name,
+        });
+      } else if (profile.participant_id !== participant.id) {
+        const linkedParticipant = getParticipantById(profile.participant_id)?.name || profile.participant_id;
+        throw new Error(`Este login já está vinculado ao participante "${linkedParticipant}".`);
+      }
+
+      supabaseProfile = profile || {
+        user_id: userId,
+        participant_id: participant.id,
+        display_name: participant.name,
+      };
+      currentUserId = resolveParticipantIdFromProfile(supabaseProfile) || participant.id;
+      localStorage.setItem(storageKeys.session, currentUserId);
+      localStorage.setItem("ucl-bolao-guest", "1");
+      if (loginPassword) loginPassword.value = "";
+      if (loginUser) loginUser.value = participant.name;
+      loginFeedback.textContent = shouldForcePasswordChangeForCurrentUser()
+        ? "Login realizado. Troque a senha antes de enviar os palpites das quartas."
+        : "Login realizado com sucesso.";
+      loginFeedback.classList.add("success");
+      renderApp();
+      return;
+    } catch (error) {
+      console.error(error);
+      clearSupabaseSession();
+      loginFeedback.textContent = `Falha no login Supabase: ${error.message || error}`;
+      loginFeedback.classList.remove("success");
+      return;
+    }
+  }
+
   const participant = getParticipantByName(loginUser.value);
   if (!participant && loginUser.value.trim()) {
     loginFeedback.textContent = "Nome não encontrado. Escolha um participante da lista ou entre sem identificar.";
@@ -4361,18 +5134,53 @@ loginForm.addEventListener("submit", (event) => {
   renderApp();
 });
 
+if (forgotPasswordButton) {
+  forgotPasswordButton.addEventListener("click", async () => {
+    if (!isSupabaseShadowMode()) return;
+    const email = String(loginEmail?.value || "").trim();
+    if (!email) {
+      loginFeedback.textContent = "Digite seu e-mail para receber o link de redefinição.";
+      loginFeedback.classList.remove("success");
+      return;
+    }
+    forgotPasswordButton.disabled = true;
+    loginFeedback.textContent = "Enviando e-mail de recuperação...";
+    loginFeedback.classList.remove("success");
+    try {
+      await supabaseRequestPasswordReset(email);
+      loginFeedback.textContent =
+        "Se o e-mail estiver cadastrado, você receberá um link para redefinir a senha.";
+      loginFeedback.classList.add("success");
+    } catch (error) {
+      loginFeedback.textContent = `Falha ao solicitar recuperação: ${error.message || error}`;
+      loginFeedback.classList.remove("success");
+    } finally {
+      forgotPasswordButton.disabled = false;
+    }
+  });
+}
+
 logoutButton.addEventListener("click", () => {
-  if (PUBLIC_CONSULT_MODE) return;
+  if (PUBLIC_CONSULT_MODE && !isSupabaseShadowMode()) return;
+  if (isSupabaseShadowMode()) {
+    clearSupabaseSession();
+  }
   currentUserId = "";
+  supabaseProfile = null;
   localStorage.removeItem(storageKeys.session);
   localStorage.removeItem("ucl-bolao-guest");
+  if (loginEmail) loginEmail.value = "";
+  if (loginPassword) loginPassword.value = "";
   loginUser.value = "";
   renderApp();
 });
 
 skipLoginButton.addEventListener("click", () => {
-  if (PUBLIC_CONSULT_MODE) return;
+  if (PUBLIC_CONSULT_MODE && !isSupabaseShadowMode()) return;
   currentUserId = "";
+  if (isSupabaseShadowMode()) {
+    clearSupabaseSession();
+  }
   localStorage.removeItem(storageKeys.session);
   localStorage.setItem("ucl-bolao-guest", "1");
   loginFeedback.textContent = "";
@@ -4398,8 +5206,9 @@ if (mobileTabSelect) {
   });
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
   loadImmediateData();
+  await ensureSupabaseSessionAndProfile();
   populateLoginSelect();
   renderRules();
   renderApp();

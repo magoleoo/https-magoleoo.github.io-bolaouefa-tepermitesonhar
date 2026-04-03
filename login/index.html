@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bolão UEFA 25/26 • Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=41.0" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <img src="../assets/champions-league-mark.png" alt="UEFA Champions League" class="brand-logo" />
+          <div>
+            <h1 class="brand-title">BOLÃO UEFA 25/26</h1>
+            <p class="brand-subtitle brand-motto">BOLÃO QUE TE PERMITE SONHAR</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div id="user-summary" class="user-mini"></div>
+          <button id="logout-button" class="ghost-button topbar-button" type="button">Logout</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <section class="card">
+            <h2>Premiações</h2>
+            <div id="awards"></div>
+          </section>
+
+          <section class="card">
+            <h2>Regras rápidas</h2>
+            <ul class="compact-list" id="rules-list"></ul>
+          </section>
+        </aside>
+
+        <section class="content">
+          <section class="tabs-bar main-tabs-bar">
+            <button id="tab-ranking" class="tab-button is-active" type="button">Ranking</button>
+            <button id="tab-results" class="tab-button" type="button">Resultados</button>
+            <button id="tab-superclassic" class="tab-button" type="button">Superclássicos</button>
+            <button id="tab-predictions" class="tab-button" type="button">Palpites</button>
+            <button id="tab-history" class="tab-button" type="button">Histórico</button>
+            <button id="tab-rules" class="tab-button" type="button">Regras</button>
+            <div class="mobile-tab-picker">
+              <label class="sr-only" for="mobile-tab-select">Abrir aba</label>
+              <select id="mobile-tab-select">
+                <option value="ranking">Ranking</option>
+                <option value="results">Resultados</option>
+                <option value="superclassic">Superclássicos</option>
+                <option value="predictions">Palpites</option>
+                <option value="history">Histórico</option>
+                <option value="rules">Regras</option>
+              </select>
+            </div>
+          </section>
+
+          <section id="panel-ranking" class="tab-panel is-active">
+
+          <section class="card">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Classificação geral</p>
+                <h2>Ranking do bolão</h2>
+              </div>
+              <span class="tag">Sincronizado com a planilha oficial</span>
+            </div>
+            <div class="ranking-mobile-view-switch" role="group" aria-label="Alternar visualização do ranking">
+              <button id="ranking-view-table-btn" class="tab-button is-active" type="button">Tabela</button>
+              <button id="ranking-view-cards-btn" class="tab-button" type="button">Cards</button>
+            </div>
+            <div class="table-wrap">
+              <table class="dashboard-table is-wide">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Participante</th>
+                    <th>Total</th>
+                    <th>1ª fase</th>
+                    <th>Playoff</th>
+                    <th>Oitavas</th>
+                    <th>Quartas</th>
+                    <th class="ranking-col-superclassic">
+                      <span>Super</span>
+                      <span>clássico</span>
+                    </th>
+                    <th>Hope Solo</th>
+                    <th>Time favorito</th>
+                    <th>Artilheiro</th>
+                    <th>Garçom</th>
+                  </tr>
+                </thead>
+                <tbody id="ranking-table"></tbody>
+              </table>
+            </div>
+            <div id="ranking-cards" class="ranking-cards-mobile"></div>
+          </section>
+
+          </section>
+
+          <section id="panel-results" class="tab-panel">
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Situação Oficial</p>
+                  <h2 style="display: flex; align-items: center; gap: 8px">
+                    Top 8 da primeira fase
+                  </h2>
+                </div>
+                <span class="tag">Atualizado da UEFA</span>
+              </div>
+              <div id="top-8-grid" class="top-8-grid"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Fechamento da temporada</p>
+                  <h2>Campeão, Artilheiro e Garçom oficiais</h2>
+                </div>
+                <span class="tag">Consulta oficial via Forms</span>
+              </div>
+              <div id="tournament-outcome-panel" class="rules-panel"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Histórico de jogos</p>
+                  <h2>Acompanhamento dos Resultados</h2>
+                </div>
+                <span class="tag">Rodada por Rodada</span>
+              </div>
+              <div id="results-tabs" class="predictions-tabs" style="margin-bottom: 24px;"></div>
+              <div id="matches-list"></div>
+            </section>
+          </section>
+
+          <section id="panel-superclassic" class="tab-panel">
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Pontuação adicional</p>
+                  <h2>Superclássicos</h2>
+                </div>
+                <span class="tag">Base inicial vinda do Forms salvo na pasta</span>
+              </div>
+              <div id="superclassic-panel" class="rules-panel"></div>
+            </section>
+          </section>
+
+          <section id="panel-history" class="tab-panel">
+            <section class="history-layout">
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Memória do bolão</p>
+                  <h2>Histórico dos últimos vencedores</h2>
+                </div>
+                <span class="tag">Base oficial do bolão</span>
+              </div>
+              <div class="table-wrap">
+                <table class="dashboard-table is-wide">
+                  <thead>
+                    <tr>
+                      <th>Temporada</th>
+                      <th>Taça Guanabara</th>
+                      <th>1º</th>
+                      <th>2º</th>
+                      <th>3º</th>
+                      <th>4º</th>
+                      <th>Participantes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="history-table"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="card hall-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Legado</p>
+                  <h2>Hall da Fama</h2>
+                </div>
+              </div>
+              <div id="hall-of-fame"></div>
+            </section>
+            </section>
+          </section>
+
+          <section id="panel-predictions" class="tab-panel">
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Participação</p>
+                  <h2>Preencher palpites das quartas</h2>
+                </div>
+                <span class="tag">Fluxo paralelo via Supabase</span>
+              </div>
+              <form id="qf-predict-form"></form>
+              <div id="qf-forms-panel"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Consulta estruturada</p>
+                  <h2>Palpites da galera</h2>
+                </div>
+                <span class="tag">Consulta por participante até as oitavas</span>
+              </div>
+              <div id="predictions-consultation" class="predictions-consultation"></div>
+            </section>
+
+
+          </section>
+
+          <section id="panel-rules" class="tab-panel">
+            <section class="card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Consulta oficial</p>
+                  <h2>Regras do bolão</h2>
+                </div>
+                <span class="tag">Disponível para todos os participantes</span>
+              </div>
+              <div id="rules-panel" class="rules-panel"></div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div id="login-modal" class="login-modal hidden">
+      <form id="login-form" class="login-card">
+        <p class="eyebrow">Acesso livre</p>
+        <h2>Identificar participante</h2>
+        <p class="login-copy">
+          No primeiro acesso, use a senha inicial comum do bolão. Antes de enviar palpites das
+          quartas, a troca para senha pessoal é obrigatória.
+        </p>
+        <p id="login-mode-hint" class="muted"></p>
+        <div id="login-email-group" class="input-group" style="margin-bottom: 12px; display: none">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+        </div>
+        <div id="login-password-group" class="input-group" style="margin-bottom: 12px; display: none">
+          <label for="login-password">Senha</label>
+          <input type="password" id="login-password" placeholder="Digite sua senha" autocomplete="current-password" />
+        </div>
+        <button id="forgot-password-button" class="ghost-button" type="button" style="margin-top: 8px; display: none">
+          Esqueci a senha
+        </button>
+        <div id="login-participant-group" class="input-group" style="margin-bottom:24px">
+          <label for="login-user">Seu nome de palpiteiro</label>
+          <input type="text" id="login-user" list="participant-list" placeholder="Digite ou selecione..." autocomplete="off" />
+          <datalist id="participant-list"></datalist>
+        </div>
+
+        <button class="primary-button" type="submit">Continuar</button>
+        <button id="skip-login-button" class="ghost-button" type="button">Entrar sem identificar</button>
+        <p id="login-feedback" class="feedback"></p>
+      </form>
+    </div>
+
+    <script src="../league-phase.js?v=30.0"></script>
+    <script src="../api/ranking.js?v=40.0"></script>
+    <script src="../api/matches.js?v=39.0"></script>
+    <script src="../data.js?v=41.0"></script>
+    <script src="./supabase-config.js?v=1.0"></script>
+    <script src="../results-data.js?v=32.0"></script>
+    <script src="../superclassicos.js?v=38.0"></script>
+    <script src="../app.js?v=77.0"></script>
+  </body>
+</html>
